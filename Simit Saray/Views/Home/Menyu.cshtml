@@ -1,0 +1,564 @@
+﻿@{
+    ViewBag.Title = "Menyu";
+}
+@section MainCss{
+    <link rel="stylesheet" href="~/Public/assets/plugins/iziModal/css/iziModal.min.css">
+    <link rel="stylesheet" href="~/Public/assets/plugins/animsition/dist/css/animsition.min.css">
+
+    <!-- CSS Global -->
+    <!-- build:css assets/css/theme.min.css -->
+    <link rel="stylesheet" href="~/Public/css/theme.css">
+}
+<!-- NAVBAR
+          ================================================== -->
+<nav class="navbar navbar-light">
+
+    <div class="container">
+
+        <span class="navbar-text order-2 order-sm-first">Mərdanov Qardaşları küçəsi 15A (Tarqovıy) </span>
+
+        <!-- Navbar: Brand -->
+        <a href="simit.html" class="navbar-brand animsition-link mr-0 order-first order-md-2">
+            <img src="~/public/uploads/logoS.png">
+        </a>
+
+        <a class="nav-link order-12" data-izimodal-open="#modal" data-izimodal-transitionin="fadeInRight" href="#">Rezervasiya</a>
+
+    </div> <!-- / .container -->
+
+</nav>
+
+<!-- MODAL RESERVATION
+================================================== -->
+
+<div id="modal" class="iziModal mainPage">
+    <div class="container">
+
+        <div class="row text-right">
+            <div class="col">
+
+                <a class="btn mt-3" href="#" data-izimodal-close="" data-izimodal-transitionout="fadeOutRight">
+                    Bağla
+                </a>
+
+            </div>
+        </div> <!-- / .row -->
+
+        <div class="row text-center">
+            <div class="col">
+
+                <h2 class="mb-0">Rezervasiya</h2>
+
+            </div>
+        </div> <!-- / .row -->
+        <!-- Form -->
+        <form class="reservation__form" id="reservation__form">
+            <div class="row align-items-center justify-content-center">
+                <div class="col-md-5">
+
+                    <div class="form-groug">
+                        <label class="sr-only" for="reservation__name">Full name</label>
+                        <input type="text" class="form-control" id="reservation__name" name="reservation__name" placeholder="Ad Soyad">
+                        <div class="invalid-feedback"></div>
+                    </div>
+                    <div class="form-group">
+                        <label class="sr-only" for="reservation__phone">Phone number</label>
+                        <input type="tel" class="form-control" id="reservation__phone" name="reservation__phone" placeholder="Telefon nömrəsi">
+                        <div class="invalid-feedback"></div>
+                    </div>
+                    <div class="form-group">
+                        <label class="sr-only" for="reservation__email">E-mail address</label>
+                        <input type="email" class="form-control" id="reservation__email" name="reservation__email" placeholder="Elektron poçt ünvanı">
+                        <div class="invalid-feedback"></div>
+                    </div>
+                </div>
+                <div class="col-md-5">
+
+                    <div class="form-group">
+                        <label class="sr-only" for="reservation__people">People</label>
+                        <select class="form-control" id="reservation__people" name="reservation__people">
+                            <option value="1">1 nəfər</option>
+                            <option value="2" selected="">2 nəfər</option>
+                            <option value="3">3 nəfər</option>
+                            <option value="4">4 nəfər</option>
+                            <option value="5">5 nəfər</option>
+                        </select>
+                        <div class="invalid-feedback"></div>
+                    </div>
+                    <div class="form-group">
+                        <label class="sr-only" for="reservation__date">Date</label>
+                        <input type="date" class="form-control" id="reservation__date" name="reservation__date" value="2017-12-31">
+                        <div class="invalid-feedback"></div>
+                    </div>
+                    <div class="form-group">
+                        <label class="sr-only" for="reservation__time">Time</label>
+                        <input type="time" class="form-control" id="reservation__time" name="reservation__time" value="18:00">
+                        <div class="invalid-feedback"></div>
+                    </div>
+
+                </div>
+
+                <div class="w-100"></div>
+
+                <div class="col">
+
+                    <div class="text-center">
+                        <button type="submit" class="btn">
+                            Masa sifariş et
+                        </button>
+                    </div>
+
+                </div>
+            </div> <!-- / .row -->
+        </form>
+
+        <div class="row text-center">
+            <div class="col">
+
+                <div class="modal_info__item">
+                    <h4>İş Vaxtı</h4>
+                    <p>Həftənin bütün günləri</p>
+                    <p>08:00 - 01:00</p>
+                </div>
+
+                <div class="modal_info__item">
+                    <h4>Simit Saray sosialda</h4>
+
+                    <!-- Social icons -->
+                    <ul class="social__list">
+                        <li><a href="https://twitter.com/simitsarayi"><i class="fab fa-twitter"></i></a></li>
+                        <li><a href="https://www.facebook.com/Simit-Sarayı-Baku-467592887378361/"><i class="fab fa-facebook-f"></i></a></li>
+                        <li><a href="https://www.instagram.com/simitsarayibaku/"><i class="fab fa-instagram"></i></a></li>
+                        <li><a href="https://foursquare.com/v/simit-sarayi-baku/56daab7d498e2749a6934f62"><i class="fab fa-foursquare"></i></a></li>
+                    </ul> <!-- .social__list -->
+                </div>
+
+            </div>
+        </div> <!-- / .row -->
+
+    </div> <!-- / .container -->
+
+</div> <!-- #modal -->
+<!-- MENU
+================================================== -->
+<section class="section section_menu">
+
+    <div class="container">
+
+        <div class="row justify-content-between section_menu__body">
+
+            <div class="col-sm-12 col-md-5 order-2 order-sm-first">
+                <div class="section_menu__img">
+                    <img src="~/Public/assets/img/menu_starters.jpg" class="img-fluid" alt="...">
+                </div>
+            </div>
+
+            <div class="col-sm-12 col-md-7 col-lg-7 col-xl-6 order-first order-sm-2">
+
+                <!-- Navigation -->
+                <nav class="nav nav_links d-flex" >
+                    <a class="nav-link animsition-link" href="simit.html">Əsas səhifə</a>
+                    <a class="nav-link animsition-link" href="about.html">Haqqımızda</a>
+                    <a class="nav-link animsition-link" href="menu.html">Menyu</a>
+                    <a class="nav-link animsition-link active" href="blog.html">Blog</a>
+                    <a class="nav-link animsition-link" href="gallery.html">Qalereya</a>
+                    <a class="nav-link animsition-link" href="contact.html">Əlaqə</a>
+                </nav>
+
+                <!-- Heading -->
+                <h1 class="section__heading mb-0">Starters</h1>
+
+                <!-- Devider Line -->
+                <div class="divider_line"></div>
+
+                <div class="row">
+
+                    <div class="col-sm-12 col-md-6 dish_body">
+                        <h5 class="dish_body__name">
+                            Pita bread <span>4 AZN</span>
+                        </h5>
+                        <div class="dish_body__desc text-italic">
+                            Bread / Pesto / Tomato / Garlic
+                        </div>
+                    </div> <!-- .dish_body -->
+
+                    <div class="col-sm-12 col-md-6 dish_body">
+                        <h5 class="dish_body__name">
+                            Fresh Salad <span>4 AZN</span>
+                        </h5>
+                        <div class="dish_body__desc text-italic">
+                            Bread / Pesto / Tomato / Garlic
+                        </div>
+                    </div> <!-- .dish_body -->
+
+                    <div class="col-sm-12 col-md-6 dish_body">
+                        <h5 class="dish_body__name">
+                            Cesar salad <span>6 AZN</span>
+                        </h5>
+                        <div class="dish_body__desc text-italic">
+                            Bread / Pesto / Tomato / Garlic
+                        </div>
+                    </div> <!-- .dish_body -->
+
+                    <div class="col-sm-12 col-md-6 dish_body">
+                        <h5 class="dish_body__name">
+                            Falafel <span>2.8 AZN</span>
+                        </h5>
+                        <div class="dish_body__desc text-italic">
+                            Bread / Pesto / Tomato / Garlic
+                        </div>
+                    </div> <!-- .dish_body -->
+
+                    <div class="col-sm-12 col-md-6 dish_body">
+                        <h5 class="dish_body__name">
+                            Julienne <span>3.5 AZN</span>
+                        </h5>
+                        <div class="dish_body__desc text-italic">
+                            Bread / Pesto / Tomato / Garlic
+                        </div>
+                    </div> <!-- .dish_body -->
+
+                    <div class="col-sm-12 col-md-6 dish_body">
+                        <h5 class="dish_body__name">
+                            Chicken carpaccio <span>4.5 AZN</span>
+                        </h5>
+                        <div class="dish_body__desc text-italic">
+                            Bread / Pesto / Tomato / Garlic
+                        </div>
+                    </div> <!-- .dish_body -->
+
+                    <div class="col-sm-12 col-md-6 dish_body">
+                        <h5 class="dish_body__name">
+                            Baked vegetables <span>7 AZN</span>
+                        </h5>
+                        <div class="dish_body__desc text-italic">
+                            Bread / Pesto / Tomato / Garlic
+                        </div>
+                    </div> <!-- .dish_body -->
+
+                    <div class="col-sm-12 col-md-6 dish_body">
+                        <h5 class="dish_body__name">
+                            Tuna sandwich <span>5 AZN</span>
+                        </h5>
+                        <div class="dish_body__desc text-italic">
+                            Bread / Pesto / Tomato / Garlic
+                        </div>
+                    </div> <!-- .dish_body -->
+
+                </div> <!-- / .row -->
+
+            </div>
+        </div> <!-- / .row -->
+
+        <div class="row justify-content-between section_menu__body">
+
+            <div class="col-sm-12 col-md-7 col-lg-7 col-xl-6">
+
+                <!-- Heading -->
+                <h1 class="section__heading mb-0">Main</h1>
+
+                <!-- Devider Line -->
+                <div class="divider_line"></div>
+
+                <div class="row">
+
+                    <div class="col-sm-12 col-md-6 dish_body">
+                        <h5 class="dish_body__name">
+                            Fish burger <span>4 AZN</span>
+                        </h5>
+                        <div class="dish_body__desc text-italic">
+                            Bread / Pesto / Tomato / Garlic
+                        </div>
+                    </div> <!-- .dish_body -->
+
+                    <div class="col-sm-12 col-md-6 dish_body">
+                        <h5 class="dish_body__name">
+                            Pasta Bolognese <span>4 AZN</span>
+                        </h5>
+                        <div class="dish_body__desc text-italic">
+                            Bread / Pesto / Tomato / Garlic
+                        </div>
+                    </div> <!-- .dish_body -->
+
+                    <div class="col-sm-12 col-md-6 dish_body">
+                        <h5 class="dish_body__name">
+                            Cheese cream soup <span>6 AZN</span>
+                        </h5>
+                        <div class="dish_body__desc text-italic">
+                            Bread / Pesto / Tomato / Garlic
+                        </div>
+                    </div> <!-- .dish_body -->
+
+                    <div class="col-sm-12 col-md-6 dish_body">
+                        <h5 class="dish_body__name">
+                            Beef steak <span>2.8 AZN</span>
+                        </h5>
+                        <div class="dish_body__desc text-italic">
+                            Bread / Pesto / Tomato / Garlic
+                        </div>
+                    </div> <!-- .dish_body -->
+
+                    <div class="col-sm-12 col-md-6 dish_body">
+                        <h5 class="dish_body__name">
+                            Baked salmon <span>3.5 AZN</span>
+                        </h5>
+                        <div class="dish_body__desc text-italic">
+                            Bread / Pesto / Tomato / Garlic
+                        </div>
+                    </div> <!-- .dish_body -->
+
+                    <div class="col-sm-12 col-md-6 dish_body">
+                        <h5 class="dish_body__name">
+                            English pie <span>4.5 AZN</span>
+                        </h5>
+                        <div class="dish_body__desc text-italic">
+                            Bread / Pesto / Tomato / Garlic
+                        </div>
+                    </div> <!-- .dish_body -->
+
+                    <div class="col-sm-12 col-md-6 dish_body">
+                        <h5 class="dish_body__name">
+                            Pizza margarita <span>7 AZN</span>
+                        </h5>
+                        <div class="dish_body__desc text-italic">
+                            Bread / Pesto / Tomato / Garlic
+                        </div>
+                    </div> <!-- .dish_body -->
+
+                    <div class="col-sm-12 col-md-6 dish_body">
+                        <h5 class="dish_body__name">
+                            Tuna & potato <span>5 AZN</span>
+                        </h5>
+                        <div class="dish_body__desc text-italic">
+                            Bread / Pesto / Tomato / Garlic
+                        </div>
+                    </div> <!-- .dish_body -->
+
+                </div> <!-- / .row -->
+
+            </div>
+            <div class="col-sm-12 col-md-5">
+                <div class="section_menu__img">
+                    <img src="~/Public/assets/img/menu_main.jpg" class="img-fluid" alt="...">
+                </div>
+            </div>
+        </div> <!-- / .row -->
+
+        <div class="row justify-content-between section_menu__body">
+
+            <div class="col-sm-12 col-md-5 order-2 order-sm-first">
+                <div class="section_menu__img">
+                    <img style="height: 100%; object-fit: cover" src="~/Public/Uploads/limonata.jpg" class="img-fluid" alt="...">
+                </div>
+            </div>
+
+            <div class="col-sm-12 col-md-7 col-lg-7 col-xl-6 order-first order-sm-2">
+
+                <!-- Heading -->
+                <h1 class="section__heading mb-0">Drinks</h1>
+
+                <!-- Devider Line -->
+                <div class="divider_line"></div>
+
+                <div class="row">
+
+                    <div class="col-sm-12 col-md-6 dish_body">
+                        <h5 class="dish_body__name mb-0">
+                            Red dry wine <span>14 AZN</span>
+                        </h5>
+                        <div class="dish_body__desc text-italic">
+                            Bread / Pesto / Tomato / Garlic
+                        </div>
+                    </div> <!-- .dish_body -->
+
+                    <div class="col-sm-12 col-md-6 dish_body">
+                        <h5 class="dish_body__name mb-0">
+                            Rose semidry wine <span>9.5 AZN</span>
+                        </h5>
+                        <div class="dish_body__desc text-italic">
+                            Bread / Pesto / Tomato / Garlic
+                        </div>
+                    </div> <!-- .dish_body -->
+
+                    <div class="col-sm-12 col-md-6 dish_body">
+                        <h5 class="dish_body__name mb-0">
+                            Red semisweet wine <span>8 AZN</span>
+                        </h5>
+                        <div class="dish_body__desc text-italic">
+                            Bread / Pesto / Tomato / Garlic
+                        </div>
+                    </div> <!-- .dish_body -->
+
+                    <div class="col-sm-12 col-md-6 dish_body">
+                        <h5 class="dish_body__name mb-0">
+                            White dry wine <span>2.8 AZN</span>
+                        </h5>
+                        <div class="dish_body__desc text-italic">
+                            Bread / Pesto / Tomato / Garlic
+                        </div>
+                    </div> <!-- .dish_body -->
+
+                    <div class="col-sm-12 col-md-6 dish_body">
+                        <h5 class="dish_body__name mb-0">
+                            Dry Irish stout <span>3.5 AZN</span>
+                        </h5>
+                        <div class="dish_body__desc text-italic">
+                            Bread / Pesto / Tomato / Garlic
+                        </div>
+                    </div> <!-- .dish_body -->
+
+                    <div class="col-sm-12 col-md-6 dish_body">
+                        <h5 class="dish_body__name mb-0">
+                            Craft IPA <span>4.5 AZN</span>
+                        </h5>
+                        <div class="dish_body__desc text-italic">
+                            Bread / Pesto / Tomato / Garlic
+                        </div>
+                    </div> <!-- .dish_body -->
+
+                    <div class="col-sm-12 col-md-6 dish_body">
+                        <h5 class="dish_body__name mb-0">
+                            12 Aged whiskey <span>17 AZN</span>
+                        </h5>
+                        <div class="dish_body__desc text-italic">
+                            Bread / Pesto / Tomato / Garlic
+                        </div>
+                    </div> <!-- .dish_body -->
+
+                    <div class="col-sm-12 col-md-6 dish_body">
+                        <h5 class="dish_body__name mb-0">
+                            Mohito <span>11 AZN</span>
+                        </h5>
+                        <div class="dish_body__desc text-italic">
+                            Bread / Pesto / Tomato / Garlic
+                        </div>
+                    </div> <!-- .dish_body -->
+
+                </div> <!-- / .row -->
+
+            </div>
+        </div> <!-- / .row -->
+
+        <div class="row justify-content-between section_menu__body">
+
+            <div class="col-sm-12 col-md-7 col-lg-7 col-xl-6">
+
+                <!-- Heading -->
+                <h1 class="section__heading mb-0">Desserts</h1>
+
+                <!-- Devider Line -->
+                <div class="divider_line"></div>
+
+                <div class="row">
+
+                    <div class="col-sm-12 col-md-6 dish_body">
+                        <h5 class="dish_body__name mb-0">
+                            Ginger cake <span>5 AZN</span>
+                        </h5>
+                        <div class="dish_body__desc text-italic">
+                            Bread / Pesto / Tomato / Garlic
+                        </div>
+                    </div> <!-- .dish_body -->
+
+                    <div class="col-sm-12 col-md-6 dish_body">
+                        <h5 class="dish_body__name mb-0">
+                            Strawberry ice cream <span>3.5 AZN</span>
+                        </h5>
+                        <div class="dish_body__desc text-italic">
+                            Bread / Pesto / Tomato / Garlic
+                        </div>
+                    </div> <!-- .dish_body -->
+
+                    <div class="col-sm-12 col-md-6 dish_body">
+                        <h5 class="dish_body__name mb-0">
+                            Pancakes with honey <span>6 AZN</span>
+                        </h5>
+                        <div class="dish_body__desc text-italic">
+                            Bread / Pesto / Tomato / Garlic
+                        </div>
+                    </div> <!-- .dish_body -->
+
+                    <div class="col-sm-12 col-md-6 dish_body">
+                        <h5 class="dish_body__name mb-0">
+                            Blueberry with cream <span>2.8 AZN</span>
+                        </h5>
+                        <div class="dish_body__desc text-italic">
+                            Bread / Pesto / Tomato / Garlic
+                        </div>
+                    </div> <!-- .dish_body -->
+
+                    <div class="col-sm-12 col-md-6 dish_body">
+                        <h5 class="dish_body__name mb-0">
+                            Honey cake <span>3.5 AZN</span>
+                        </h5>
+                        <div class="dish_body__desc text-italic">
+                            Bread / Pesto / Tomato / Garlic
+                        </div>
+                    </div> <!-- .dish_body -->
+
+                    <div class="col-sm-12 col-md-6 dish_body">
+                        <h5 class="dish_body__name mb-0">
+                            Friut salad <span>7 AZN</span>
+                        </h5>
+                        <div class="dish_body__desc text-italic">
+                            Bread / Pesto / Tomato / Garlic
+                        </div>
+                    </div> <!-- .dish_body -->
+
+                    <div class="col-sm-12 col-md-6 dish_body">
+                        <h5 class="dish_body__name mb-0">
+                            Eclair <span>2.7 AZN</span>
+                        </h5>
+                        <div class="dish_body__desc text-italic">
+                            Bread / Pesto / Tomato / Garlic
+                        </div>
+                    </div> <!-- .dish_body -->
+
+                    <div class="col-sm-12 col-md-6 dish_body">
+                        <h5 class="dish_body__name mb-0">
+                            Cranberry tart <span>5 AZN</span>
+                        </h5>
+                        <div class="dish_body__desc text-italic">
+                            Bread / Pesto / Tomato / Garlic
+                        </div>
+                    </div> <!-- .dish_body -->
+
+                </div> <!-- / .row -->
+
+            </div>
+            <div class="col-sm-12 col-md-5">
+                <div class="section_menu__img">
+                    <img src="~/Public/assets/img/menu_desserts.jpg" class="img-fluid" alt="...">
+                </div>
+            </div>
+        </div> <!-- / .row -->
+
+        <div class="row text-center">
+            <div class="col">
+
+                <a class="btn" href="https://bit.ly/31Os9iE">
+                    <h4 class="mb-0">Menyunu yüklə</h4>
+                </a>
+
+            </div>
+        </div> <!-- / .row -->
+
+    </div> <!-- .container -->
+
+</section> <!-- .section_menu -->
+@section MainJs{
+
+    <!-- JS Plugins -->
+    <script src="~/Public/assets/plugins/iziModal/js/iziModal.min.js"></script>
+    <script src="~/Public/assets/plugins/reservation/reservation.js"></script>
+    <script src="~/Public/assets/plugins/alerts/alerts.js"></script>
+    <script src="~/Public/assets/plugins/animsition/dist/js/animsition.min.js"></script>
+
+    <!-- JS Custom -->
+    <!-- build:js assets/js/theme.min.js -->
+    <script src="~/Public/assets/js/theme.js"></script>
+    <!-- endbuild -->
+    <script src="~/Public/assets/js/custom.js"></script>
+
+    <!-- Google maps -->
+}

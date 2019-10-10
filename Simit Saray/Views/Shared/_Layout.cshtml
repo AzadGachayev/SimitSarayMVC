@@ -1,0 +1,86 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Simit Saray</title>
+    <link rel="stylesheet" href="~/public/vendors/css/bootstrap.css">
+    <link rel="stylesheet" href="~/public/Vendors/owlcarousel/css/owl.carousel.css">
+    <link rel="stylesheet" href="~/public/vendors/owlcarousel/css/animate.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+    <link rel="stylesheet" href="~/public/css/Simit.css">
+    @RenderSection("MainCss",required:false)
+
+</head>
+
+<body>
+    <header class="cd-header">
+        <div class="header-wrapper">
+            <div class="logo-wrap">
+                <a href="#" class="hover-target"><img src="~/Public/Uploads/logoS.png"></a>
+            </div>
+            <div class="nav-but-wrap">
+                <div class="menu-icon hover-target">
+                    <span class="menu-icon__line menu-icon__line-left"></span>
+                    <span class="menu-icon__line"></span>
+                    <span class="menu-icon__line menu-icon__line-right"></span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="mainNav nav">
+        <div class="nav__content">
+            <ul class="nav__list">
+
+                <li class="nav__list-item"><a href="simit.html" class="hover-target">Ana Səhifə</a></li>
+                <li class="nav__list-item"><a href="@Url.Action("Menyu","Home")" class="hover-target">Menyu</a></li>
+                <li class="nav__list-item"><a href="blog.html" class="hover-target">Xəbərlər</a></li>
+                <li class="nav__list-item"><a href="gallery.html" class="hover-target">Qalereya</a></li>
+                <li class="nav__list-item"><a href="about.html" class="hover-target">Haqqımızda</a></li>
+                <li class="nav__list-item"><a href="contact.html" class="hover-target">Əlaqə</a></li>
+
+            </ul>
+        </div>
+    </div>
+    <div class='cursor' id="cursor"></div>
+    <div class='cursor2' id="cursor2"></div>
+    <div class='cursor3' id="cursor3"></div>
+    @RenderBody()
+    <footer class="section_footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-md-6">
+
+                    <p>© 2019 Simit Sarayı Bakı. Bütün hüquqlar qorunur.</p>
+
+                </div>
+                <div class="col-12 col-md-6 ">
+
+                    <!-- Social icons -->
+                    <ul class="social__list">
+                        <li><a href="https://twitter.com/simitsarayi"><i class="fab fa-twitter"></i></a></li>
+                        <li><a href="https://www.facebook.com/Simit-Sarayı-Baku-467592887378361/"><i class="fab fa-facebook-f"></i></a></li>
+                        <li><a href="https://www.instagram.com/simitsarayibaku/"><i class="fab fa-instagram"></i></a></li>
+                        <li><a href="https://foursquare.com/v/simit-sarayi-baku/56daab7d498e2749a6934f62"><i class="fab fa-foursquare"></i></a></li>
+                    </ul>
+
+                </div>
+            </div> <!-- / .row -->
+        </div>
+    </footer> <!-- .section_footer -->
+    
+
+
+    <script src="~/public/vendors/js/jquery-3.4.1.js"></script>
+    <script src="~/public/vendors/js/bootstrap.js"></script>
+    <script src="~/public/Vendors/owlcarousel/js/owl.carousel.js"></script>
+
+
+    <script src="~/public/js/simit.js"></script>
+    @RenderSection("MainJs",required:false)
+</body>
+
+</html>
