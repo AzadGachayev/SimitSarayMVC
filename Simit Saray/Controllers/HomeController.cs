@@ -22,15 +22,34 @@ namespace Simit_Saray.Controllers
 
         public ActionResult Blog()
         {
-            ViewBag.Message = "Your contact page.";
+            ViewBag.Message = "Your Blog page.";
 
             return View();
         }
         public ActionResult Gallery()
         {
-            ViewBag.Message = "Your contact page.";
+            ViewBag.Message = "Your Gallery page.";
 
             return View();
         }
+        public ActionResult Contact()
+        {
+            ViewBag.Message = "Your Contact page.";
+
+            return View();
+        }
+        public ActionResult About()
+        {
+            ViewBag.Message = "Your About page.";
+
+            return View();
+        }
+        public ActionResult BlogItem()
+        {
+            ViewBag.Message = "Your About page.";
+
+            return View();
+        }
+
     }
 }

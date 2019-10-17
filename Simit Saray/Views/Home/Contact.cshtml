@@ -1,0 +1,254 @@
+﻿
+@{
+    ViewBag.Title = "Contact";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@section MainCss{
+    <link rel="stylesheet" href="~/Public/assets/plugins/iziModal/css/iziModal.min.css">
+    <link rel="stylesheet" href="~/Public/assets/plugins/animsition/dist/css/animsition.min.css">
+
+    <!-- CSS Global -->
+    <!-- build:css assets/css/theme.min.css -->
+    <link rel="stylesheet" href="~/Public/css/theme.css">
+
+}
+
+
+<!-- NAVBAR
+================================================== -->
+<nav class="navbar navbar-light">
+
+    <div class="container">
+
+        <span class="navbar-text order-2 order-sm-first">Mərdanov Qardaşları küçəsi 15A (Tarqovıy)</span>
+
+      
+        <a class="nav-link order-12" data-izimodal-open="#modal" data-izimodal-transitionin="fadeInRight" href="#">Rezervasiya</a>
+
+    </div> <!-- / .container -->
+
+</nav>
+
+<!-- MODAL RESERVATION
+================================================== -->
+
+<div id="modal" class="iziModal mainPage">
+    <div class="container">
+
+        <div class="row text-right">
+            <div class="col">
+
+                <a class="btn mt-3" href="#" data-izimodal-close="" data-izimodal-transitionout="fadeOutRight">
+                    Bağla
+                </a>
+
+            </div>
+        </div> <!-- / .row -->
+
+        <div class="row text-center">
+            <div class="col">
+
+                <h2 class="mb-0">Rezervasiya</h2>
+
+            </div>
+        </div> <!-- / .row -->
+        <!-- Form -->
+        <form class="reservation__form" id="reservation__form">
+            <div class="row align-items-center justify-content-center">
+                <div class="col-md-5">
+
+                    <div class="form-groug">
+                        <label class="sr-only" for="reservation__name">Full name</label>
+                        <input type="text" class="form-control" id="reservation__name" name="reservation__name" placeholder="Ad Soyad">
+                        <div class="invalid-feedback"></div>
+                    </div>
+                    <div class="form-group">
+                        <label class="sr-only" for="reservation__phone">Phone number</label>
+                        <input type="tel" class="form-control" id="reservation__phone" name="reservation__phone" placeholder="Telefon nömrəsi">
+                        <div class="invalid-feedback"></div>
+                    </div>
+                    <div class="form-group">
+                        <label class="sr-only" for="reservation__email">E-mail address</label>
+                        <input type="email" class="form-control" id="reservation__email" name="reservation__email" placeholder="Elektron poçt ünvanı">
+                        <div class="invalid-feedback"></div>
+                    </div>
+                </div>
+                <div class="col-md-5">
+
+                    <div class="form-group">
+                        <label class="sr-only" for="reservation__people">People</label>
+                        <select class="form-control" id="reservation__people" name="reservation__people">
+                            <option value="1">1 nəfər</option>
+                            <option value="2" selected="">2 nəfər</option>
+                            <option value="3">3 nəfər</option>
+                            <option value="4">4 nəfər</option>
+                            <option value="5">5 nəfər</option>
+                        </select>
+                        <div class="invalid-feedback"></div>
+                    </div>
+                    <div class="form-group">
+                        <label class="sr-only" for="reservation__date">Date</label>
+                        <input type="date" class="form-control" id="reservation__date" name="reservation__date" value="2017-12-31">
+                        <div class="invalid-feedback"></div>
+                    </div>
+                    <div class="form-group">
+                        <label class="sr-only" for="reservation__time">Time</label>
+                        <input type="time" class="form-control" id="reservation__time" name="reservation__time" value="18:00">
+                        <div class="invalid-feedback"></div>
+                    </div>
+
+                </div>
+
+                <div class="w-100"></div>
+
+                <div class="col">
+
+                    <div class="text-center">
+                        <button type="submit" class="btn">
+                            Masa sifariş et
+                        </button>
+                    </div>
+
+                </div>
+            </div> <!-- / .row -->
+        </form>
+
+        <div class="row text-center">
+            <div class="col">
+
+                <div class="modal_info__item">
+                    <h4>İş Vaxtı</h4>
+                    <p>Həftənin bütün günləri</p>
+                    <p>08:00 - 01:00</p>
+                </div>
+
+                <div class="modal_info__item">
+                    <h4>Simit Saray sosialda</h4>
+
+                    <!-- Social icons -->
+                    <ul class="social__list">
+                        <li><a href="https://twitter.com/simitsarayi"><i class="fab fa-twitter"></i></a></li>
+                        <li><a href="https://www.facebook.com/Simit-Sarayı-Baku-467592887378361/"><i class="fab fa-facebook-f"></i></a></li>
+                        <li><a href="https://www.instagram.com/simitsarayibaku/"><i class="fab fa-instagram"></i></a></li>
+                        <li><a href="https://foursquare.com/v/simit-sarayi-baku/56daab7d498e2749a6934f62"><i class="fab fa-foursquare"></i></a></li>
+                    </ul> <!-- .social__list -->
+                </div>
+
+            </div>
+        </div> <!-- / .row -->
+
+    </div> <!-- / .container -->
+
+</div> <!-- #modal -->
+<!-- CONTACT
+================================================== -->
+<section class="section section_contact">
+
+    <div class="container">
+        <div class="row justify-content-between mb-5">
+
+            <div class="col-sm-12 col-md-6 col-lg-5 order-2 order-sm-first">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d379.9515667175205!2d49.839936764481955!3d40.37311500285256!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40307db02096a42f%3A0x4f6276f326db430b!2sSimit%20Saray%C4%B1!5e0!3m2!1saz!2s!4v1570579189676!5m2!1saz!2s" width="100%" height="100%" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+                <div id="map"></div>
+
+            </div>
+
+            <div class="col-sm-12 col-md-6 order-first order-sm-2">
+
+                <!-- Navigation -->
+                <nav class="nav nav_links d-flex">
+                    <a class="nav-link animsition-link" href="@Url.Action("Index","Home")">Əsas səhifə</a>
+                    <a class="nav-link animsition-link" href="@Url.Action("About","Home")">Haqqımızda</a>
+                    <a class="nav-link animsition-link" href="@Url.Action("Menyu","Home")">Menyu</a>
+                    <a class="nav-link animsition-link" href="@Url.Action("Blog","Home")">Blog</a>
+                    <a class="nav-link animsition-link" href="@Url.Action("Gallery","Home")">Qalereya</a>
+                    <a class="nav-link animsition-link active" href="@Url.Action("Contact","Home")">Əlaqə</a>
+                </nav>
+
+                <!-- Heading -->
+                <h1 class="section__heading mb-0">Əlaqə vasitələri</h1>
+
+                <!-- Subheading -->
+                <p>
+                    Restoranımızda vaxt keçirmək istəsəniz,
+                    bizimlə istədiyiniz vaxt əlaqə saxlaya bilərsiniz.
+                </p>
+
+                <!-- Info -->
+                <div class="section_contact__item">
+                    <h4 class="mb-0">Ünvan</h4>
+                    <p class="mb-0">Mərdanov Qardaşları 15A (Tarqovıy) <br> 1 nömrəli məktəbin yanı, <br> Şaurma N1 ilə üzbəüz.</p>
+                </div> <!-- .section_contact__item -->
+
+                <div class="section_contact__item">
+                    <h4 class="mb-0">Telefon</h4>
+                    <p class="mb-0">+994 55 254 29 32</p>
+                    <p class="mb-0">+994 12 597 05 75</p>
+                </div> <!-- .section_contact__item -->
+
+                <div class="section_contact__item">
+                    <h4 class="mb-0">Email</h4>
+                    <p class="mb-0">azad.gachayev@gmail.com</p>
+                    <p class="mb-0"></p>
+                </div> <!-- .section_contact__item -->
+
+                <div class="section_contact__item">
+                    <h4 class="mb-0">İş Vaxtı</h4>
+                    <p class="mb-0">Həftənin bütün günləri</p>
+                    <p class="mb-0">08:00 - 01:00</p>
+                </div> <!-- .section_contact__item -->
+
+            </div>
+        </div> <!-- / .row -->
+        <div class="row justify-content-center">
+            <div class="col-sm-12 col-md-10 col-lg-7">
+
+                <h2 class="text-center">Əlaqə formu</h2>
+
+                <!-- Contact form -->
+                <form class="section_contact__form" id="contact__form">
+
+                    <div class="form-group">
+                        <label for="contact__form__name" class="sr-only">Full name</label>
+                        <input type="text" class="form-control" id="contact__form__name" name="contact__form__name" placeholder="Ad Soyad">
+                        <div class="invalid-feedback"></div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="contact__form__email" class="sr-only">E-mail address</label>
+                        <input type="email" class="form-control" id="contact__form__email" name="contact__form__email" placeholder="Elektron poçt ünvanı">
+                        <div class="invalid-feedback"></div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="contact__form__email" class="sr-only">Message</label>
+                        <textarea class="form-control" id="contact__form__message" name="contact__form__message" rows="6" placeholder="Məktub"></textarea>
+                        <div class="invalid-feedback"></div>
+                    </div>
+
+                    <button type="submit" class="btn">
+                        Məktub göndər
+                    </button>
+
+                </form>
+
+            </div>
+        </div> <!-- / .row -->
+
+    </div> <!-- .container -->
+</section> <!-- .section_contact -->
+@section MainJs{
+<!-- JS Plugins -->
+<script src="~/public/assets/plugins/iziModal/js/iziModal.min.js"></script>
+<script src="~/public/assets/plugins/reservation/reservation.js"></script>
+<script src="~/public/assets/plugins/alerts/alerts.js"></script>
+<script src="~/public/assets/plugins/animsition/dist/js/animsition.min.js"></script>
+<script src="~/public/assets/plugins/contact/contact.js"></script>
+
+<!-- JS Custom -->
+<!-- build:js ~/public/assets/js/theme.min.js -->
+<script src="~/public/assets/js/theme.js"></script>
+<script src="~/public/assets/js/google_maps.js"></script>
+<!-- endbuild -->
+<script src="~/public/assets/js/custom.js"></script>
+}

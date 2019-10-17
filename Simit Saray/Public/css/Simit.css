@@ -31,7 +31,7 @@ body {
   height: 100%; }
 
 #menyu, #contact {
-  background: linear-gradient(#380303, black);
+  background: linear-gradient(#380303, black) !important;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -55,10 +55,10 @@ a:hover {
     outline: none; }
 
 .owl-next {
-  right: -50px; }
+  right: -30px; }
 
 .owl-prev {
-  left: -50px; }
+  left: -30px; }
 
 /* #Cursor
 ================================================== */

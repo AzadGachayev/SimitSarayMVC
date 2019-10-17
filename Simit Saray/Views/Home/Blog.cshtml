@@ -17,10 +17,6 @@
 
         <span class="navbar-text order-2 order-sm-first">Mərdanov Qardaşları küçəsi 15A (Tarqovıy) </span>
 
-        <!-- Navbar: Brand -->
-        <a href="simit.html" class="navbar-brand animsition-link mr-0 order-first order-md-2">
-            <img src="~/Public/uploads/logoS.png">
-        </a>
 
         <a class="nav-link order-12" data-izimodal-open="#modal" data-izimodal-transitionin="fadeInRight" href="#">Rezervasiya</a>
 
@@ -153,7 +149,15 @@
             </div>
 
             <div class="col-sm-12 col-md-7 col-lg-7 col-xl-6 order-first order-sm-2">
-
+                <!-- Navigation -->
+                <nav class="nav nav_links d-flex">
+                    <a class="nav-link animsition-link" href="@Url.Action("Index","Home")">Əsas səhifə</a>
+                    <a class="nav-link animsition-link" href="@Url.Action("About","Home")">Haqqımızda</a>
+                    <a class="nav-link animsition-link" href="@Url.Action("Menyu","Home")">Menyu</a>
+                    <a class="nav-link animsition-link active" href="@Url.Action("Blog","Home")">Blog</a>
+                    <a class="nav-link animsition-link" href="@Url.Action("Gallery","Home")">Qalereya</a>
+                    <a class="nav-link animsition-link" href="@Url.Action("Contact","Home")">Əlaqə</a>
+                </nav>
                 <!-- Heading -->
                 <h1 class="section__heading">Latest News</h1>
 
@@ -168,7 +172,7 @@
                         <li><a href="#">by John Doe</a></li>
                     </ul>
 
-                    <a href="blog-item.html" class="blog_title animsition-link">
+                    <a href="@Url.Action("BlogItem","Home")" class="blog_title animsition-link">
                         <h4 data-hover="Lorem ipsum dolor sit amet">Lorem ipsum dolor sit amet</h4>
                     </a>
 
@@ -185,7 +189,7 @@
                         <li><a href="#">by John Doe</a></li>
                     </ul>
 
-                    <a href="blog-item.html" class="blog_title animsition-link">
+                    <a href="@Url.Action("BlogItem","Home")" class="blog_title animsition-link">
                         <h4 data-hover="Lorem ipsum dolor sit amet">Lorem ipsum dolor sit amet</h4>
                     </a>
 
@@ -202,7 +206,7 @@
                         <li><a href="#">by John Doe</a></li>
                     </ul>
 
-                    <a href="blog-item.html" class="blog_title animsition-link">
+                    <a href="@Url.Action("BlogItem","Home")" class="blog_title animsition-link">
                         <h4 data-hover="Lorem ipsum dolor sit amet">Lorem ipsum dolor sit amet</h4>
                     </a>
 
@@ -219,7 +223,7 @@
                         <li><a href="#">by John Doe</a></li>
                     </ul>
 
-                    <a href="blog-item.html" class="blog_title animsition-link">
+                    <a href="@Url.Action("BlogItem","Home")" class="blog_title animsition-link">
                         <h4 data-hover="Lorem ipsum dolor sit amet">Lorem ipsum dolor sit amet</h4>
                     </a>
 

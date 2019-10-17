@@ -1,0 +1,347 @@
+﻿
+@{
+    ViewBag.Title = "BlogItem";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@section MainCss{
+    <link rel="stylesheet" href="~/Public/assets/plugins/iziModal/css/iziModal.min.css">
+    <link rel="stylesheet" href="~/Public/assets/plugins/animsition/dist/css/animsition.min.css">
+
+    <!-- CSS Global -->
+    <!-- build:css assets/css/theme.min.css -->
+    <link rel="stylesheet" href="~/Public/css/theme.css">
+
+}
+<!-- NAVBAR
+    ================================================== -->
+<nav class="navbar navbar-light">
+
+    <div class="container">
+
+        <span class="navbar-text order-2 order-sm-first">Mərdanov Qardaşları küçəsi 15A (Tarqovıy) </span>
+
+       
+
+        <a class="nav-link order-12" data-izimodal-open="#modal" data-izimodal-transitionin="fadeInRight" href="#">Rezervasiya</a>
+
+    </div> <!-- / .container -->
+
+</nav>
+
+<!-- MODAL RESERVATION
+================================================== -->
+
+<div id="modal" class="iziModal mainPage">
+    <div class="container">
+
+        <div class="row text-right">
+            <div class="col">
+
+                <a class="btn mt-3" href="#" data-izimodal-close="" data-izimodal-transitionout="fadeOutRight">
+                    Bağla
+                </a>
+
+            </div>
+        </div> <!-- / .row -->
+
+        <div class="row text-center">
+            <div class="col">
+
+                <h2 class="mb-0">Rezervasiya</h2>
+
+            </div>
+        </div> <!-- / .row -->
+        <!-- Form -->
+        <form class="reservation__form" id="reservation__form">
+            <div class="row align-items-center justify-content-center">
+                <div class="col-md-5">
+
+                    <div class="form-groug">
+                        <label class="sr-only" for="reservation__name">Full name</label>
+                        <input type="text" class="form-control" id="reservation__name" name="reservation__name" placeholder="Ad Soyad">
+                        <div class="invalid-feedback"></div>
+                    </div>
+                    <div class="form-group">
+                        <label class="sr-only" for="reservation__phone">Phone number</label>
+                        <input type="tel" class="form-control" id="reservation__phone" name="reservation__phone" placeholder="Telefon nömrəsi">
+                        <div class="invalid-feedback"></div>
+                    </div>
+                    <div class="form-group">
+                        <label class="sr-only" for="reservation__email">E-mail address</label>
+                        <input type="email" class="form-control" id="reservation__email" name="reservation__email" placeholder="Elektron poçt ünvanı">
+                        <div class="invalid-feedback"></div>
+                    </div>
+                </div>
+                <div class="col-md-5">
+
+                    <div class="form-group">
+                        <label class="sr-only" for="reservation__people">People</label>
+                        <select class="form-control" id="reservation__people" name="reservation__people">
+                            <option value="1">1 nəfər</option>
+                            <option value="2" selected="">2 nəfər</option>
+                            <option value="3">3 nəfər</option>
+                            <option value="4">4 nəfər</option>
+                            <option value="5">5 nəfər</option>
+                        </select>
+                        <div class="invalid-feedback"></div>
+                    </div>
+                    <div class="form-group">
+                        <label class="sr-only" for="reservation__date">Date</label>
+                        <input type="date" class="form-control" id="reservation__date" name="reservation__date" value="2017-12-31">
+                        <div class="invalid-feedback"></div>
+                    </div>
+                    <div class="form-group">
+                        <label class="sr-only" for="reservation__time">Time</label>
+                        <input type="time" class="form-control" id="reservation__time" name="reservation__time" value="18:00">
+                        <div class="invalid-feedback"></div>
+                    </div>
+
+                </div>
+
+                <div class="w-100"></div>
+
+                <div class="col">
+
+                    <div class="text-center">
+                        <button type="submit" class="btn">
+                            Masa sifariş et
+                        </button>
+                    </div>
+
+                </div>
+            </div> <!-- / .row -->
+        </form>
+
+        <div class="row text-center">
+            <div class="col">
+
+                <div class="modal_info__item">
+                    <h4>İş Vaxtı</h4>
+                    <p>Həftənin bütün günləri</p>
+                    <p>08:00 - 01:00</p>
+                </div>
+
+                <div class="modal_info__item">
+                    <h4>Simit Saray sosialda</h4>
+
+                    <!-- Social icons -->
+                    <ul class="social__list">
+                        <li><a href="https://twitter.com/simitsarayi"><i class="fab fa-twitter"></i></a></li>
+                        <li><a href="https://www.facebook.com/Simit-Sarayı-Baku-467592887378361/"><i class="fab fa-facebook-f"></i></a></li>
+                        <li><a href="https://www.instagram.com/simitsarayibaku/"><i class="fab fa-instagram"></i></a></li>
+                        <li><a href="https://foursquare.com/v/simit-sarayi-baku/56daab7d498e2749a6934f62"><i class="fab fa-foursquare"></i></a></li>
+                    </ul> <!-- .social__list -->
+                </div>
+
+            </div>
+        </div> <!-- / .row -->
+
+    </div> <!-- / .container -->
+
+</div> <!-- #modal -->
+<!-- BLOG ITEM
+================================================== -->
+<section class="section section_blog-item">
+
+    <div class="container">
+        <div class="row justify-content-center">
+
+            <div class="col-sm-12 col-md-10 col-lg-7">
+
+                <div class="section_blog-item_body">
+
+                    <!-- Image -->
+                    <div class="section_blog-item_body__img">
+                        <img src="~/public/assets/img/blog_item_img.jpg" class="img-fluid" alt="...">
+                    </div>
+
+                    <!-- Heading -->
+                    <h2 class="section_blog-item_body__title text-center mb-0">The place to enjoy and dreams</h2>
+
+                    <!-- Info data -->
+                    <ul class="section_blog-item_body__info">
+                        <li><a href="#">24 Dec 2017</a></li>
+                        <li>/</li>
+                        <li><a href="#">Food</a></li>
+                        <li>/</li>
+                        <li><a href="#">by John Doe</a></li>
+                    </ul>
+
+                    <!-- Description -->
+                    <p class="section_blog-item_body__desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita ullam delectus harum assumenda velit unde illum eveniet magni, nobis iusto distinctio maxime. Mollitia vero nobis doloremque, officiis ab? Accusantium fugiat cum non, nobis numquam perspiciatis possimus optio amet necessitatibus, iste corrupti doloremque, nihil doloribus suscipit. Praesentium reiciendis veniam, porro deleniti? Odio placeat voluptatibus atque, aperiam.</p>
+                    <p class="section_blog-item_body__desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo dolorum, dignissimos sit id fugit blanditiis, numquam possimus accusamus obcaecati, aspernatur nobis ipsa itaque. Perferendis aperiam excepturi ipsa dolor mollitia numquam, dignissimos dicta explicabo, minima fugit aliquam! Asperiores minus, magni quis maxime at quam explicabo provident deserunt amet consequuntur, consequatur natus eum. Esse praesentium molestias repellat deleniti facilis mollitia quos rem nisi, dolorem animi architecto ea voluptates temporibus error sed saepe, natus ipsam assumenda perspiciatis. Sint deleniti ea consequuntur velit, quas earum aliquid quos cumque hic suscipit, neque molestias tempore itaque ratione dolore vitae enim aspernatur nihil dignissimos provident.</p>
+
+                </div> <!-- .section_blog-item_body -->
+
+            </div>
+
+        </div> <!-- / .row -->
+
+        <div class="row justify-content-center">
+
+            <div class="col-sm-12 col-md-10 col-lg-7">
+
+
+                <!-- Social icons -->
+                <ul class="social__list">
+                    <li><a href="https://twitter.com/simitsarayi"><i class="fab fa-twitter"></i></a></li>
+                    <li><a href="https://www.facebook.com/Simit-Sarayı-Baku-467592887378361/"><i class="fab fa-facebook-f"></i></a></li>
+                    <li><a href="https://www.instagram.com/simitsarayibaku/"><i class="fab fa-instagram"></i></a></li>
+                    <li><a href="https://foursquare.com/v/simit-sarayi-baku/56daab7d498e2749a6934f62"><i class="fab fa-foursquare"></i></a></li>
+                </ul> <!-- .social__list -->
+
+            </div>
+        </div> <!-- / .row -->
+
+        <div class="row justify-content-center">
+            <div class="col-sm-12 col-md-10 col-lg-7">
+
+                <div class="section_blog-item__comments">
+                    <h4 class="text-center">
+                        4 Comments
+                    </h4>
+
+                    <ul class="comments__list">
+                        <li class="comment">
+                            <div class="comment__avatar">
+                                <img src="~/public/assets/img/comment_img_1.jpg" class="img-fluid" alt="...">
+                            </div>
+                            <div class="comment__content">
+                                <h5 class="comment__user">
+                                    Robert Jones
+                                </h5>
+                                <div class="comment__date">
+                                    August 8, 2017 at 1:15 pm
+                                </div>
+                                <div class="comment__message">
+                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni dicta alias enim quasi sapiente saepe, repellat soluta commodi delectus doloribus, veniam odit hic ratione quae modi earum dolor dignissimos quas?
+                                </div>
+                                <div class="comment__reply">
+                                    <a href="#">Reply</a>
+                                </div>
+                            </div>
+                        </li> <!-- .comment -->
+                        <li class="comment">
+                            <div class="comment__avatar">
+                                <img src="~/public/assets/img/comment_img_2.jpg" class="img-fluid" alt="...">
+                            </div>
+                            <div class="comment__content">
+                                <h5 class="comment__user">
+                                    Jane Doe
+                                </h5>
+                                <div class="comment__date">
+                                    August 12, 2017 at 3:15 pm
+                                </div>
+                                <div class="comment__message">
+                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci iusto sapiente magnam, dolorum laudantium eius corporis odit deserunt aliquid architecto ut veniam cumque repudiandae commodi impedit tempore vitae modi voluptates amet aliquam.
+                                </div>
+                                <div class="comment__reply">
+                                    <a href="#">Reply</a>
+                                </div>
+                            </div>
+                        </li> <!-- .comment -->
+                        <li class="comment">
+                            <div class="comment__avatar">
+                                <img src="~/public/assets/img/comment_img_3.jpg" class="img-fluid" alt="...">
+                            </div>
+                            <div class="comment__content">
+                                <h5 class="comment__user">
+                                    Robert Jones
+                                </h5>
+                                <div class="comment__date">
+                                    October 8, 2017 at 11:42 am
+                                </div>
+                                <div class="comment__message">
+                                    Sint nisi quod culpa animi sit a voluptas quia, dolor qui eius esse itaque velit quasi quibusdam, modi nesciunt facere harum! Error adipisci nesciunt praesentium! Dolorum magni dolorem adipisci vitae, culpa praesentium inventore.
+                                </div>
+                                <div class="comment__reply">
+                                    <a href="#">Reply</a>
+                                </div>
+                            </div>
+                        </li> <!-- .comment -->
+                        <li class="comment">
+                            <div class="comment__avatar">
+                                <img src="~/public/assets/img/comment_img_4.jpg" class="img-fluid" alt="...">
+                            </div>
+                            <div class="comment__content">
+                                <h5 class="comment__user">
+                                    Jessica Border
+                                </h5>
+                                <div class="comment__date">
+                                    October 14, 2017 at 11:10 am
+                                </div>
+                                <div class="comment__message">
+                                    placeat eaque quaerat distinctio voluptatibus modi. Asperiores fugiat deleniti praesentium enim incidunt quaerat cupiditate repellendus and reprehend.
+                                </div>
+                                <div class="comment__reply">
+                                    <a href="#">Cavab</a>
+                                </div>
+                            </div>
+                        </li> <!-- .comment -->
+                    </ul> <!-- .comments__list -->
+                </div> <!-- .comments -->
+            </div>
+        </div> <!-- / .row -->
+
+        <div class="row justify-content-center">
+            <div class="col-sm-12 col-md-10 col-lg-7">
+
+                <h4 class="text-center">
+                    Şərh yaz
+                </h4>
+
+                <!-- Form -->
+                <form class="comments__form">
+
+                    <div class="form-group">
+                        <label for="name" class="sr-only">Name (Required)</label>
+                        <input type="text" name="name" class="form-control" id="name" placeholder="Adını, Soyadını daxil et">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email" class="sr-only">Email address (Required)</label>
+                        <input type="email" name="email" class="form-control" id="email" placeholder="Elektron poçt ünvanını yaz">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="message" class="sr-only">Message (Required)</label>
+                        <textarea name="message" class="form-control" rows="6" id="message" placeholder="Mesajını daxil et"></textarea>
+                        <span class="help-block"></span>
+                    </div>
+
+                    <button type="submit" class="btn btn-accent">
+                        Mesaj göndər
+                    </button>
+                </form>
+            </div>
+        </div> <!-- / .row -->
+
+        <div class="row text-center">
+            <div class="col">
+
+                <a href="@Url.Action("Blog","Home")" class="btn animsition-link">
+                    <h4 class="mb-0 mt-5">Xəbər listinə geri dön</h4>
+                </a>
+
+            </div>
+        </div> <!-- / .row -->
+
+    </div> <!-- .container -->
+
+</section> <!-- .section_blog-item -->
+@section MainJs{
+
+    <!-- JS Plugins -->
+    <script src="~/Public/assets/plugins/iziModal/js/iziModal.min.js"></script>
+    <script src="~/Public/assets/plugins/reservation/reservation.js"></script>
+    <script src="~/Public/assets/plugins/alerts/alerts.js"></script>
+    <script src="~/Public/assets/plugins/animsition/dist/js/animsition.min.js"></script>
+
+    <!-- JS Custom -->
+    <!-- build:js assets/js/theme.min.js -->
+    <script src="~/Public/assets/js/theme.js"></script>
+    <!-- endbuild -->
+    <script src="~/Public/assets/js/custom.js"></script>
+
+    <!-- Google maps -->
+}

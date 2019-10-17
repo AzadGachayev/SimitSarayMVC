@@ -17,10 +17,6 @@
 
         <span class="navbar-text order-2 order-sm-first">Mərdanov Qardaşları küçəsi 15A (Tarqovıy) </span>
 
-        <!-- Navbar: Brand -->
-        <a href="simit.html" class="navbar-brand animsition-link mr-0 order-first order-md-2">
-            <img src="~/public/uploads/logoS.png">
-        </a>
 
         <a class="nav-link order-12" data-izimodal-open="#modal" data-izimodal-transitionin="fadeInRight" href="#">Rezervasiya</a>
 
@@ -157,12 +153,12 @@
 
                 <!-- Navigation -->
                 <nav class="nav nav_links d-flex" >
-                    <a class="nav-link animsition-link" href="simit.html">Əsas səhifə</a>
-                    <a class="nav-link animsition-link" href="about.html">Haqqımızda</a>
-                    <a class="nav-link animsition-link" href="menu.html">Menyu</a>
-                    <a class="nav-link animsition-link active" href="blog.html">Blog</a>
-                    <a class="nav-link animsition-link" href="gallery.html">Qalereya</a>
-                    <a class="nav-link animsition-link" href="contact.html">Əlaqə</a>
+                    <a class="nav-link animsition-link" href="@Url.Action("Index","Home")">Əsas səhifə</a>
+                    <a class="nav-link animsition-link" href="@Url.Action("About","Home")">Haqqımızda</a>
+                    <a class="nav-link animsition-link active" href="@Url.Action("Menyu","Home")">Menyu</a>
+                    <a class="nav-link animsition-link" href="@Url.Action("Blog","Home")">Blog</a>
+                    <a class="nav-link animsition-link" href="@Url.Action("Gallery","Home")">Qalereya</a>
+                    <a class="nav-link animsition-link" href="@Url.Action("Contact","Home")">Əlaqə</a>
                 </nav>
 
                 <!-- Heading -->

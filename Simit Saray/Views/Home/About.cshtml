@@ -1,0 +1,304 @@
+﻿
+@{
+    ViewBag.Title = "About";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@section MainCss{
+    <link rel="stylesheet" href="~/Public/assets/plugins/iziModal/css/iziModal.min.css">
+    <link rel="stylesheet" href="~/Public/assets/plugins/animsition/dist/css/animsition.min.css">
+    <link href="~/public/assets/plugins/flickity/flickity.min.css" rel="stylesheet">
+
+    <!-- CSS Global -->
+    <!-- build:css assets/css/theme.min.css -->
+    <link rel="stylesheet" href="~/Public/css/theme.css">
+
+}
+
+<!-- NAVBAR
+       ================================================== -->
+<nav class="navbar navbar-light">
+
+    <div class="container">
+
+        <span class="navbar-text order-2 order-sm-first">Mərdanov Qardaşları küçəsi 15A (Tarqovıy)</span>
+
+        <a class="nav-link order-12" data-izimodal-open="#modal" data-izimodal-transitionin="fadeInRight" href="#">Rezervasiya</a>
+
+    </div> <!-- / .container -->
+
+</nav>
+
+<!-- MODAL RESERVATION
+================================================== -->
+
+<div id="modal" class="iziModal mainPage">
+    <div class="container">
+
+        <div class="row text-right">
+            <div class="col">
+
+                <a class="btn mt-3" href="#" data-izimodal-close="" data-izimodal-transitionout="fadeOutRight">
+                    Bağla
+                </a>
+
+            </div>
+        </div> <!-- / .row -->
+
+        <div class="row text-center">
+            <div class="col">
+
+                <h2 class="mb-0">Rezervasiya</h2>
+
+            </div>
+        </div> <!-- / .row -->
+        <!-- Form -->
+        <form class="reservation__form" id="reservation__form">
+            <div class="row align-items-center justify-content-center">
+                <div class="col-md-5">
+
+                    <div class="form-groug">
+                        <label class="sr-only" for="reservation__name">Full name</label>
+                        <input type="text" class="form-control" id="reservation__name" name="reservation__name" placeholder="Ad Soyad">
+                        <div class="invalid-feedback"></div>
+                    </div>
+                    <div class="form-group">
+                        <label class="sr-only" for="reservation__phone">Phone number</label>
+                        <input type="tel" class="form-control" id="reservation__phone" name="reservation__phone" placeholder="Telefon nömrəsi">
+                        <div class="invalid-feedback"></div>
+                    </div>
+                    <div class="form-group">
+                        <label class="sr-only" for="reservation__email">E-mail address</label>
+                        <input type="email" class="form-control" id="reservation__email" name="reservation__email" placeholder="Elektron poçt ünvanı">
+                        <div class="invalid-feedback"></div>
+                    </div>
+                </div>
+                <div class="col-md-5">
+
+                    <div class="form-group">
+                        <label class="sr-only" for="reservation__people">People</label>
+                        <select class="form-control" id="reservation__people" name="reservation__people">
+                            <option value="1">1 nəfər</option>
+                            <option value="2" selected="">2 nəfər</option>
+                            <option value="3">3 nəfər</option>
+                            <option value="4">4 nəfər</option>
+                            <option value="5">5 nəfər</option>
+                        </select>
+                        <div class="invalid-feedback"></div>
+                    </div>
+                    <div class="form-group">
+                        <label class="sr-only" for="reservation__date">Date</label>
+                        <input type="date" class="form-control" id="reservation__date" name="reservation__date" value="2017-12-31">
+                        <div class="invalid-feedback"></div>
+                    </div>
+                    <div class="form-group">
+                        <label class="sr-only" for="reservation__time">Time</label>
+                        <input type="time" class="form-control" id="reservation__time" name="reservation__time" value="18:00">
+                        <div class="invalid-feedback"></div>
+                    </div>
+
+                </div>
+
+                <div class="w-100"></div>
+
+                <div class="col">
+
+                    <div class="text-center">
+                        <button type="submit" class="btn">
+                            Masa sifariş et
+                        </button>
+                    </div>
+
+                </div>
+            </div> <!-- / .row -->
+        </form>
+
+        <div class="row text-center">
+            <div class="col">
+
+                <div class="modal_info__item">
+                    <h4>İş Vaxtı</h4>
+                    <p>Həftənin bütün günləri</p>
+                    <p>08:00 - 01:00</p>
+                </div>
+
+                <div class="modal_info__item">
+                    <h4>Simit Saray sosialda</h4>
+
+                    <!-- Social icons -->
+                    <ul class="social__list">
+                        <li><a href="https://twitter.com/simitsarayi"><i class="fab fa-twitter"></i></a></li>
+                        <li><a href="https://www.facebook.com/Simit-Sarayı-Baku-467592887378361/"><i class="fab fa-facebook-f"></i></a></li>
+                        <li><a href="https://www.instagram.com/simitsarayibaku/"><i class="fab fa-instagram"></i></a></li>
+                        <li><a href="https://foursquare.com/v/simit-sarayi-baku/56daab7d498e2749a6934f62"><i class="fab fa-foursquare"></i></a></li>
+                    </ul> <!-- .social__list -->
+                </div>
+
+            </div>
+        </div> <!-- / .row -->
+
+    </div> <!-- / .container -->
+
+</div> <!-- #modal -->
+<!-- ABOUT
+================================================== -->
+<section class="section section_about">
+
+    <div class="container">
+
+        <div class="row justify-content-between pb-5">
+
+            <div class="col-sm-12 col-md-5 order-2 order-sm-first">
+                <div class="section_about__img">
+                    <img src="~/public/assets/img/about_img.jpg" class="img-fluid" alt="...">
+                </div>
+            </div>
+
+            <div class="col-sm-12 col-md-7 col-lg-7 col-xl-6 order-first order-sm-2">
+
+                <!-- Navigation -->
+                <nav class="nav nav_links d-flex">
+                    <a class="nav-link animsition-link" href="@Url.Action("Index","Home")">Əsas səhifə</a>
+                    <a class="nav-link animsition-link active" href="@Url.Action("About","Home")">Haqqımızda</a>
+                    <a class="nav-link animsition-link" href="@Url.Action("Menyu","Home")">Menyu</a>
+                    <a class="nav-link animsition-link" href="@Url.Action("Blog","Home")">Blog</a>
+                    <a class="nav-link animsition-link" href="@Url.Action("Gallery","Home")">Qalereya</a>
+                    <a class="nav-link animsition-link" href="@Url.Action("Contact","Home")">Əlaqə</a>
+                </nav>
+
+                <!-- Heading -->
+                <h1 class="section__heading">Hekayəmiz</h1>
+
+                <!-- Info -->
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda sequi temporibus accusamus unde tempore dolorum explicabo quam, fugiat necessitatibus quaerat, dolorem, inventore officiis dicta accusantium totam nostrum eius molestias, adipisci commodi eos dolores nobis est voluptatibus.</p>
+
+                <h4 class="mb-0">2007</h4>
+                <p>Nesciunt totam velit, dolore enim adipisci animi! Illum facilis ex ratione inventore sit iusto fuga unde quam, quaerat in, eveniet pariatur cupiditate.</p>
+
+                <h4 class="mb-0">2012</h4>
+                <p>
+                    Ut enim ad minim veniam,
+                    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                    consequat. Duis aute irure dolor in reprehen.
+                </p>
+
+                <h4 class="mb-0">2016</h4>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam quod, repudiandae voluptatem facere. Iure eius est delectus ipsa cupiditate consequatur nisi consectetur dolorem debitis similique.</p>
+
+
+            </div>
+        </div> <!-- / .row -->
+
+        <div class="row justify-content-between pt-5">
+
+            <div class="col-sm-12 col-md-6 col-lg-6 col-xl-5">
+
+                <!-- Heading -->
+                <h1 class="section__heading">We take care that in <span>Entrey's</span> every guest feels like at home</h1>
+
+                <!-- Info -->
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda sequi temporibus accusamus unde tempore dolorum explicabo quam, fugiat necessitatibus quaerat, dolorem, inventore officiis dicta accusantium totam nostrum eius molestias, adipisci commodi eos dolores nobis est voluptatibus.</p>
+
+                <p class="text-italic">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae ab nobis cupiditate odit repudiandae maiores in autem voluptate.</p>
+
+                <!-- Devider Line -->
+                <div class="divider_line"></div>
+
+                <h4 class="mb-1">İş Vaxtı</h4>
+                <p class="mb-0">Həftənin bütün günləri</p>
+                <p class="mb-0">08:00 - 01:00</p>
+
+            </div>
+
+            <div class="col-sm-12 col-md-6">
+                <div class="section_about__img">
+                    <img src="~/public/assets/img/about_img_2.jpg" class="img-fluid" alt="...">
+                </div>
+            </div>
+
+        </div> <!-- / .row -->
+
+    </div> <!-- .container -->
+
+</section> <!-- .section_about -->
+<!-- TESTIMONIALS
+================================================== -->
+<section class="section section_testimonials">
+
+    <div class="container">
+
+        <div class="row justify-content-center text-center pb-5">
+
+            <div class="col-xs-12 col-sm-12 col-md-8">
+
+                <!-- Title -->
+                <h2 class="section_testimonials_title">Testimonials</h2>
+
+                <div class="section_testimonials_carousel">
+
+                    <div class="section_testimonials_carousel_item">
+
+                        <!-- Text -->
+                        <p class="section_testimonials_text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda sequi temporibus accusamus unde tempore dolorum explicabo quam, fugiat necessitatibus quaerat, dolorem, inventore officiis dicta accusantium totam nostrum eius molestias.</p>
+
+                        <!-- Author -->
+                        <p class="section_testimonials_author text-italic">
+                            Johnatan Doe
+                        </p>
+
+                    </div> <!-- .section_testimonials_item -->
+
+                    <div class="section_testimonials_carousel_item">
+
+                        <!-- Text -->
+                        <p class="section_testimonials_text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda sequi temporibus accusamus unde tempore dolorum explicabo quam, fugiat necessitatibus quaerat, dolorem, inventore officiis dicta accusantium totam nostrum eius molestias.</p>
+
+                        <!-- Author -->
+                        <p class="section_testimonials_author text-italic">
+                            Johnatan Doe
+                        </p>
+
+                    </div> <!-- .section_testimonials_item -->
+
+                    <div class="section_testimonials_carousel_item">
+
+                        <!-- Text -->
+                        <p class="section_testimonials_text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda sequi temporibus accusamus unde tempore dolorum explicabo quam, fugiat necessitatibus quaerat, dolorem, inventore officiis dicta accusantium totam nostrum eius molestias.</p>
+
+                        <!-- Author -->
+                        <p class="section_testimonials_author text-italic">
+                            Johnatan Doe
+                        </p>
+
+                    </div> <!-- .section_testimonials_item -->
+
+                </div>
+
+            </div>
+
+        </div> <!-- / .row -->
+
+    </div> <!-- .container -->
+
+</section> <!-- .section_testimonials -->
+@section MainJs{
+
+    <!-- JS Plugins -->
+    <script src="~/Public/assets/plugins/iziModal/js/iziModal.min.js"></script>
+    <script src="~/Public/assets/plugins/reservation/reservation.js"></script>
+    <script src="~/Public/assets/plugins/alerts/alerts.js"></script>
+    <script src="~/Public/assets/plugins/animsition/dist/js/animsition.min.js"></script>
+    <script src="~/public/assets/plugins/contact/contact.js"></script>
+    <script src="~/public/assets/plugins/flickity/flickity.pkgd.min.js"></script>
+
+
+
+    <!-- JS Custom -->
+    <!-- build:js assets/js/theme.min.js -->
+    <script src="~/Public/assets/js/theme.js"></script>
+    <script src="~/public/assets/js/google_maps.js"></script>
+
+    <!-- endbuild -->
+    <script src="~/Public/assets/js/custom.js"></script>
+
+    <!-- Google maps -->
+}
