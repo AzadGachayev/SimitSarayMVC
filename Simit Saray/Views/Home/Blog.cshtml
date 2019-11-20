@@ -1,6 +1,8 @@
 ﻿@{
     ViewBag.Title = "Blog";
 }
+@using Simit_Saray.ViewModels
+@model DefaultViewModel
 @section MainCss{
     <link rel="stylesheet" href="~/Public/assets/plugins/iziModal/css/iziModal.min.css">
     <link rel="stylesheet" href="~/Public/assets/plugins/animsition/dist/css/animsition.min.css">
@@ -15,7 +17,7 @@
 
     <div class="container">
 
-        <span class="navbar-text order-2 order-sm-first">Mərdanov Qardaşları küçəsi 15A (Tarqovıy) </span>
+        <span class="navbar-text order-2 order-sm-first"> </span>
 
 
         <a class="nav-link order-12" data-izimodal-open="#modal" data-izimodal-transitionin="fadeInRight" href="#">Rezervasiya</a>
@@ -48,65 +50,7 @@
             </div>
         </div> <!-- / .row -->
         <!-- Form -->
-        <form class="reservation__form" id="reservation__form">
-            <div class="row align-items-center justify-content-center">
-                <div class="col-md-5">
-
-                    <div class="form-groug">
-                        <label class="sr-only" for="reservation__name">Full name</label>
-                        <input type="text" class="form-control" id="reservation__name" name="reservation__name" placeholder="Ad Soyad">
-                        <div class="invalid-feedback"></div>
-                    </div>
-                    <div class="form-group">
-                        <label class="sr-only" for="reservation__phone">Phone number</label>
-                        <input type="tel" class="form-control" id="reservation__phone" name="reservation__phone" placeholder="Telefon nömrəsi">
-                        <div class="invalid-feedback"></div>
-                    </div>
-                    <div class="form-group">
-                        <label class="sr-only" for="reservation__email">E-mail address</label>
-                        <input type="email" class="form-control" id="reservation__email" name="reservation__email" placeholder="Elektron poçt ünvanı">
-                        <div class="invalid-feedback"></div>
-                    </div>
-                </div>
-                <div class="col-md-5">
-
-                    <div class="form-group">
-                        <label class="sr-only" for="reservation__people">People</label>
-                        <select class="form-control" id="reservation__people" name="reservation__people">
-                            <option value="1">1 nəfər</option>
-                            <option value="2" selected="">2 nəfər</option>
-                            <option value="3">3 nəfər</option>
-                            <option value="4">4 nəfər</option>
-                            <option value="5">5 nəfər</option>
-                        </select>
-                        <div class="invalid-feedback"></div>
-                    </div>
-                    <div class="form-group">
-                        <label class="sr-only" for="reservation__date">Date</label>
-                        <input type="date" class="form-control" id="reservation__date" name="reservation__date" value="2017-12-31">
-                        <div class="invalid-feedback"></div>
-                    </div>
-                    <div class="form-group">
-                        <label class="sr-only" for="reservation__time">Time</label>
-                        <input type="time" class="form-control" id="reservation__time" name="reservation__time" value="18:00">
-                        <div class="invalid-feedback"></div>
-                    </div>
-
-                </div>
-
-                <div class="w-100"></div>
-
-                <div class="col">
-
-                    <div class="text-center">
-                        <button type="submit" class="btn">
-                            Masa sifariş et
-                        </button>
-                    </div>
-
-                </div>
-            </div> <!-- / .row -->
-        </form>
+       @Html.Partial("Reservation")
 
         <div class="row text-center">
             <div class="col">
@@ -133,7 +77,7 @@
         </div> <!-- / .row -->
 
     </div> <!-- / .container -->
-
+    
 </div> <!-- #modal -->
 <!-- BLOG
 ================================================== -->
@@ -144,7 +88,8 @@
 
             <div class="col-sm-12 col-md-5 order-2 order-sm-first">
                 <div class="section_blog__img">
-                    <img src="~/public/assets/img/blog_img.jpg" class="img-fluid" alt="...">
+
+                    <img style="height:100%; object-fit:cover;" src="~/Public/Uploads/" class="img-fluid" alt="...">
                 </div>
             </div>
 
@@ -159,76 +104,43 @@
                     <a class="nav-link animsition-link" href="@Url.Action("Contact","Home")">Əlaqə</a>
                 </nav>
                 <!-- Heading -->
-                <h1 class="section__heading">Latest News</h1>
+                <h1 class="section__heading">Ən Son Yeniliklər</h1>
 
                 <!-- blog list -->
-                <div class="section_blog__item">
+                @foreach (var item in Model.BloqSehife)
+                {
+                    <div class="section_blog__item">
 
-                    <ul class="blog_info">
-                        <li><a href="#">24 Dec 2017</a></li>
-                        <li>/</li>
-                        <li><a href="#">Food</a></li>
-                        <li>/</li>
-                        <li><a href="#">by John Doe</a></li>
-                    </ul>
+                        <ul class="blog_info">
+                            <li><a href="#">@item.CreateDate.ToString("MMMM dd, yyyy")</a></li>
+                            <li>/</li>
+                            <li><a href="#">Food</a></li>
+                            <li>/</li>
+                            <li><a href="#">@item.AuthorName</a></li>
+                        </ul>
 
-                    <a href="@Url.Action("BlogItem","Home")" class="blog_title animsition-link">
-                        <h4 data-hover="Lorem ipsum dolor sit amet">Lorem ipsum dolor sit amet</h4>
-                    </a>
+                        <a href="@Url.Action("BlogItem","Home",new { id=item.ID})" class="blog_title animsition-link">
+                            <h4 data-hover="@item.Header">@item.Header</h4>
+                        </a>
+                        
+                        <p class="blog_desc">
+                            @if (item.Description.Length > 150)
+                            {
+                                @item.Description.Substring(0, 150) <a href="@Url.Action("BlogItem","Home",new { id=item.ID})">[...]</a>
 
-                    <p class="blog_desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni voluptate natus facere atque amet nostrum aliquam.</p>
-                </div> <!-- .section_blog__item -->
+                            }
+                            else
+                            {
+                                @item.Description
 
-                <div class="section_blog__item">
+                            }
 
-                    <ul class="blog_info">
-                        <li><a href="#">24 Dec 2017</a></li>
-                        <li>/</li>
-                        <li><a href="#">Food</a></li>
-                        <li>/</li>
-                        <li><a href="#">by John Doe</a></li>
-                    </ul>
+                        </p>
+                    </div> <!-- .section_blog__item -->
+                }
 
-                    <a href="@Url.Action("BlogItem","Home")" class="blog_title animsition-link">
-                        <h4 data-hover="Lorem ipsum dolor sit amet">Lorem ipsum dolor sit amet</h4>
-                    </a>
 
-                    <p class="blog_desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni voluptate natus facere atque amet nostrum aliquam.</p>
-                </div> <!-- .section_blog__item -->
-
-                <div class="section_blog__item">
-
-                    <ul class="blog_info">
-                        <li><a href="#">24 Dec 2017</a></li>
-                        <li>/</li>
-                        <li><a href="#">Food</a></li>
-                        <li>/</li>
-                        <li><a href="#">by John Doe</a></li>
-                    </ul>
-
-                    <a href="@Url.Action("BlogItem","Home")" class="blog_title animsition-link">
-                        <h4 data-hover="Lorem ipsum dolor sit amet">Lorem ipsum dolor sit amet</h4>
-                    </a>
-
-                    <p class="blog_desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni voluptate natus facere atque amet nostrum aliquam.</p>
-                </div> <!-- .section_blog__item -->
-
-                <div class="section_blog__item">
-
-                    <ul class="blog_info">
-                        <li><a href="#">24 Dec 2017</a></li>
-                        <li>/</li>
-                        <li><a href="#">Food</a></li>
-                        <li>/</li>
-                        <li><a href="#">by John Doe</a></li>
-                    </ul>
-
-                    <a href="@Url.Action("BlogItem","Home")" class="blog_title animsition-link">
-                        <h4 data-hover="Lorem ipsum dolor sit amet">Lorem ipsum dolor sit amet</h4>
-                    </a>
-
-                    <p class="blog_desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni voluptate natus facere atque amet nostrum aliquam.</p>
-                </div> <!-- .section_blog__item -->
+     
 
 
             </div>

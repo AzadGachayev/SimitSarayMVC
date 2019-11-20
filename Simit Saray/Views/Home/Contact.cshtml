@@ -3,6 +3,8 @@
     ViewBag.Title = "Contact";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
+@using Simit_Saray.ViewModels
+@model DefaultViewModel
 @section MainCss{
     <link rel="stylesheet" href="~/Public/assets/plugins/iziModal/css/iziModal.min.css">
     <link rel="stylesheet" href="~/Public/assets/plugins/animsition/dist/css/animsition.min.css">
@@ -20,7 +22,7 @@
 
     <div class="container">
 
-        <span class="navbar-text order-2 order-sm-first">Mərdanov Qardaşları küçəsi 15A (Tarqovıy)</span>
+        <span class="navbar-text order-2 order-sm-first"></span>
 
       
         <a class="nav-link order-12" data-izimodal-open="#modal" data-izimodal-transitionin="fadeInRight" href="#">Rezervasiya</a>
@@ -52,8 +54,10 @@
 
             </div>
         </div> <!-- / .row -->
+
+    @Html.Partial("Reservation")
         <!-- Form -->
-        <form class="reservation__form" id="reservation__form">
+        @*<form class="reservation__form" id="reservation__form">
             <div class="row align-items-center justify-content-center">
                 <div class="col-md-5">
 
@@ -110,8 +114,8 @@
                     </div>
 
                 </div>
-            </div> <!-- / .row -->
-        </form>
+            </div>*@ <!-- / .row -->
+        @*</form>*@
 
         <div class="row text-center">
             <div class="col">
@@ -148,9 +152,123 @@
         <div class="row justify-content-between mb-5">
 
             <div class="col-sm-12 col-md-6 col-lg-5 order-2 order-sm-first">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d379.9515667175205!2d49.839936764481955!3d40.37311500285256!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40307db02096a42f%3A0x4f6276f326db430b!2sSimit%20Saray%C4%B1!5e0!3m2!1saz!2s!4v1570579189676!5m2!1saz!2s" width="100%" height="100%" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
-                <div id="map"></div>
 
+                <div data-map="@Model.Kontakt.Map" id="map"></div>
+                <script>
+                    var map;
+                    var mapElement = document.getElementById("map")
+                    function initMap() {
+                        var locationMap = mapElement.getAttribute("data-map")
+                        var settingsMap = locationMap.split(",")
+                        var latMap = Number(settingsMap[0])
+                        var lngMap = Number(settingsMap[1])
+                        var academy = { lat: latMap, lng: lngMap }
+                        map = new google.maps.Map(document.getElementById('map'), {
+                            center: academy,
+                            zoom: 18,
+                            styles: [
+            {elementType: 'geometry', stylers: [{color: '#242f3e'}]},
+            {elementType: 'labels.text.stroke', stylers: [{color: '#242f3e'}]},
+            {elementType: 'labels.text.fill', stylers: [{color: '#746855'}]},
+            {
+              featureType: 'administrative.locality',
+              elementType: 'labels.text.fill',
+              stylers: [{color: '#d59563'}]
+            },
+            {
+              featureType: 'poi',
+              elementType: 'labels.text.fill',
+              stylers: [{color: '#d59563'}]
+            },
+            {
+              featureType: 'poi.park',
+              elementType: 'geometry',
+              stylers: [{color: '#263c3f'}]
+            },
+            {
+              featureType: 'poi.park',
+              elementType: 'labels.text.fill',
+              stylers: [{color: '#6b9a76'}]
+            },
+            {
+              featureType: 'road',
+              elementType: 'geometry',
+              stylers: [{color: '#38414e'}]
+            },
+            {
+              featureType: 'road',
+              elementType: 'geometry.stroke',
+              stylers: [{color: '#212a37'}]
+            },
+            {
+              featureType: 'road',
+              elementType: 'labels.text.fill',
+              stylers: [{color: '#9ca5b3'}]
+            },
+            {
+              featureType: 'road.highway',
+              elementType: 'geometry',
+              stylers: [{color: '#746855'}]
+            },
+            {
+              featureType: 'road.highway',
+              elementType: 'geometry.stroke',
+              stylers: [{color: '#1f2835'}]
+            },
+            {
+              featureType: 'road.highway',
+              elementType: 'labels.text.fill',
+              stylers: [{color: '#f3d19c'}]
+            },
+            {
+              featureType: 'transit',
+              elementType: 'geometry',
+              stylers: [{color: '#2f3948'}]
+            },
+            {
+              featureType: 'transit.station',
+              elementType: 'labels.text.fill',
+              stylers: [{color: '#d59563'}]
+            },
+            {
+              featureType: 'water',
+              elementType: 'geometry',
+              stylers: [{color: '#17263c'}]
+            },
+            {
+              featureType: 'water',
+              elementType: 'labels.text.fill',
+              stylers: [{color: '#515c6d'}]
+            },
+            {
+              featureType: 'water',
+              elementType: 'labels.text.stroke',
+              stylers: [{color: '#17263c'}]
+            }
+          ],
+                        });
+                        var marker = new google.maps.Marker({
+                            position: academy,
+                            map: map,
+                                draggable:true
+
+                        })
+                        var contentString = "<div id='content'><h1>Simit Sarayı</h1>"+
+                            "<p>Xoş gəlmisiniz! <a target='_blank' href='http://localhost:50236/Home/Contact'> Əlaqə: +994 55 254 29 32</a>"+
+                            "</div > "
+                          var infowindow = new google.maps.InfoWindow({
+                         content: contentString
+                         });
+                      marker.addListener('click', function() {
+                             infowindow.open(map, marker);
+                        });
+                    }
+
+                    
+
+                </script>
+                <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAPm-ZQUNuMNmZ9DfSXn9fhGFVKQI1lpoQ&callback=initMap"
+                        async defer></script>
             </div>
 
             <div class="col-sm-12 col-md-6 order-first order-sm-2">
@@ -170,26 +288,25 @@
 
                 <!-- Subheading -->
                 <p>
-                    Restoranımızda vaxt keçirmək istəsəniz,
-                    bizimlə istədiyiniz vaxt əlaqə saxlaya bilərsiniz.
+                    @Model.Kontakt.Contact1
                 </p>
 
                 <!-- Info -->
-                <div class="section_contact__item">
+                <div class="section_contact__item col-md-7 p-0">
                     <h4 class="mb-0">Ünvan</h4>
-                    <p class="mb-0">Mərdanov Qardaşları 15A (Tarqovıy) <br> 1 nömrəli məktəbin yanı, <br> Şaurma N1 ilə üzbəüz.</p>
+                    <p class="mb-0">@Model.Kontakt.Adress</p>
                 </div> <!-- .section_contact__item -->
 
                 <div class="section_contact__item">
                     <h4 class="mb-0">Telefon</h4>
-                    <p class="mb-0">+994 55 254 29 32</p>
-                    <p class="mb-0">+994 12 597 05 75</p>
+                    <p class="mb-0">@Model.Kontakt.Phone</p>
+                    <p class="mb-0">@Model.Kontakt.Phone2</p>
                 </div> <!-- .section_contact__item -->
 
                 <div class="section_contact__item">
                     <h4 class="mb-0">Email</h4>
-                    <p class="mb-0">azad.gachayev@gmail.com</p>
-                    <p class="mb-0"></p>
+                    <p class="mb-0">@Model.Kontakt.Email</p>
+                    <p class="mb-0">@Model.Kontakt.Email2</p>
                 </div> <!-- .section_contact__item -->
 
                 <div class="section_contact__item">

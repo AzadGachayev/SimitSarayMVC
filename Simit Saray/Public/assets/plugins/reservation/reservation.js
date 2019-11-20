@@ -17,7 +17,7 @@ $(document).on('opening', '#modal', function() {
 		var formDate = 		form.find('#reservation__date');
 		var formTime = 		form.find('#reservation__time');
 		var formSubmit = 	form.find('[type="submit"]');
-		var formActionUrl = 'assets/plugins/reservation/reservation.php';
+        var formActionUrl = 'http://localhost:50236/Home/Reservation';
 
 		// Methods
 		function getCurrentDate() {
@@ -39,8 +39,8 @@ $(document).on('opening', '#modal', function() {
 			var today = getCurrentDate();
 			formDate.attr('value', today);
 		}
-		function submitForm($this) {
-
+        function submitForm($this) {
+            console.log($this.serialize())
 			$.ajax({
 				url: formActionUrl,
 				type: 'POST',
@@ -72,8 +72,8 @@ $(document).on('opening', '#modal', function() {
 						if ( json.error.name ) {
 							showError(formName, json.error.name);
 						}
-						if ( json.error.phone ) {
-							showError(formPhone, json.error.phone);
+                        if (json.error.phone) {
+                            showError(formPhone, json.error.message);
 						}
 						if ( json.error.email ) {
 							showError(formEmail, json.error.email);
@@ -94,7 +94,7 @@ $(document).on('opening', '#modal', function() {
 
 						// Show alert message
 						$(document).trigger('entreys.alert.show', ['success', json.success]);
-
+    
 						// Reset form fields
 						form[0].reset();
 					}

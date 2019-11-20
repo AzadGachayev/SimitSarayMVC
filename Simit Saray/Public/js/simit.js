@@ -11,7 +11,8 @@
 		items: 1,
 		margin: 30,
 		autoplay: true,
-		smartSpeed: 300,
+        smartSpeed: 300,
+
 		responsive: {
 			0: {
 				items: 1,

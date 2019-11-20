@@ -1,0 +1,178 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="SSarayModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="About">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Header" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="Photo" Type="String" MaxLength="800" FixedLength="false" Unicode="true" />
+    <Property Name="Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="WorkTime" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="Admin">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Email" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Password" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="BlogItem">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Photo" Type="String" MaxLength="800" FixedLength="false" Unicode="true" />
+    <Property Name="Header" Type="String" MaxLength="500" FixedLength="true" Unicode="true" />
+    <Property Name="Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="CreateDate" Type="DateTime" />
+    <Property Name="AuthorName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="Contact">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Adress" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Contact1" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Phone" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Phone2" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Email" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Email2" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Worktime" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Map" Type="String" MaxLength="300" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="Gallery">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Header" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Photo" Type="String" MaxLength="800" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="Gallery2">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Photo" Type="String" MaxLength="800" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="HomeHeader">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Head" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Description" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="Logo" Type="String" MaxLength="800" FixedLength="false" Unicode="true" />
+    <Property Name="BackgroundImage" Type="String" MaxLength="800" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="HomeNavbar">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="BackgroundImage" Type="String" MaxLength="800" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="MenuCategory">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CategoryName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="CategoryPhoto" Type="String" MaxLength="600" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Menyu" Relationship="Self.FK_Menyu_MenuCategory" FromRole="MenuCategory" ToRole="Menyu" />
+  </EntityType>
+  <EntityType Name="Menyu">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Price" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="Ingridient" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="Photo" Type="String" MaxLength="800" FixedLength="false" Unicode="true" />
+    <Property Name="CategoryID" Type="Int32" />
+    <NavigationProperty Name="MenuCategory" Relationship="Self.FK_Menyu_MenuCategory" FromRole="Menyu" ToRole="MenuCategory" />
+  </EntityType>
+  <EntityType Name="Profil">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="FullName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Phone" Type="String" MaxLength="22" FixedLength="false" Unicode="true" />
+    <Property Name="Email" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Reservation" Relationship="Self.FK_Reservation_Profil" FromRole="Profil" ToRole="Reservation" />
+  </EntityType>
+  <EntityType Name="Reservation">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="UserID" Type="Int32" />
+    <Property Name="Amount" Type="Int32" />
+    <Property Name="ComeDate" Type="DateTime" />
+    <NavigationProperty Name="Profil" Relationship="Self.FK_Reservation_Profil" FromRole="Reservation" ToRole="Profil" />
+  </EntityType>
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="principal_id" Type="Int32" Nullable="false" />
+    <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="version" Type="Int32" />
+    <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+  </EntityType>
+  <Association Name="FK_Menyu_MenuCategory">
+    <End Role="MenuCategory" Type="Self.MenuCategory" Multiplicity="0..1" />
+    <End Role="Menyu" Type="Self.Menyu" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="MenuCategory">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Menyu">
+        <PropertyRef Name="CategoryID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Reservation_Profil">
+    <End Role="Profil" Type="Self.Profil" Multiplicity="0..1" />
+    <End Role="Reservation" Type="Self.Reservation" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Profil">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Reservation">
+        <PropertyRef Name="UserID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="SimitDB" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="About" EntityType="Self.About" />
+    <EntitySet Name="Admin" EntityType="Self.Admin" />
+    <EntitySet Name="BlogItem" EntityType="Self.BlogItem" />
+    <EntitySet Name="Contact" EntityType="Self.Contact" />
+    <EntitySet Name="Gallery" EntityType="Self.Gallery" />
+    <EntitySet Name="Gallery2" EntityType="Self.Gallery2" />
+    <EntitySet Name="HomeHeader" EntityType="Self.HomeHeader" />
+    <EntitySet Name="HomeNavbar" EntityType="Self.HomeNavbar" />
+    <EntitySet Name="MenuCategory" EntityType="Self.MenuCategory" />
+    <EntitySet Name="Menyu" EntityType="Self.Menyu" />
+    <EntitySet Name="Profil" EntityType="Self.Profil" />
+    <EntitySet Name="Reservation" EntityType="Self.Reservation" />
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" />
+    <AssociationSet Name="FK_Menyu_MenuCategory" Association="Self.FK_Menyu_MenuCategory">
+      <End Role="MenuCategory" EntitySet="MenuCategory" />
+      <End Role="Menyu" EntitySet="Menyu" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Reservation_Profil" Association="Self.FK_Reservation_Profil">
+      <End Role="Profil" EntitySet="Profil" />
+      <End Role="Reservation" EntitySet="Reservation" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

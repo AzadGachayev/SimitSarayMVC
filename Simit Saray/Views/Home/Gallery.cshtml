@@ -3,6 +3,8 @@
     ViewBag.Title = "Gallery";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
+@using Simit_Saray.ViewModels
+@model DefaultViewModel
 @section MainCss{
     <link rel="stylesheet" href="~/Public/assets/plugins/iziModal/css/iziModal.min.css">
     <link rel="stylesheet" href="~/Public/assets/plugins/animsition/dist/css/animsition.min.css">
@@ -18,9 +20,9 @@
 
     <div class="container">
 
-        <span class="navbar-text order-2 order-md-first">Mərdanov Qardaşları küçəsi 15A (Tarqovıy)</span>
+        <span class="navbar-text order-2 order-md-first"></span>
 
-       
+
 
         </a>
 
@@ -53,66 +55,7 @@
 
             </div>
         </div> <!-- / .row -->
-        <!-- Form -->
-        <form class="reservation__form" id="reservation__form">
-            <div class="row align-items-center justify-content-center">
-                <div class="col-md-5">
-
-                    <div class="form-groug">
-                        <label class="sr-only" for="reservation__name">Full name</label>
-                        <input type="text" class="form-control" id="reservation__name" name="reservation__name" placeholder="Ad Soyad">
-                        <div class="invalid-feedback"></div>
-                    </div>
-                    <div class="form-group">
-                        <label class="sr-only" for="reservation__phone">Phone number</label>
-                        <input type="tel" class="form-control" id="reservation__phone" name="reservation__phone" placeholder="Telefon nömrəsi">
-                        <div class="invalid-feedback"></div>
-                    </div>
-                    <div class="form-group">
-                        <label class="sr-only" for="reservation__email">E-mail address</label>
-                        <input type="email" class="form-control" id="reservation__email" name="reservation__email" placeholder="Elektron poçt ünvanı">
-                        <div class="invalid-feedback"></div>
-                    </div>
-                </div>
-                <div class="col-md-5">
-
-                    <div class="form-group">
-                        <label class="sr-only" for="reservation__people">People</label>
-                        <select class="form-control" id="reservation__people" name="reservation__people">
-                            <option value="1">1 nəfər</option>
-                            <option value="2" selected="">2 nəfər</option>
-                            <option value="3">3 nəfər</option>
-                            <option value="4">4 nəfər</option>
-                            <option value="5">5 nəfər</option>
-                        </select>
-                        <div class="invalid-feedback"></div>
-                    </div>
-                    <div class="form-group">
-                        <label class="sr-only" for="reservation__date">Date</label>
-                        <input type="date" class="form-control" id="reservation__date" name="reservation__date" value="2017-12-31">
-                        <div class="invalid-feedback"></div>
-                    </div>
-                    <div class="form-group">
-                        <label class="sr-only" for="reservation__time">Time</label>
-                        <input type="time" class="form-control" id="reservation__time" name="reservation__time" value="18:00">
-                        <div class="invalid-feedback"></div>
-                    </div>
-
-                </div>
-
-                <div class="w-100"></div>
-
-                <div class="col">
-
-                    <div class="text-center">
-                        <button type="submit" class="btn">
-                            Masa sifariş et
-                        </button>
-                    </div>
-
-                </div>
-            </div> <!-- / .row -->
-        </form>
+       @Html.Partial("Reservation")
 
         <div class="row text-center">
             <div class="col">
@@ -152,18 +95,14 @@
 
                 <!-- Carousel -->
                 <div class="section_gallery_carousel">
-                    <div class="section_gallery_carousel_item">
-                        <img src="~/public/assets/img/gallery_1.jpg" class="img-fluid" alt="...">
-                    </div>
-                    <div class="section_gallery_carousel_item">
-                        <img src="~/public/assets/img/gallery_5.jpg" class="img-fluid" alt="...">
-                    </div>
-                    <div class="section_gallery_carousel_item">
-                        <img src="~/public/assets/img/gallery_8.jpg" class="img-fluid" alt="...">
-                    </div>
-                    <div class="section_gallery_carousel_item">
-                        <img src="~/public/assets/img/blog_item_img.jpg" class="img-fluid" alt="...">
-                    </div>
+                    @foreach (var item in Model.Qalereya2)
+                    {
+                        <div class="section_gallery_carousel_item">
+                            <img src="@item.Photo" class="img-fluid" alt="...">
+                        </div>
+
+                    }
+                 
                 </div> <!-- .section_gallery_carousel -->
 
             </div>
@@ -179,12 +118,19 @@
                     <a class="nav-link animsition-link active" href="@Url.Action("Gallery","Home")">Qalereya</a>
                     <a class="nav-link animsition-link" href="@Url.Action("Contact","Home")">Əlaqə</a>
                 </nav>
+                @foreach (var item in Model.Qalereya)
+                {
+                    <!-- Heading -->
+                    <h1 class="section__heading">@item.Header</h1>
+                }
 
-                <!-- Heading -->
-                <h1 class="section__heading">Qalereya</h1>
+                @foreach (var item in Model.Qalereya)
+                {
+                    <!-- Info -->
+                    <p>@item.Description</p>
 
-                <!-- Info -->
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam quod, repudiandae voluptatem facere. Iure eius est delectus, illum, quos expedita ipsa cupiditate consequatur nisi ea, non, consectetur dolorem debitis similique.</p>
+                }
+
 
             </div>
         </div> <!-- / .row -->
@@ -202,46 +148,16 @@
             </div>
         </div>
         <div class="row section_interior_grid">
-            <div class="col-xs-6 col-sm-4 section_interior_grid_item">
-                <a href="~/public/assets/img/gallery_1.jpg" data-lightbox="gallery">
-                    <img src="~/public/assets/img/gallery_1.jpg" class="img-fluid" alt="...">
-                </a>
-            </div>
-            <div class="col-xs-6 col-sm-4 section_interior_grid_item">
-                <a href="~/public/assets/img/gallery_2.jpg" data-lightbox="gallery">
-                    <img src="~/public/assets/img/gallery_2.jpg" class="img-fluid" alt="...">
-                </a>
-            </div>
-            <div class="col-xs-6 col-sm-4 section_interior_grid_item">
-                <a href="~/public/assets/img/gallery_3.jpg" data-lightbox="gallery">
-                    <img src="~/public/assets/img/gallery_3.jpg" class="img-fluid" alt="...">
-                </a>
-            </div>
-            <div class="col-xs-6 col-sm-4 section_interior_grid_item">
-                <a href="~/public/assets/img/gallery_4.jpg" data-lightbox="gallery">
-                    <img src="~/public/assets/img/gallery_4.jpg" class="img-fluid" alt="...">
-                </a>
-            </div>
-            <div class="col-xs-6 col-sm-4 section_interior_grid_item">
-                <a href="~/public/assets/img/gallery_5.jpg" data-lightbox="gallery">
-                    <img src="~/public/assets/img/gallery_5.jpg" class="img-fluid" alt="...">
-                </a>
-            </div>
-            <div class="col-xs-6 col-sm-4 section_interior_grid_item">
-                <a href="~/public/assets/img/gallery_6.jpg" data-lightbox="gallery">
-                    <img src="~/public/assets/img/gallery_6.jpg" class="img-fluid" alt="...">
-                </a>
-            </div>
-            <div class="col-xs-6 col-sm-4 section_interior_grid_item">
-                <a href="~/public/assets/img/gallery_7.jpg" data-lightbox="gallery">
-                    <img src="~/public/assets/img/gallery_7.jpg" class="img-fluid" alt="...">
-                </a>
-            </div>
-            <div class="col-xs-6 col-sm-4 section_interior_grid_item">
-                <a href="~/public/assets/img/gallery_8.jpg" data-lightbox="gallery">
-                    <img src="~/public/assets/img/gallery_8.jpg" class="img-fluid" alt="...">
-                </a>
-            </div>
+            @foreach (var item in Model.Qalereya2)
+            {
+                <div class="col-xs-6 col-sm-4 section_interior_grid_item">
+                    <a href="~/public/assets/img/gallery_1.jpg" data-lightbox="gallery">
+                        <img src="@item.Photo" class="img-fluid" alt="...">
+                    </a>
+                </div>
+            }
+
+  
         </div> <!-- .row -->
     </div> <!-- .container -->
 

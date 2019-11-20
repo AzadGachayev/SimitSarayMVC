@@ -1,4 +1,5 @@
 ﻿@charset "UTF-8";
+@using 
 /* Please ❤ this if you like it! */
 @import url("https://fonts.googleapis.com/css?family=Montserrat:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i");
 body {
@@ -12,23 +13,17 @@ body {
   transition: all 300ms linear; }
  
 #welcome {
-    background: linear-gradient(to bottom, rgba(92, 77, 66, 0.8) 0, rgba(92, 77, 66, 0.8) 100%), url(../Uploads/AysSaray.jpg);
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    width: 100%;
-    height: 100%;
+
 }
 
 #about {
-  background: linear-gradient(to bottom, rgba(92, 77, 66, 0.8) 0, rgba(92, 77, 66, 0.8) 100%), url(../Uploads/interior3.jpg);
+  /*background: linear-gradient(to bottom, rgba(92, 77, 66, 0.8) 0, rgba(92, 77, 66, 0.8) 100%), url(../Uploads/interior3.jpg);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   background-attachment: fixed;
   width: 100%;
-  height: 100%; }
+  height: 100%;*/ }
 
 #menyu, #contact {
   background: linear-gradient(#380303, black) !important;
@@ -207,6 +202,13 @@ a:hover {
   position: fixed;
   z-index: 98; }
 
+#map{
+    height:100%;
+}
+#content h1 {
+    color: brown;
+    font-size: 28px;
+}
 .nav:before, .nav:after {
   content: "";
   position: fixed;
@@ -223,7 +225,7 @@ a:hover {
   transform: translateX(100%) translateY(-100%); }
 
 .nav:after {
-  background: linear-gradient(to bottom, rgba(92, 77, 66, 0.8) 0, rgba(92, 77, 66, 0.8) 100%), url(../Uploads/interior.jpg);
+  background:var(--my-background) ;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -628,5 +630,7 @@ Navbar, Header, Esas sehife olan hisselerin sonu
 .order-2 {
   -webkit-box-ordinal-group: 3;
   order: 2; }
+
+
 
 /*# sourceMappingURL=Simit.css.map */

@@ -1,16 +1,20 @@
 ﻿@{
     ViewBag.Title = "Home Page";
 }
-<section id="welcome">
+@using Simit_Saray.ViewModels
+@model DefaultViewModel
+<section id="welcome" style="
+   
+    background: linear-gradient(to bottom, rgba(92, 77, 66, 0.8) 0, rgba(92, 77, 66, 0.8) 100%), url(@Model.homeHeader.BackgroundImage) no-repeat center center/ cover">
     <div class="section full-height over-hide">
         <div class="switch-wrap">
-            <h1>SİMİT SARAYI'NA <br> XOŞ GƏLMİSİNİZ !</h1>
+            <h1>@Model.EsasSehife.Head <br> XOŞ GƏLMİSİNİZ !</h1>
             <!-- <div id="switch" class="hover-target">
                     <div id="circle"></div>
 
                 </div> -->
             <div class="paragraf">
-                <p>Kefsiz hiss etsəniz də bizim personalı gördüyünüz anda əhvalınız yüksələcək! :) </p>
+                <p> @Model.EsasSehife.Description </p>
             </div>
         </div>
     </div>
@@ -25,384 +29,101 @@
         <h1 class="section__heading text-center pt-5">Menyu</h1>
         <div class="container">
             <div class="owl-carousel owl-theme mt-5">
-                <div class="row justify-content-between section_menu__body">
 
-                    <div class="col-sm-12 col-md-5 order-2 order-sm-first">
-                        <div class="section_menu__img">
-                            <img src="~/Public/assets/img/menu_starters.jpg" class="img-fluid" alt="...">
-                        </div>
-                    </div>
+                @{ var count = 0; }
+                @foreach (var item in Model.KateqoriyaMenyu)
+                {
+                    count++;
+                    if (count % 2 != 0)
+                    {
+                        <div class="row justify-content-between section_menu__body">
 
-                    <div class="col-sm-12 col-md-7 col-lg-7 col-xl-6 order-first order-sm-2">
-
-
-                        <!-- Heading -->
-                        <h1 class="section__heading mb-0">Starters</h1>
-
-                        <!-- Devider Line -->
-                        <div class="divider_line"></div>
-
-                        <div class="row">
-
-                            <div class="col-sm-12 col-md-6 dish_body">
-                                <h5 class="dish_body__name">
-                                    Pita bread <span>4 AZN</span>
-                                </h5>
-                                <div class="dish_body__desc text-italic">
-                                    Bread / Pesto / Tomato / Garlic
+                            <div class="col-sm-12 col-md-5 order-2 order-sm-first">
+                                <div class="section_menu__img">
+                                    <img style="height: 100%; object-fit: cover"  src="@item.CategoryPhoto" class="img-fluid" alt="...">
                                 </div>
-                            </div> <!-- .dish_body -->
+                            </div>
 
-                            <div class="col-sm-12 col-md-6 dish_body">
-                                <h5 class="dish_body__name">
-                                    Fresh Salad <span>4 AZN</span>
-                                </h5>
-                                <div class="dish_body__desc text-italic">
-                                    Bread / Pesto / Tomato / Garlic
-                                </div>
-                            </div> <!-- .dish_body -->
+                            <div class="col-sm-12 col-md-7 col-lg-7 col-xl-6 order-first order-sm-2">
 
-                            <div class="col-sm-12 col-md-6 dish_body">
-                                <h5 class="dish_body__name">
-                                    Cesar salad <span>6 AZN</span>
-                                </h5>
-                                <div class="dish_body__desc text-italic">
-                                    Bread / Pesto / Tomato / Garlic
-                                </div>
-                            </div> <!-- .dish_body -->
 
-                            <div class="col-sm-12 col-md-6 dish_body">
-                                <h5 class="dish_body__name">
-                                    Falafel <span>2.8 AZN</span>
-                                </h5>
-                                <div class="dish_body__desc text-italic">
-                                    Bread / Pesto / Tomato / Garlic
-                                </div>
-                            </div> <!-- .dish_body -->
+                                <!-- Heading -->
+                                <h1 class="section__heading mb-0">@item.CategoryName</h1>
 
-                            <div class="col-sm-12 col-md-6 dish_body">
-                                <h5 class="dish_body__name">
-                                    Julienne <span>3.5 AZN</span>
-                                </h5>
-                                <div class="dish_body__desc text-italic">
-                                    Bread / Pesto / Tomato / Garlic
-                                </div>
-                            </div> <!-- .dish_body -->
+                                <!-- Devider Line -->
+                                <div class="divider_line"></div>
 
-                            <div class="col-sm-12 col-md-6 dish_body">
-                                <h5 class="dish_body__name">
-                                    Chicken carpaccio <span>4.5 AZN</span>
-                                </h5>
-                                <div class="dish_body__desc text-italic">
-                                    Bread / Pesto / Tomato / Garlic
-                                </div>
-                            </div> <!-- .dish_body -->
+                                <div class="row">
 
-                            <div class="col-sm-12 col-md-6 dish_body">
-                                <h5 class="dish_body__name">
-                                    Baked vegetables <span>7 AZN</span>
-                                </h5>
-                                <div class="dish_body__desc text-italic">
-                                    Bread / Pesto / Tomato / Garlic
-                                </div>
-                            </div> <!-- .dish_body -->
+                                    @foreach (var menuitem in item.Menyu)
+                                    {
+                                        <div class="col-sm-12 col-md-6 dish_body">
+                                            <h5 class="dish_body__name">
+                                                @menuitem.Name <span>@menuitem.Price AZN</span>
+                                            </h5>
+                                            <div class="dish_body__desc text-italic">
+                                                @menuitem.Ingridient
+                                            </div>
+                                        </div> <!-- .dish_body -->
+                                    }
 
-                            <div class="col-sm-12 col-md-6 dish_body">
-                                <h5 class="dish_body__name">
-                                    Tuna sandwich <span>5 AZN</span>
-                                </h5>
-                                <div class="dish_body__desc text-italic">
-                                    Bread / Pesto / Tomato / Garlic
-                                </div>
-                            </div> <!-- .dish_body -->
 
+
+                                </div> <!-- / .row -->
+
+                            </div>
                         </div> <!-- / .row -->
 
-                    </div>
-                </div> <!-- / .row -->
 
-                <div class="row justify-content-between section_menu__body">
+                    }
 
-                    <div class="col-sm-12 col-md-7 col-lg-7 col-xl-6">
+                    else
+                    {
 
-                        <!-- Heading -->
-                        <h1 class="section__heading mb-0">Main</h1>
+                        <div class="row justify-content-between section_menu__body">
 
-                        <!-- Devider Line -->
-                        <div class="divider_line"></div>
+                            <div class="col-sm-12 col-md-7 col-lg-7 col-xl-6">
 
-                        <div class="row">
+                                <!-- Heading -->
+                                <h1 class="section__heading mb-0">@item.CategoryName</h1>
 
-                            <div class="col-sm-12 col-md-6 dish_body">
-                                <h5 class="dish_body__name">
-                                    Fish burger <span>4 AZN</span>
-                                </h5>
-                                <div class="dish_body__desc text-italic">
-                                    Bread / Pesto / Tomato / Garlic
+                                <!-- Devider Line -->
+                                <div class="divider_line"></div>
+
+                                <div class="row">
+                                    @foreach (var menuitem in item.Menyu)
+                                    {
+                                        <div class="col-sm-12 col-md-6 dish_body">
+                                            <h5 class="dish_body__name">
+                                                @menuitem.Name <span>@menuitem.Price AZN</span>
+                                            </h5>
+                                            <div class="dish_body__desc text-italic">
+                                             @menuitem.Ingridient
+                                            </div>
+                                        </div> <!-- .dish_body -->
+                                    }
+
+
+                                </div> <!-- / .row -->
+
+                            </div>
+                            <div class="col-sm-12 col-md-5">
+                                <div class="section_menu__img">
+                                    <img style="height: 100%; object-fit: cover;"  src="@item.CategoryPhoto" class="img-fluid" alt="...">
                                 </div>
-                            </div> <!-- .dish_body -->
-
-                            <div class="col-sm-12 col-md-6 dish_body">
-                                <h5 class="dish_body__name">
-                                    Pasta Bolognese <span>4 AZN</span>
-                                </h5>
-                                <div class="dish_body__desc text-italic">
-                                    Bread / Pesto / Tomato / Garlic
-                                </div>
-                            </div> <!-- .dish_body -->
-
-                            <div class="col-sm-12 col-md-6 dish_body">
-                                <h5 class="dish_body__name">
-                                    Cheese cream soup <span>6 AZN</span>
-                                </h5>
-                                <div class="dish_body__desc text-italic">
-                                    Bread / Pesto / Tomato / Garlic
-                                </div>
-                            </div> <!-- .dish_body -->
-
-                            <div class="col-sm-12 col-md-6 dish_body">
-                                <h5 class="dish_body__name">
-                                    Beef steak <span>2.8 AZN</span>
-                                </h5>
-                                <div class="dish_body__desc text-italic">
-                                    Bread / Pesto / Tomato / Garlic
-                                </div>
-                            </div> <!-- .dish_body -->
-
-                            <div class="col-sm-12 col-md-6 dish_body">
-                                <h5 class="dish_body__name">
-                                    Baked salmon <span>3.5 AZN</span>
-                                </h5>
-                                <div class="dish_body__desc text-italic">
-                                    Bread / Pesto / Tomato / Garlic
-                                </div>
-                            </div> <!-- .dish_body -->
-
-                            <div class="col-sm-12 col-md-6 dish_body">
-                                <h5 class="dish_body__name">
-                                    English pie <span>4.5 AZN</span>
-                                </h5>
-                                <div class="dish_body__desc text-italic">
-                                    Bread / Pesto / Tomato / Garlic
-                                </div>
-                            </div> <!-- .dish_body -->
-
-                            <div class="col-sm-12 col-md-6 dish_body">
-                                <h5 class="dish_body__name">
-                                    Pizza margarita <span>7 AZN</span>
-                                </h5>
-                                <div class="dish_body__desc text-italic">
-                                    Bread / Pesto / Tomato / Garlic
-                                </div>
-                            </div> <!-- .dish_body -->
-
-                            <div class="col-sm-12 col-md-6 dish_body">
-                                <h5 class="dish_body__name">
-                                    Tuna & potato <span>5 AZN</span>
-                                </h5>
-                                <div class="dish_body__desc text-italic">
-                                    Bread / Pesto / Tomato / Garlic
-                                </div>
-                            </div> <!-- .dish_body -->
-
+                            </div>
                         </div> <!-- / .row -->
 
-                    </div>
-                    <div class="col-sm-12 col-md-5">
-                        <div class="section_menu__img">
-                            <img src="~/Public/assets/img/menu_main.jpg" class="img-fluid" alt="...">
-                        </div>
-                    </div>
-                </div> <!-- / .row -->
+                    }
 
-                <div class="row justify-content-between section_menu__body">
 
-                    <div class="col-sm-12 col-md-5 order-2 order-sm-first">
-                        <div class="section_menu__img">
-                            <img src="~/Public/Uploads/limonata.jpg" class="img-fluid " alt="...">
-                        </div>
-                    </div>
 
-                    <div class="col-sm-12 col-md-7 col-lg-7 col-xl-6 order-first order-sm-2">
 
-                        <!-- Heading -->
-                        <h1 class="section__heading mb-0">İçkilər</h1>
+                }
 
-                        <!-- Devider Line -->
-                        <div class="divider_line"></div>
 
-                        <div class="row">
 
-                            <div class="col-sm-12 col-md-6 dish_body">
-                                <h5 class="dish_body__name mb-0">
-                                    Red dry wine <span>14AZN</span>
-                                </h5>
-                                <div class="dish_body__desc text-italic">
-                                    Bread / Pesto / Tomato / Garlic
-                                </div>
-                            </div> <!-- .dish_body -->
 
-                            <div class="col-sm-12 col-md-6 dish_body">
-                                <h5 class="dish_body__name mb-0">
-                                    Rose semidry wine <span>9.5 AZN</span>
-                                </h5>
-                                <div class="dish_body__desc text-italic">
-                                    Bread / Pesto / Tomato / Garlic
-                                </div>
-                            </div> <!-- .dish_body -->
-
-                            <div class="col-sm-12 col-md-6 dish_body">
-                                <h5 class="dish_body__name mb-0">
-                                    Red semisweet wine <span>8 AZN</span>
-                                </h5>
-                                <div class="dish_body__desc text-italic">
-                                    Bread / Pesto / Tomato / Garlic
-                                </div>
-                            </div> <!-- .dish_body -->
-
-                            <div class="col-sm-12 col-md-6 dish_body">
-                                <h5 class="dish_body__name mb-0">
-                                    White dry wine <span>2.8 AZN</span>
-                                </h5>
-                                <div class="dish_body__desc text-italic">
-                                    Bread / Pesto / Tomato / Garlic
-                                </div>
-                            </div> <!-- .dish_body -->
-
-                            <div class="col-sm-12 col-md-6 dish_body">
-                                <h5 class="dish_body__name mb-0">
-                                    Dry Irish stout <span>3.5 AZN</span>
-                                </h5>
-                                <div class="dish_body__desc text-italic">
-                                    Bread / Pesto / Tomato / Garlic
-                                </div>
-                            </div> <!-- .dish_body -->
-
-                            <div class="col-sm-12 col-md-6 dish_body">
-                                <h5 class="dish_body__name mb-0">
-                                    Craft IPA <span>4.5 AZN</span>
-                                </h5>
-                                <div class="dish_body__desc text-italic">
-                                    Bread / Pesto / Tomato / Garlic
-                                </div>
-                            </div> <!-- .dish_body -->
-
-                            <div class="col-sm-12 col-md-6 dish_body">
-                                <h5 class="dish_body__name mb-0">
-                                    12 Aged whiskey <span>17 AZN</span>
-                                </h5>
-                                <div class="dish_body__desc text-italic">
-                                    Bread / Pesto / Tomato / Garlic
-                                </div>
-                            </div> <!-- .dish_body -->
-
-                            <div class="col-sm-12 col-md-6 dish_body">
-                                <h5 class="dish_body__name mb-0">
-                                    Mohito <span>11 AZN</span>
-                                </h5>
-                                <div class="dish_body__desc text-italic">
-                                    Bread / Pesto / Tomato / Garlic
-                                </div>
-                            </div> <!-- .dish_body -->
-
-                        </div> <!-- / .row -->
-
-                    </div>
-                </div> <!-- / .row -->
-
-                <div class="row justify-content-between section_menu__body">
-
-                    <div class="col-sm-12 col-md-7 col-lg-7 col-xl-6">
-
-                        <!-- Heading -->
-                        <h1 class="section__heading mb-0">Desserts</h1>
-
-                        <!-- Devider Line -->
-                        <div class="divider_line"></div>
-
-                        <div class="row">
-
-                            <div class="col-sm-12 col-md-6 dish_body">
-                                <h5 class="dish_body__name mb-0">
-                                    Ginger cake <span>5 AZN</span>
-                                </h5>
-                                <div class="dish_body__desc text-italic">
-                                    Bread / Pesto / Tomato / Garlic
-                                </div>
-                            </div> <!-- .dish_body -->
-
-                            <div class="col-sm-12 col-md-6 dish_body">
-                                <h5 class="dish_body__name mb-0">
-                                    Strawberry ice cream <span>3.5 AZN</span>
-                                </h5>
-                                <div class="dish_body__desc text-italic">
-                                    Bread / Pesto / Tomato / Garlic
-                                </div>
-                            </div> <!-- .dish_body -->
-
-                            <div class="col-sm-12 col-md-6 dish_body">
-                                <h5 class="dish_body__name mb-0">
-                                    Pancakes with honey <span>6 AZN</span>
-                                </h5>
-                                <div class="dish_body__desc text-italic">
-                                    Bread / Pesto / Tomato / Garlic
-                                </div>
-                            </div> <!-- .dish_body -->
-
-                            <div class="col-sm-12 col-md-6 dish_body">
-                                <h5 class="dish_body__name mb-0">
-                                    Blueberry with cream <span>2.8 AZN</span>
-                                </h5>
-                                <div class="dish_body__desc text-italic">
-                                    Bread / Pesto / Tomato / Garlic
-                                </div>
-                            </div> <!-- .dish_body -->
-
-                            <div class="col-sm-12 col-md-6 dish_body">
-                                <h5 class="dish_body__name mb-0">
-                                    Honey cake <span>3.5 AZN</span>
-                                </h5>
-                                <div class="dish_body__desc text-italic">
-                                    Bread / Pesto / Tomato / Garlic
-                                </div>
-                            </div> <!-- .dish_body -->
-
-                            <div class="col-sm-12 col-md-6 dish_body">
-                                <h5 class="dish_body__name mb-0">
-                                    Friut salad <span>7 AZN</span>
-                                </h5>
-                                <div class="dish_body__desc text-italic">
-                                    Bread / Pesto / Tomato / Garlic
-                                </div>
-                            </div> <!-- .dish_body -->
-
-                            <div class="col-sm-12 col-md-6 dish_body">
-                                <h5 class="dish_body__name mb-0">
-                                    Eclair <span>2.7 AZN</span>
-                                </h5>
-                                <div class="dish_body__desc text-italic">
-                                    Bread / Pesto / Tomato / Garlic
-                                </div>
-                            </div> <!-- .dish_body -->
-
-                            <div class="col-sm-12 col-md-6 dish_body">
-                                <h5 class="dish_body__name mb-0">
-                                    Cranberry tart <span>5 AZN</span>
-                                </h5>
-                                <div class="dish_body__desc text-italic">
-                                    Bread / Pesto / Tomato / Garlic
-                                </div>
-                            </div> <!-- .dish_body -->
-
-                        </div> <!-- / .row -->
-
-                    </div>
-                    <div class="col-sm-12 col-md-5">
-                        <div class="section_menu__img">
-                            <img src="~/Public/assets/img/menu_desserts.jpg" class="img-fluid" alt="...">
-                        </div>
-                    </div>
-                </div> <!-- / .row -->
             </div>
 
         </div> <!-- .container -->
@@ -418,38 +139,39 @@
             ================================================== -->
 
 
-<section id="about">
-    <!-- Heading -->
-    <h1 class="section__heading text-center pt-5">Haqqımızda</h1>
+<section id="about" style="
+         background: linear-gradient(to bottom, rgba(92, 77, 66, 0.8) 0, rgba(92, 77, 66, 0.8) 100%), url(@Model.Haqqinda.BackgroundImage)  no-repeat center center/ cover">
+   
+       <!-- Heading -->
+        <h1 class="section__heading text-center pt-5">Haqqımızda</h1>
 
-    <div class="container">
-        <div class="row justify-content-between">
+        <div class="container">
+            <div class="row justify-content-between">
 
-            <div class="col-sm-12 col-md-6 col-lg-6 col-xl-5">
+                <div class="col-sm-12 col-md-6 col-lg-6 col-xl-5">
 
-                <!-- Heading -->
-                <h1 class="section__heading">We take care that in <span>Entrey's</span> every guest feels like at home</h1>
+                    <!-- Heading -->
+                    <h1 class="section__heading">@Model.Haqqinda.Header</h1>
 
-                <!-- Info -->
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda sequi temporibus accusamus unde tempore dolorum explicabo quam, fugiat necessitatibus quaerat, dolorem, inventore officiis dicta accusantium totam nostrum eius molestias, adipisci commodi eos dolores nobis est voluptatibus.</p>
+                    <!-- Info -->
 
-                <p class="text-italic">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae ab nobis cupiditate odit repudiandae maiores in autem voluptate.</p>
+                    <p class="text-italic">@Model.Haqqinda.Description</p>
 
-                <!-- Devider Line -->
-                <div class="divider_line"></div>
+                    <!-- Devider Line -->
+                    <div class="divider_line"></div>
 
-            </div>
-
-            <div class="col-sm-12 col-md-6">
-                <div class="section_about__img">
-                    <img src="~/Public/Uploads/lattepasta.jpg" class="img-fluid mb-5" alt="...">
                 </div>
-            </div>
 
-        </div> <!-- / .row -->
-    </div>
+                <div class="col-sm-12 col-md-6">
+                    <div class="section_about__img">
+                        <img src="@Model.Haqqinda.Photo" class="img-fluid mb-5" alt="...">
+                    </div>
+                </div>
 
-</section>
+            </div> <!-- / .row -->
+        </div>
+
+    </section>
 
 
 <!-- CONTACT
@@ -465,8 +187,124 @@
             <div class="row justify-content-between mb-5">
 
                 <div class="col-sm-12 col-md-6 col-lg-5 order-2 order-sm-first">
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d379.9515667175205!2d49.839936764481955!3d40.37311500285256!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40307db02096a42f%3A0x4f6276f326db430b!2sSimit%20Saray%C4%B1!5e0!3m2!1saz!2s!4v1570579189676!5m2!1saz!2s" width="100%" height="100%" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
-                    <div id="map"> </div>
+                    <div data-map="@Model.Kontakt.Map" id="map"></div>
+
+                    <script>
+                        var map;
+                        var mapElement = document.getElementById("map")
+                        function initMap() {
+                            var locationMap = mapElement.getAttribute("data-map")
+                            var settingsMap = locationMap.split(",")
+                            var latMap = Number(settingsMap[0])
+                            var lngMap = Number(settingsMap[1])
+                            var academy = { lat: latMap, lng: lngMap }
+                            map = new google.maps.Map(document.getElementById('map'), {
+                                center: academy,
+                                zoom: 18,
+                                //styles: [
+                                //    { elementType: 'geometry', stylers: [{ color: '#242f3e' }] },
+                                //    { elementType: 'labels.text.stroke', stylers: [{ color: '#242f3e' }] },
+                                //    { elementType: 'labels.text.fill', stylers: [{ color: '#746855' }] },
+                                //    {
+                                //        featureType: 'administrative.locality',
+                                //        elementType: 'labels.text.fill',
+                                //        stylers: [{ color: '#d59563' }]
+                                //    },
+                                //    {
+                                //        featureType: 'poi',
+                                //        elementType: 'labels.text.fill',
+                                //        stylers: [{ color: '#d59563' }]
+                                //    },
+                                //    {
+                                //        featureType: 'poi.park',
+                                //        elementType: 'geometry',
+                                //        stylers: [{ color: '#263c3f' }]
+                                //    },
+                                //    {
+                                //        featureType: 'poi.park',
+                                //        elementType: 'labels.text.fill',
+                                //        stylers: [{ color: '#6b9a76' }]
+                                //    },
+                                //    {
+                                //        featureType: 'road',
+                                //        elementType: 'geometry',
+                                //        stylers: [{ color: '#38414e' }]
+                                //    },
+                                //    {
+                                //        featureType: 'road',
+                                //        elementType: 'geometry.stroke',
+                                //        stylers: [{ color: '#212a37' }]
+                                //    },
+                                //    {
+                                //        featureType: 'road',
+                                //        elementType: 'labels.text.fill',
+                                //        stylers: [{ color: '#9ca5b3' }]
+                                //    },
+                                //    {
+                                //        featureType: 'road.highway',
+                                //        elementType: 'geometry',
+                                //        stylers: [{ color: '#746855' }]
+                                //    },
+                                //    {
+                                //        featureType: 'road.highway',
+                                //        elementType: 'geometry.stroke',
+                                //        stylers: [{ color: '#1f2835' }]
+                                //    },
+                                //    {
+                                //        featureType: 'road.highway',
+                                //        elementType: 'labels.text.fill',
+                                //        stylers: [{ color: '#f3d19c' }]
+                                //    },
+                                //    {
+                                //        featureType: 'transit',
+                                //        elementType: 'geometry',
+                                //        stylers: [{ color: '#2f3948' }]
+                                //    },
+                                //    {
+                                //        featureType: 'transit.station',
+                                //        elementType: 'labels.text.fill',
+                                //        stylers: [{ color: '#d59563' }]
+                                //    },
+                                //    {
+                                //        featureType: 'water',
+                                //        elementType: 'geometry',
+                                //        stylers: [{ color: '#17263c' }]
+                                //    },
+                                //    {
+                                //        featureType: 'water',
+                                //        elementType: 'labels.text.fill',
+                                //        stylers: [{ color: '#515c6d' }]
+                                //    },
+                                //    {
+                                //        featureType: 'water',
+                                //        elementType: 'labels.text.stroke',
+                                //        stylers: [{ color: '#17263c' }]
+                                //    }
+                                //],
+                            });
+                            var marker = new google.maps.Marker({
+                                position: academy,
+                                map: map,
+                                draggable: true
+
+                            })
+                            var contentString = "<div id='content'><h1>Simit Sarayı</h1>" +
+                                "<p>Xoş gəlmisiniz! <a target='_blank' href='http://localhost:50236/Home/Contact'> Əlaqə: +994 55 254 29 32</a>" +
+                                "</div > "
+                            var infowindow = new google.maps.InfoWindow({
+                                content: contentString
+                            });
+                            marker.addListener('click', function () {
+                                infowindow.open(map, marker);
+                            });
+                        }
+
+
+
+                    </script>
+                    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAPm-ZQUNuMNmZ9DfSXn9fhGFVKQI1lpoQ&callback=initMap"
+                            async defer></script>
+                    @*<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d379.9515667175205!2d49.839936764481955!3d40.37311500285256!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40307db02096a42f%3A0x4f6276f326db430b!2sSimit%20Saray%C4%B1!5e0!3m2!1saz!2s!4v1570579189676!5m2!1saz!2s" width="100%" height="100%" frameborder="0" style="border:0;" allowfullscreen=""></iframe>*@
                 </div>
 
 
@@ -477,26 +315,25 @@
 
                     <!-- Subheading -->
                     <p>
-                        Restoranımızda vaxt keçirmək istəsəniz,
-                        bizimlə istədiyiniz vaxt əlaqə saxlaya bilərsiniz.
+                        @Model.Kontakt.Contact1
                     </p>
 
                     <!-- Info -->
-                    <div class="section_contact__item">
+                    <div class="section_contact__item col-md-7 p-0">
                         <h4 class="mb-0">Ünvan</h4>
-                        <p class="mb-0">Mərdanov Qardaşları 15A (Tarqovıy) <br> 1 nömrəli məktəbin yanı, <br> Şaurma N1 ilə üzbəüz.</p>
+                        <p class="mb-0">@Model.Kontakt.Adress</p>
                     </div> <!-- .section_contact__item -->
 
                     <div class="section_contact__item">
                         <h4 class="mb-0">Telefon</h4>
-                        <p class="mb-0">+994 55 254 29 32</p>
-                        <p class="mb-0">+994 12 597 05 75</p>
+                        <p class="mb-0">@Model.Kontakt.Phone</p>
+                        <p class="mb-0">@Model.Kontakt.Phone2</p>
                     </div> <!-- .section_contact__item -->
 
                     <div class="section_contact__item">
                         <h4 class="mb-0">Email</h4>
-                        <p class="mb-0">azad.gachayev@gmail.com</p>
-                        <p class="mb-0"></p>
+                        <p class="mb-0">@Model.Kontakt.Email</p>
+                        <p class="mb-0">@Model.Kontakt.Email2</p>
                     </div> <!-- .section_contact__item -->
 
                     <div class="section_contact__item">

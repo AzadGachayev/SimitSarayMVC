@@ -1,0 +1,42 @@
+﻿@model Simit_Saray.Models.HomeNavbar
+
+@{
+    ViewBag.Title = "Edit";
+    Layout = "~/Areas/SimitAdmin/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2> Edit </h2>
+
+@using (Html.BeginForm("Edit", "AdminHomeNavbars", FormMethod.Post, new { enctype = "multipart/form-data" }))
+
+{
+    @Html.AntiForgeryToken()
+
+<div class="form-horizontal">
+    <h4>HomeNavbar</h4>
+    <hr />
+    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+    @Html.HiddenFor(model => model.ID)
+
+   
+    <div class="form-group">
+        <div class="col-md-2">
+            <label class="control-label "> <b>Yeni Arxa fon seç</b></label>
+        </div>
+        <div class="col-md-10">
+            <input type="file" name="BackgroundImage" class="form-control" />
+            @Html.ValidationMessageFor(model => model.BackgroundImage, "", new { @class = "text-danger" })
+        </div>
+    </div>
+
+    <div class="form-group">
+        <div class="col-md-offset-2 col-md-10">
+            <input type="submit" value="Save" class="btn btn-primary" />
+        </div>
+    </div>
+</div>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>

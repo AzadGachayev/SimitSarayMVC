@@ -1,0 +1,32 @@
+﻿@model IEnumerable<Simit_Saray.Models.HomeNavbar>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Areas/SimitAdmin/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2>Index</h2>
+
+
+<table class="table">
+    <tr>
+     
+        <th>
+            @Html.DisplayNameFor(model => model.BackgroundImage)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+<tr>
+
+    <td style="width: 25%">
+        <img src="@item.BackgroundImage" class="img-thumbnail" alt="Alternate Text" />
+    </td>
+    <td>
+        @Html.ActionLink("Edit", "Edit", new { id = item.ID }) 
+    </td>
+</tr>
+}
+
+</table>

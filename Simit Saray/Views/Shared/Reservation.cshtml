@@ -1,0 +1,81 @@
+﻿	<!-- Form -->
+<form class="reservation__form" id="reservation__form" action="">
+    <div class="row align-items-center justify-content-center">
+        <div class="col-md-5">
+
+            <div class="form-groug">
+                <label class="sr-only" for="reservation__name">Full name</label>
+                <input type="text" class="form-control" id="reservation__name" name="FullName" placeholder="Ad Soyad">
+                <div class="invalid-feedback"></div>
+            </div>
+            <div class="form-group">
+                <label class="sr-only" for="reservation__phone">Phone number</label>
+                <input type="tel" class="form-control" id="reservation__phone" name="Phone" placeholder="Telefon nömrəsi">
+                <div class="invalid-feedback"></div>
+            </div>
+            <div class="form-group">
+                <label class="sr-only" for="reservation__email">E-mail address</label>
+                <input type="email" class="form-control" id="reservation__email" name="Email" placeholder="Elektron poçt ünvanı">
+                <div class="invalid-feedback"></div>
+            </div>
+        </div>
+        <div class="col-md-5">
+
+            <div class="form-group">
+                <label class="sr-only" for="reservation__people">People</label>
+                <select class="form-control" id="reservation__people" name="Amount">
+                    <option value="1">1 nəfər</option>
+                    <option value="2" selected="">2 nəfər</option>
+                    <option value="3">3 nəfər</option>
+                    <option value="4">4 nəfər</option>
+                    <option value="5">5 nəfər</option>
+                </select>
+                <div class="invalid-feedback"></div>
+            </div>
+            <div class="form-group">
+                <label class="sr-only" for="reservation__date">Date</label>
+                <input type="date" class="form-control" id="reservation__date" name="ComeDate" value="">
+                <div class="invalid-feedback"></div>
+            </div>
+            <div class="form-group">
+                <label class="sr-only" for="reservation__time">Time</label>
+                <input type="time" class="form-control" id="reservation__time" name="ComingHours" value="18:00">
+                <div class="invalid-feedback"></div>
+            </div>
+
+        </div>
+
+        <div class="w-100"></div>
+
+        <div class="col">
+
+            <div class="text-center">
+                <button type="submit" class="btn">
+                    Masa sifariş et
+                </button>
+            </div>
+
+        </div>
+    </div> <!-- / .row -->
+</form>
+
+@*@section MainJS{
+    <script>
+      
+        $("#reservation__form").submit(function () {
+        var data = {
+            Fullname: $("#reservation__name").val(),
+            Email: $("#reservation__email").val(),
+            Phone:$("#reservation__phone").val(),
+            }
+            console.log(data.Fullname)
+        }) 
+        //$.ajax({
+
+        //})
+        
+    </script>
+    }*@
+
+
+
