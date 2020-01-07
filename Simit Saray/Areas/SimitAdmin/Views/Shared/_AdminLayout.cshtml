@@ -18,7 +18,7 @@
     <link href="https://fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
     <!-- Font Awesome-->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
-    
+
     <!-- Bootstrap css-->
     <link rel="stylesheet" type="text/css" href="~/Areas/SimitAdmin/assets/css/bootstrap.css">
     <!-- App css-->
@@ -27,7 +27,15 @@
     <!-- Responsive css-->
     <link rel="stylesheet" type="text/css" href="~/Areas/SimitAdmin/assets/css/responsive.css">
     @RenderSection("head", required: false)
-    <script src="https://kit.fontawesome.com/150f0be467.js" crossorigin="anonymous"></script>
+    @*<script src="https://kit.fontawesome.com/150f0be467.js" crossorigin="anonymous"></script>
+    <script>(function(w,d,s,g,js,fs){
+    g=w.gapi||(w.gapi={});g.analytics={q:[],ready:function(f){this.q.push(f);}};
+    js=d.createElement(s);fs=d.getElementsByTagName(s)[0];
+    js.src='https://apis.google.com/js/platform.js';
+    fs.parentNode.insertBefore(js,fs);js.onload=function(){g.load('analytics');};
+    }(window,document,'script'));</script>*@
+    
+ 
 </head>
 <body>
     <!-- Loader starts-->
@@ -76,7 +84,7 @@
 
                             </ul>
                         </li>
-        
+
                         <li class="onhover-dropdown">
                             <div class="media align-items-center">
                                 <img class="align-self-center pull-right img-50 rounded-circle" src="~/Public/Uploads/logoS.png" alt="header-user">
@@ -111,12 +119,12 @@
         <div class="page-body-wrapper">
             <!-- Page Sidebar Start-->
             <div class="page-sidebar">
-               
+
                 <div class="sidebar custom-scrollbar">
                     <div class="sidebar-user text-center">
                         <div>
                             <img class="img-60 rounded-circle" src="~/Public/Uploads/logoS.png" alt="#">
-                            <div class="profile-edit"><a href="@Url.Action("Index","Home")" target="_blank"><i data-feather="edit"></i></a></div>
+                            <div class="profile-edit"><a href="@Url.Action("Index","AdminHome")" target="_blank"><i data-feather="edit"></i></a></div>
                         </div>
                         <h6 class="mt-3 f-14">Baku</h6>
                         <p>Simit Sarayı</p>
@@ -124,7 +132,10 @@
                     <ul class="sidebar-menu">
 
                         <li>
-                            <a class="sidebar-header" href="@Url.Action("Index","Home")"><i data-feather="home"></i><span>Əvvələ qayıt</span></a>
+                            <a class="sidebar-header" href="@Url.Action("Index","AdminHome")"><i data-feather="home"></i><span>Əvvələ qayıt</span></a>
+                        </li>
+                        <li>
+                            <a class="sidebar-header" href="@Url.Action("reserv","AdminReserv")"><i data-feather="home"></i><span>Reservation</span>  </a>
                         </li>
                         <li>
                             <a class="sidebar-header" href="#"><i data-feather="airplay"></i><span>Əsas Səhifə </span><i class="fa fa-angle-right pull-right"></i></a>
@@ -182,7 +193,7 @@
                                         <li><a href="#" data-container="body" data-toggle="popover" data-placement="top" title="" data-original-title="Mail"><i data-feather="mail"></i></a></li>
                                         <li><a href="#" data-container="body" data-toggle="popover" data-placement="top" title="" data-original-title="Chat"><i data-feather="message-square"></i></a></li>
                                         <li>
-                                            
+
                                             <form class="form-inline search-form">
                                                 <div class="form-group form-control-search">
                                                     <input type="text" placeholder="Search..">
@@ -220,19 +231,23 @@
                         <div class="col-md-6 footer-copyright">
                             <p class="mb-0"> © Simit Saray Baku. All rights reserved.</p>
                         </div>
-                       
+
                     </div>
                 </div>
             </footer>
         </div>
     </div>
+
     <!-- latest jquery-->
     <script src="~/Areas/SimitAdmin/assets/js/jquery-3.2.1.min.js"></script>
+
     <!-- Bootstrap js-->
     <script src="~/Areas/SimitAdmin/assets/js/bootstrap/popper.min.js"></script>
     <script src="~/Areas/SimitAdmin/assets/js/bootstrap/bootstrap.js"></script>
     <!-- feather icon js-->
     <!-- Sidebar jquery-->
+    @RenderSection("AdminJS", required: false)
+
     <script src="~/Areas/SimitAdmin/assets/js/sidebar-menu.js"></script>
     <script src="~/Areas/SimitAdmin/assets/js/config.js"></script>
     <!-- Plugins JS start-->

@@ -32,7 +32,7 @@ namespace Simit_Saray.Areas.SimitAdmin.Controllers
                     if (selectAdmin.Password == Adm.Password)
                     {
                         Session["activeAdmin"] = selectAdmin;
-                        return RedirectToAction("Index", "Home");
+                        return RedirectToAction("Index", "AdminHome");
                     }
                     else
                     {

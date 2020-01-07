@@ -3,8 +3,29 @@
 }
 @using Simit_Saray.ViewModels
 @model DefaultViewModel
+@section navMenu{
+    <div class="nav-but-wrap" style="position:fixed;right:45px;top:0px;">
+        <div class="menu-icon hover-target">
+            <span class="menu-icon__line menu-icon__line-left"></span>
+            <span class="menu-icon__line"></span>
+            <span class="menu-icon__line menu-icon__line-right"></span>
+        </div>
+    </div>
+}
+<div style="position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: #FFFFF1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 500;" class="prLoader">
+    <img src="~/Public/Uploads/simitload.gif" />
+</div>
 <section id="welcome" style="
-   
+
     background: linear-gradient(to bottom, rgba(92, 77, 66, 0.8) 0, rgba(92, 77, 66, 0.8) 100%), url(@Model.homeHeader.BackgroundImage) no-repeat center center/ cover">
     <div class="section full-height over-hide">
         <div class="switch-wrap">
@@ -18,7 +39,7 @@
             </div>
         </div>
     </div>
-  
+
 
 </section>
 <!-- MENU
@@ -39,8 +60,8 @@
                         <div class="row justify-content-between section_menu__body">
 
                             <div class="col-sm-12 col-md-5 order-2 order-sm-first">
-                                <div class="section_menu__img">
-                                    <img style="height: 100%; object-fit: cover"  src="@item.CategoryPhoto" class="img-fluid" alt="...">
+                                <div class="section_menu__img" style="height:100%">
+                                    <img style="height: 100%; object-fit: cover" src="@item.CategoryPhoto" class="img-fluid" alt="...">
                                 </div>
                             </div>
 
@@ -58,9 +79,9 @@
                                     @foreach (var menuitem in item.Menyu)
                                     {
                                         <div class="col-sm-12 col-md-6 dish_body">
-                                            <h5 class="dish_body__name">
-                                                @menuitem.Name <span>@menuitem.Price AZN</span>
-                                            </h5>
+                                            <div class="dish_body__name" style="display:flex;align-items:center;justify-content:space-between">
+                                                <h5 style="flex:2;margin:0 4px;">@menuitem.Name </h5><span style="flex:1;text-align:right">@menuitem.Price AZN</span>
+                                            </div>
                                             <div class="dish_body__desc text-italic">
                                                 @menuitem.Ingridient
                                             </div>
@@ -94,11 +115,11 @@
                                     @foreach (var menuitem in item.Menyu)
                                     {
                                         <div class="col-sm-12 col-md-6 dish_body">
-                                            <h5 class="dish_body__name">
-                                                @menuitem.Name <span>@menuitem.Price AZN</span>
-                                            </h5>
+                                            <div class="dish_body__name" style="display:flex;align-items:center;justify-content:space-between">
+                                                <h5 style="flex:2;margin:0 4px;">@menuitem.Name </h5><span style="flex:1;text-align:right">@menuitem.Price AZN</span>
+                                            </div>
                                             <div class="dish_body__desc text-italic">
-                                             @menuitem.Ingridient
+                                                @menuitem.Ingridient
                                             </div>
                                         </div> <!-- .dish_body -->
                                     }
@@ -107,9 +128,9 @@
                                 </div> <!-- / .row -->
 
                             </div>
-                            <div class="col-sm-12 col-md-5">
-                                <div class="section_menu__img">
-                                    <img style="height: 100%; object-fit: cover;"  src="@item.CategoryPhoto" class="img-fluid" alt="...">
+                            <div class="col-sm-12 col-md-5 order-2 order-sm-first">
+                                <div class="section_menu__img" style="height:100%">
+                                    <img style="height: 100%; object-fit: cover" src="@item.CategoryPhoto" class="img-fluid" alt="...">
                                 </div>
                             </div>
                         </div> <!-- / .row -->
@@ -141,43 +162,43 @@
 
 <section id="about" style="
          background: linear-gradient(to bottom, rgba(92, 77, 66, 0.8) 0, rgba(92, 77, 66, 0.8) 100%), url(@Model.Haqqinda.BackgroundImage)  no-repeat center center/ cover">
-   
-       <!-- Heading -->
-        <h1 class="section__heading text-center pt-5">Haqqımızda</h1>
 
-        <div class="container">
-            <div class="row justify-content-between">
+    <!-- Heading -->
+    <h1 class="section__heading text-center pt-5">Haqqımızda</h1>
 
-                <div class="col-sm-12 col-md-6 col-lg-6 col-xl-5">
+    <div class="container">
+        <div class="row justify-content-between">
 
-                    <!-- Heading -->
-                    <h1 class="section__heading">@Model.Haqqinda.Header</h1>
+            <div class="col-sm-12 col-md-6 col-lg-6 col-xl-5">
 
-                    <!-- Info -->
+                <!-- Heading -->
+                <h1 class="section__heading">@Model.Haqqinda.Header</h1>
 
-                    <p class="text-italic">@Model.Haqqinda.Description</p>
+                <!-- Info -->
 
-                    <!-- Devider Line -->
-                    <div class="divider_line"></div>
+                <p class="text-italic">@Model.Haqqinda.Description</p>
 
+                <!-- Devider Line -->
+                <div class="divider_line"></div>
+
+            </div>
+
+            <div class="col-sm-12 col-md-6">
+                <div class="section_about__img">
+                    <img src="@Model.Haqqinda.Photo" class="img-fluid mb-5" alt="...">
                 </div>
+            </div>
 
-                <div class="col-sm-12 col-md-6">
-                    <div class="section_about__img">
-                        <img src="@Model.Haqqinda.Photo" class="img-fluid mb-5" alt="...">
-                    </div>
-                </div>
+        </div> <!-- / .row -->
+    </div>
 
-            </div> <!-- / .row -->
-        </div>
-
-    </section>
+</section>
 
 
 <!-- CONTACT
 ================================================== -->
 <section id="contact">
-    <section class="section_contact pb-5" >
+    <section class="section_contact pb-5">
 
         <!-- Heading -->
         <h1 class="section__heading text-center pt-5 mb-0">Əlaqə vasitələri</h1>
@@ -345,8 +366,18 @@
                 </div>
             </div> <!-- / .row -->
 
+    
 
 
         </div> <!-- .container -->
     </section> <!-- .section_contact -->
+
 </section>
+@section MainJs{
+    <script src="~/public/js/mainSimit.js"></script>
+    <script>
+        $(window).on("load", function () {
+            $(".prLoader").delay(2100).fadeOut(500);
+        })
+    </script>
+}

@@ -3,6 +3,8 @@ using Simit_Saray.ViewModels;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net;
+using System.Net.Mail;
 using System.Web;
 using System.Web.Mvc;
 
@@ -31,40 +33,96 @@ namespace Simit_Saray.Controllers
             return PartialView();
         }
         [HttpPost]
-        public ActionResult Reservation(Reservation res,Profil user)
+        public JsonResult Reservation(Reservation res,Profil user)
         {
-            
 
-            if (user.Phone!=null && user.FullName != null)
+            if (user.FullName != null)
             {
-                int profilId = 0;
-                Profil selectedProfil = DB.Profil.FirstOrDefault(pr=>pr.Phone==user.Phone);
-                if (selectedProfil == null)
-                {
-                    Profil profile = DB.Profil.Add(new Profil
+                
+                    int profilId = 0;
+                    Profil selectedProfil = DB.Profil.FirstOrDefault(pr => pr.Phone == user.Phone);
+                    if (selectedProfil == null)
                     {
-                        Phone = user.Phone,
-                        Email = user.Email,
-                        FullName = user.FullName
+                        Profil profile = DB.Profil.Add(new Profil
+                        {
+                            Phone = user.Phone,
+                            Email = user.Email,
+                            FullName = user.FullName
+                        });
+                        DB.SaveChanges();
+                        profilId = profile.ID;
+                    }
+                    else
+                    {
+                        profilId = selectedProfil.ID;
+                    }
+                    DB.Reservation.Add(new Reservation
+                    {
+                        UserID = profilId,
+                        ComeDate = res.ComeDate,
+                        ComingHours = res.ComingHours,
+                        Amount = res.Amount,
                     });
                     DB.SaveChanges();
-                    profilId = profile.ID;
-                }
-                else
+                try
                 {
-                    profilId = selectedProfil.ID;
-                }
-                DB.Reservation.Add(new Reservation
+                  
+                        var senderEmail = new MailAddress(user.Email, user.FullName);
+                        var receiverEmail = new MailAddress("azad.gachayev@gmail.com", "Azad");
+                        var password = "mediterranean92";
+                        var sub = "Reservasiya";
+                        var body = res.Amount+ " neferlik";
+                        var smtp = new SmtpClient
+                        {
+                            Host = "smtp.gmail.com",
+                            Port = 587,
+                            EnableSsl = true,
+                            DeliveryMethod = SmtpDeliveryMethod.Network,
+                            UseDefaultCredentials = false,
+                            Credentials = new NetworkCredential(senderEmail.Address, password)
+                        };
+                        using (var mess = new MailMessage(senderEmail, receiverEmail)
+                        {
+                            Subject = sub,
+                            Body = body
+                        })
+                        {
+                            smtp.Send(mess);
+                        }
+                    }
+                
+                catch (Exception)
                 {
-                    UserID=profilId,  
-                    ComeDate=res.ComeDate,
-                    ComingHours=res.ComingHours,
-                    Amount=res.Amount,
-                });
-                DB.SaveChanges();
+                    ViewBag.Error = "Some Error";
+                }
 
             }
-            return PartialView();
+
+            else
+            {
+                return Json(new
+                {
+                    status = 404,
+                    errorFullName = true,
+                    fullname = "Zəhmət olmasa adınızı qeyd edin!"
+                }, JsonRequestBehavior.AllowGet);
+            }
+            if (user.Phone == null)
+            {
+                return Json(new
+                {
+                    status = 404,
+                    errorPhone = true,
+                    phone = "Telefon nömrəsini yazın!"
+                }, JsonRequestBehavior.AllowGet);
+             
+            }
+            return Json(new{ 
+                message="success",
+                status=200,
+                response="",
+                error=false
+            },JsonRequestBehavior.AllowGet);
         }
         public ActionResult Menyu()
         {

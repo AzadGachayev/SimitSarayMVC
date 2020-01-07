@@ -1,0 +1,51 @@
+﻿@model IEnumerable<Simit_Saray.Models.About>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Areas/SimitAdmin/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2>Index</h2>
+
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Header)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Photo)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.BackgroundImage)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Description)
+        </th>
+
+
+    </tr>
+
+@foreach (var item in Model) {
+<tr>
+    <td>
+        @Html.DisplayFor(modelItem => item.Header)
+    </td>
+    <td style="width: 25%">
+        <img src="@item.Photo" class="img-thumbnail" alt="Alternate Text" />
+    </td>
+    <td style="width: 25%">
+        <img src="@item.BackgroundImage" class="img-thumbnail" alt="Alternate Text" />
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.Description)
+    </td>
+
+    <td>
+        @Html.ActionLink("Edit", "Edit", new { id = item.ID }) |
+        @Html.ActionLink("Delete", "Delete", new { id = item.ID })
+    </td>
+</tr>
+}
+
+</table>

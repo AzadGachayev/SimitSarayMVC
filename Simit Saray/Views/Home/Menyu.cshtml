@@ -90,7 +90,7 @@
             <a class="nav-link animsition-link" href="@Url.Action("Index","Home")">Əsas səhifə</a>
             <a class="nav-link animsition-link" href="@Url.Action("About","Home")">Haqqımızda</a>
             <a class="nav-link animsition-link active" href="@Url.Action("Menyu","Home")">Menyu</a>
-            <a class="nav-link animsition-link" href="@Url.Action("Blog","Home")">Blog</a>
+            <a class="nav-link animsition-link" href="@Url.Action("Blog","Home")">Bloq</a>
             <a class="nav-link animsition-link" href="@Url.Action("Gallery","Home")">Qalereya</a>
             <a class="nav-link animsition-link" href="@Url.Action("Contact","Home")">Əlaqə</a>
         </nav>
@@ -124,14 +124,14 @@
 
                             @foreach (var menuitem in item.Menyu)
                             {
-                                <div class="col-sm-12 col-md-6 dish_body">
-                                    <h5 class="dish_body__name">
-                                        @menuitem.Name <span>@menuitem.Price AZN</span>
-                                    </h5>
-                                    <div class="dish_body__desc text-italic">
-                                        @menuitem.Ingridient
-                                    </div>
-                                </div> <!-- .dish_body -->
+                            <div class="col-sm-12 col-md-6 dish_body">
+                                <div class="dish_body__name" style="display:flex;align-items:center;justify-content:space-between">
+                                    <h5 style="flex:2;margin:0 4px;">@menuitem.Name </h5><span style="flex:1;text-align:right">@menuitem.Price AZN</span>
+                                </div>
+                                <div class="dish_body__desc text-italic">
+                                    @menuitem.Ingridient
+                                </div>
+                            </div> <!-- .dish_body -->
                             }
 
 
@@ -155,9 +155,9 @@
                             @foreach (var menuitem in item.Menyu)
                             {
                                 <div class="col-sm-12 col-md-6 dish_body">
-                                    <h5 class="dish_body__name">
-                                        @menuitem.Name <span>@menuitem.Price AZN</span>
-                                    </h5>
+                                    <div class="dish_body__name" style="display:flex;align-items:center;justify-content:space-between">
+                                        <h5 style="flex:2;margin:0 4px;">@menuitem.Name </h5><span style="flex:1;text-align:right">@menuitem.Price AZN</span>
+                                    </div>
                                     <div class="dish_body__desc text-italic">
                                         @menuitem.Ingridient
                                     </div>
@@ -181,16 +181,16 @@
                 </div> <!-- / .row -->
             }
 
-
         }
 
 
         <div class="row text-center">
             <div class="col">
+                <a target="_blank" class="btn" href="https://docdro.id/TB9vPXk">
 
-                <a class="btn" href="https://bit.ly/31Os9iE">
-                    <h4 class="mb-0">Menyunu yüklə</h4>
-                </a>
+                    @*<a target="_blank" class="btn" href="https://bit.ly/31Os9iE">*@
+                        <h4 class="mb-0">Menyunu yüklə</h4>
+                    </a>
 
             </div>
         </div> <!-- / .row -->
@@ -202,7 +202,6 @@
 
     <!-- JS Plugins -->
     <script src="~/Public/assets/plugins/iziModal/js/iziModal.min.js"></script>
-    <script src="~/Public/assets/plugins/reservation/reservation.js"></script>
     <script src="~/Public/assets/plugins/alerts/alerts.js"></script>
     <script src="~/Public/assets/plugins/animsition/dist/js/animsition.min.js"></script>
 

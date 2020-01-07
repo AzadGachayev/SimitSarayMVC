@@ -17,7 +17,7 @@ namespace Simit_Saray.Areas.SimitAdmin
             context.MapRoute(
                 "SimitAdmin_default",
                 "SimitAdmin/{controller}/{action}/{id}",
-                new { controller = "Home", action = "Index", id = UrlParameter.Optional },
+                new { controller = "AdminHome", action = "Index", id = UrlParameter.Optional },
                 new string[] { "Simit_Saray.Areas.SimitAdmin.Controllers" }
 
             );

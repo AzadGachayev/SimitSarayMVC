@@ -1,0 +1,122 @@
+﻿@using Simit_Saray.ViewModels
+@model DefaultViewModel
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="2002-ci ildən fəaliyyət göstərən Simit Sarayı təkcə Türkiyənin deyil,
+          dünyanın da böyüyən markası olma yolunda irəliləyir. Günün istənilən saatı isti və təzə 
+          məhsullarını təqdim edən Simit Sarayı artıq Bakıda fəaliyyət göstərir.">
+    <meta name="keywords" content="Simit, Simit Saray, Simit Sarayı, Simit Sarayi, Simit Sarayi Baku,
+          Simit Sarayi Baki, Simit Sarayı Bakı, su boregi, kunefe, kahvalti tabagi, restoran, bakery, tarqoviy, pizza, kofe,
+          çay  seti, bakida en yaxsi restoran, ailevi restoran,  ">
+  @*<meta name="google-site-verification" content="" />*@
+    <meta name="author" content="Azad Gachayev" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Simit Sarayı</title>
+    <link rel="icon" href="~/Public/Uploads/logoS.png" type="image/x-icon">
+    <link rel="stylesheet" href="~/public/vendors/css/bootstrap.css">
+    <link rel="stylesheet" href="~/public/Vendors/owlcarousel/css/owl.carousel.css">
+    <link rel="stylesheet" href="~/public/vendors/owlcarousel/css/animate.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+    <link rel="stylesheet" href="~/public/css/simit.css">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-153543323-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-153543323-1');
+    </script>
+
+    @RenderSection("MainCss", required: false)
+</head>
+
+<body>
+    <header class="cd-header">
+        <div class="header-wrapper">
+            <div class="logo-wrap">
+                <a href="@Url.Action("","")" class="hover-target"><img src="@Model.homeHeader.Logo"></a>
+            </div>
+            @RenderSection("navMenu", required: false)
+        </div>
+    </header>
+
+    <div class="mainNav nav" style="--my-background:linear-gradient(to bottom, rgba(92, 77, 66, 0.8) 0, rgba(92, 77, 66, 0.8) 100%), url(@Model.NavBackground.BackgroundImage) no-repeat center center/ cover">
+        <div class="nav__content">
+            <ul class="nav__list">
+
+                <li class="nav__list-item"><a href="@Url.Action("Index","Home")" class="hover-target">Ana Səhifə</a></li>
+                <li class="nav__list-item"><a href="@Url.Action("Menyu","Home")" class="hover-target">Menyu</a></li>
+                <li class="nav__list-item"><a href="@Url.Action("Blog","Home")" class="hover-target">Xəbərlər</a></li>
+                <li class="nav__list-item"><a href="@Url.Action("Gallery","Home")" class="hover-target">Qalereya</a></li>
+                <li class="nav__list-item"><a href="@Url.Action("About","Home")" class="hover-target">Haqqımızda</a></li>
+                <li class="nav__list-item"><a href="@Url.Action("Contact","Home")" class="hover-target">Əlaqə</a></li>
+
+            </ul>
+        </div>
+    </div>
+    <div class='cursor' id="cursor"></div>
+    <div class='cursor2' id="cursor2"></div>
+    <div class='cursor3' id="cursor3"></div>
+    @RenderBody()
+    <footer class="section_footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-md-4">
+                    <p>© 2019 Simit Sarayı Bakı. Bütün hüquqlar qorunur.</p>
+
+                </div>
+                <div class="col-12 col-md-4 d-flex justify-content-around">
+
+                    <a href="https://www.facebook.com/azad.gachayev"><span>Created by Azad Gachayev</span></a>
+
+
+                </div>
+                <div class="col-12 col-md-4 ">
+                    <!-- Social icons -->
+                    <ul class="social__list">
+                        <li><a href="https://twitter.com/simitsarayi"><i class="fab fa-twitter"></i></a></li>
+                        <li><a href="https://www.facebook.com/Simit-Sarayı-Baku-467592887378361/"><i class="fab fa-facebook-f"></i></a></li>
+                        <li><a href="https://www.instagram.com/simitsarayibaku/"><i class="fab fa-instagram"></i></a></li>
+                        <li><a href="https://foursquare.com/v/simit-sarayi-baku/56daab7d498e2749a6934f62"><i class="fab fa-foursquare"></i></a></li>
+
+                    </ul>
+
+
+                </div>
+            </div> <!-- / .row -->
+        </div>
+    </footer> <!-- .section_footer -->
+
+
+
+    <script src="~/public/vendors/js/jquery-3.4.1.js"></script>
+    <script src="~/public/vendors/js/bootstrap.js"></script>
+    <script src="~/public/Vendors/owlcarousel/js/owl.carousel.js"></script>
+
+
+    <!--End of Tawk.to Script-->
+    <script src="~/public/js/mainSimit.js"></script>
+
+    @RenderSection("MainJs", required: false)
+    <!--Start of Tawk.to Script-->
+    <script type="text/javascript">
+        var Tawk_API = Tawk_API || {}, Tawk_LoadStart = new Date();
+        (function () {
+            var s1 = document.createElement("script"), s0 = document.getElementsByTagName("script")[0];
+            s1.async = true;
+            s1.src = 'https://embed.tawk.to/5ddfaad2d96992700fc9b1c4/default';
+            s1.charset = 'UTF-8';
+            s1.setAttribute('crossorigin', '*');
+            s0.parentNode.insertBefore(s1, s0);
+        })();
+    </script>
+    <script src="~/Public/assets/plugins/reservation/reservation.js"></script>
+
+</body>
+
+</html>

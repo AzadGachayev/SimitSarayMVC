@@ -104,11 +104,11 @@
 
                     <!-- Info data -->
                     <ul class="section_blog-item_body__info">
-                        <li><a href="#">24 Dec 2017</a></li>
+                        <li><a href="#">@Model.blogDetail.CreateDate.ToString("dd MMMM yyyy")</a></li>
                         <li>/</li>
-                        <li><a href="#">Food</a></li>
-                        <li>/</li>
-                        <li><a href="#">by John Doe</a></li>
+                        @*<li><a href="#">Food</a></li>
+                        <li>/</li>*@
+                        <li><a href="#">@Model.blogDetail.AuthorName</a></li>
                     </ul>
 
                     <!-- Description -->
@@ -140,124 +140,32 @@
             <div class="col-sm-12 col-md-10 col-lg-7">
 
                 <div class="section_blog-item__comments">
-                    <h4 class="text-center">
-                        4 Comments
-                    </h4>
+                    <div id="disqus_thread"></div>
+                    <script>
 
-                    <ul class="comments__list">
-                        <li class="comment">
-                            <div class="comment__avatar">
-                                <img src="~/public/assets/img/comment_img_1.jpg" class="img-fluid" alt="...">
-                            </div>
-                            <div class="comment__content">
-                                <h5 class="comment__user">
-                                    Robert Jones
-                                </h5>
-                                <div class="comment__date">
-                                    August 8, 2017 at 1:15 pm
-                                </div>
-                                <div class="comment__message">
-                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni dicta alias enim quasi sapiente saepe, repellat soluta commodi delectus doloribus, veniam odit hic ratione quae modi earum dolor dignissimos quas?
-                                </div>
-                                <div class="comment__reply">
-                                    <a href="#">Reply</a>
-                                </div>
-                            </div>
-                        </li> <!-- .comment -->
-                        <li class="comment">
-                            <div class="comment__avatar">
-                                <img src="~/public/assets/img/comment_img_2.jpg" class="img-fluid" alt="...">
-                            </div>
-                            <div class="comment__content">
-                                <h5 class="comment__user">
-                                    Jane Doe
-                                </h5>
-                                <div class="comment__date">
-                                    August 12, 2017 at 3:15 pm
-                                </div>
-                                <div class="comment__message">
-                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci iusto sapiente magnam, dolorum laudantium eius corporis odit deserunt aliquid architecto ut veniam cumque repudiandae commodi impedit tempore vitae modi voluptates amet aliquam.
-                                </div>
-                                <div class="comment__reply">
-                                    <a href="#">Reply</a>
-                                </div>
-                            </div>
-                        </li> <!-- .comment -->
-                        <li class="comment">
-                            <div class="comment__avatar">
-                                <img src="~/public/assets/img/comment_img_3.jpg" class="img-fluid" alt="...">
-                            </div>
-                            <div class="comment__content">
-                                <h5 class="comment__user">
-                                    Robert Jones
-                                </h5>
-                                <div class="comment__date">
-                                    October 8, 2017 at 11:42 am
-                                </div>
-                                <div class="comment__message">
-                                    Sint nisi quod culpa animi sit a voluptas quia, dolor qui eius esse itaque velit quasi quibusdam, modi nesciunt facere harum! Error adipisci nesciunt praesentium! Dolorum magni dolorem adipisci vitae, culpa praesentium inventore.
-                                </div>
-                                <div class="comment__reply">
-                                    <a href="#">Reply</a>
-                                </div>
-                            </div>
-                        </li> <!-- .comment -->
-                        <li class="comment">
-                            <div class="comment__avatar">
-                                <img src="~/public/assets/img/comment_img_4.jpg" class="img-fluid" alt="...">
-                            </div>
-                            <div class="comment__content">
-                                <h5 class="comment__user">
-                                    Jessica Border
-                                </h5>
-                                <div class="comment__date">
-                                    October 14, 2017 at 11:10 am
-                                </div>
-                                <div class="comment__message">
-                                    placeat eaque quaerat distinctio voluptatibus modi. Asperiores fugiat deleniti praesentium enim incidunt quaerat cupiditate repellendus and reprehend.
-                                </div>
-                                <div class="comment__reply">
-                                    <a href="#">Cavab</a>
-                                </div>
-                            </div>
-                        </li> <!-- .comment -->
-                    </ul> <!-- .comments__list -->
+                        /**
+                        *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+                        *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+                        /*
+                        var disqus_config = function () {
+                        this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+                        this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+                        };
+                        */
+                        (function () { // DON'T EDIT BELOW THIS LINE
+                            var d = document, s = d.createElement('script');
+                            s.src = 'https://simitsarayi.disqus.com/embed.js';
+                            s.setAttribute('data-timestamp', +new Date());
+                            (d.head || d.body).appendChild(s);
+                        })();
+                    </script>
+                    <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
                 </div> <!-- .comments -->
             </div>
         </div> <!-- / .row -->
 
-        <div class="row justify-content-center">
-            <div class="col-sm-12 col-md-10 col-lg-7">
-
-                <h4 class="text-center">
-                    Şərh yaz
-                </h4>
-
-                <!-- Form -->
-                <form class="comments__form">
-
-                    <div class="form-group">
-                        <label for="name" class="sr-only">Name (Required)</label>
-                        <input type="text" name="name" class="form-control" id="name" placeholder="Adını, Soyadını daxil et">
-                    </div>
-
-                    <div class="form-group">
-                        <label for="email" class="sr-only">Email address (Required)</label>
-                        <input type="email" name="email" class="form-control" id="email" placeholder="Elektron poçt ünvanını yaz">
-                    </div>
-
-                    <div class="form-group">
-                        <label for="message" class="sr-only">Message (Required)</label>
-                        <textarea name="message" class="form-control" rows="6" id="message" placeholder="Mesajını daxil et"></textarea>
-                        <span class="help-block"></span>
-                    </div>
-
-                    <button type="submit" class="btn btn-accent">
-                        Mesaj göndər
-                    </button>
-                </form>
-            </div>
-        </div> <!-- / .row -->
+  
 
         <div class="row text-center">
             <div class="col">

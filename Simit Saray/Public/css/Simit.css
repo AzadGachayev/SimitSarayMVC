@@ -7,7 +7,7 @@ body {
   font-weight: 300;
   font-size: 15px;
   line-height: 1.7;
-  color: #acaab6;
+  color: #fff;
   overflow-x: hidden;
   -webkit-transition: all 300ms linear;
   transition: all 300ms linear; }
@@ -117,7 +117,7 @@ a:hover {
 /* #Navigation
 ================================================== */
 .cd-header {
-  position: fixed;
+  position: absolute;
   width: 100%;
   top: 0;
   left: 0;
@@ -202,8 +202,18 @@ a:hover {
   position: fixed;
   z-index: 98; }
 
-#map{
-    height:100%;
+#map {
+    height: 100%;
+}
+
+@media (max-width: 991px) {
+     #map {
+        height: 80vh;
+    }
+}
+
+.section_contact__item {
+    margin: 3rem 0;
 }
 #content h1 {
     color: brown;
@@ -253,25 +263,26 @@ a:hover {
   z-index: 2; }
 
 .nav__list-item {
-  position: relative;
-  display: block;
-  -webkit-transition-delay: 0.8s;
-  transition-delay: 0.8s;
-  opacity: 0;
-  text-align: center;
-  color: #fff;
-  overflow: hidden;
-  font-family: 'Rozha One', serif;
-  font-size: 5vh;
-  line-height: 1.15;
-  -webkit-transform: translate(100px, 0%);
-  transform: translate(100px, 0%);
-  -webkit-transition: opacity .2s ease, -webkit-transform .3s ease;
-  transition: opacity .2s ease, -webkit-transform .3s ease;
-  transition: opacity .2s ease, transform .3s ease;
-  transition: opacity .2s ease, transform .3s ease, -webkit-transform .3s ease;
-  margin-top: 0;
-  margin-bottom: 0; }
+    position: relative;
+    display: block;
+    -webkit-transition-delay: 0.8s;
+    transition-delay: 0.8s;
+    opacity: 0;
+    text-align: center;
+    color: #fff;
+    overflow: hidden;
+    font-family: -webkit-body;
+    font-size: 5vh;
+    line-height: 1.15;
+    -webkit-transform: translate(100px, 0%);
+    transform: translate(100px, 0%);
+    -webkit-transition: opacity .2s ease, -webkit-transform .3s ease;
+    transition: opacity .2s ease, -webkit-transform .3s ease;
+    transition: opacity .2s ease, transform .3s ease;
+    transition: opacity .2s ease, transform .3s ease, -webkit-transform .3s ease;
+    margin-top: 0;
+    margin-bottom: 0;
+}
 
 .nav__list-item a {
   position: relative;
@@ -423,25 +434,27 @@ body.nav-active .nav__list-item:nth-child(10) {
   margin: 0 auto;
   text-align: center; }
 
-.switch-wrap h1 {
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 800;
-  font-size: 46px;
-  line-height: 2;
-  color: #fff;
-  text-align: center;
-  text-transform: uppercase;
-  margin-bottom: 40px;
-  -webkit-transition: all 300ms linear;
-  transition: all 300ms linear; }
+    .switch-wrap h1 {
+        font-family: -webkit-body;
+        font-weight: 800;
+        font-size: 46px;
+        line-height: 2;
+        color: #fff;
+        text-align: center;
+        text-transform: uppercase;
+        margin-bottom: 40px;
+        -webkit-transition: all 300ms linear;
+        transition: all 300ms linear;
+    }
 
 .paragraf p {
-  font-family: sans-serif;
-  color: #fff;
-  text-align: center;
-  margin: auto;
-  -webkit-transition: all 300ms linear;
-  transition: all 300ms linear; }
+    font-family: -webkit-body;
+    color: #fff;
+    text-align: center;
+    margin: auto;
+    -webkit-transition: all 300ms linear;
+    transition: all 300ms linear;
+}
 
 @media screen and (max-width: 580px) {
   .switch-wrap h1 {
@@ -500,6 +513,7 @@ body.nav-active .nav__list-item:nth-child(10) {
 /* #Light
 ================================================== */
 body.light {
+
   background-color: #fff; }
 
 body.light .cursor,
@@ -576,15 +590,16 @@ Navbar, Header, Esas sehife olan hisselerin sonu
 .section__heading.text-center {
   margin-right: auto;
   margin-left: auto; }
-.section_footer {
-    background: #0e0101 !important;
-}
+
 @media (max-width: 991px) {
   .section__heading {
     font-size: 2rem; } }
 /* ----------------------------------------------
                  HAQQIMIZDA
 -------------------------------------------------*/
+#menyu {
+    height: 950px;
+}
 @media (max-width: 991px) {
   .section_about__img {
     margin-top: 3rem; } }
@@ -595,14 +610,19 @@ Navbar, Header, Esas sehife olan hisselerin sonu
   margin: 3rem 0; }
 
 .section_footer {
-    background: #0e0101 !important;
+    background: linear-gradient(#210000, black) !important;
     margin-top: auto;
-    padding: 2rem 0;
+    padding: 20px 0;
 }
-
-@media (max-width: 767px) {
-
-  .section_footer {
+    .section_footer span{
+        color: #463939;
+        
+    }
+        .section_footer span:hover {
+            color: #ACAAB6;
+        }
+    @media (max-width: 767px) {
+        .section_footer {
     text-align: center; } }
 .social__list {
   margin: 0;
@@ -612,6 +632,12 @@ Navbar, Header, Esas sehife olan hisselerin sonu
   text-align: right; }
 
 @media (max-width: 767px) {
+    .owl-prev,.owl-next{
+        display:none;
+    }
+    #menyu {
+        height: 100%;
+    }
   .social__list {
     text-align: center; } }
 .social__list > li {
@@ -634,3 +660,124 @@ Navbar, Header, Esas sehife olan hisselerin sonu
 
 
 /*# sourceMappingURL=Simit.css.map */
+
+/*windows load start*/
+
+/*.preloader {
+    position: fixed;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: blue;
+    z-index: 100;
+}
+
+.lds-roller {
+    display: inline-block;
+    position: relative;
+    width: 80px;
+    height: 80px;
+}
+
+    .lds-roller div {
+        animation: lds-roller 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+        transform-origin: 40px 40px;
+    }
+
+        .lds-roller div:after {
+            content: " ";
+            display: block;
+            position: absolute;
+            width: 7px;
+            height: 7px;
+            border-radius: 50%;
+            background: #fff;
+            margin: -4px 0 0 -4px;
+        }
+
+        .lds-roller div:nth-child(1) {
+            animation-delay: -0.036s;
+        }
+
+            .lds-roller div:nth-child(1):after {
+                top: 63px;
+                left: 63px;
+            }
+
+        .lds-roller div:nth-child(2) {
+            animation-delay: -0.072s;
+        }
+
+            .lds-roller div:nth-child(2):after {
+                top: 68px;
+                left: 56px;
+            }
+
+        .lds-roller div:nth-child(3) {
+            animation-delay: -0.108s;
+        }
+
+            .lds-roller div:nth-child(3):after {
+                top: 71px;
+                left: 48px;
+            }
+
+        .lds-roller div:nth-child(4) {
+            animation-delay: -0.144s;
+        }
+
+            .lds-roller div:nth-child(4):after {
+                top: 72px;
+                left: 40px;
+            }
+
+        .lds-roller div:nth-child(5) {
+            animation-delay: -0.18s;
+        }
+
+            .lds-roller div:nth-child(5):after {
+                top: 71px;
+                left: 32px;
+            }
+
+        .lds-roller div:nth-child(6) {
+            animation-delay: -0.216s;
+        }
+
+            .lds-roller div:nth-child(6):after {
+                top: 68px;
+                left: 24px;
+            }
+
+        .lds-roller div:nth-child(7) {
+            animation-delay: -0.252s;
+        }
+
+            .lds-roller div:nth-child(7):after {
+                top: 63px;
+                left: 17px;
+            }
+
+        .lds-roller div:nth-child(8) {
+            animation-delay: -0.288s;
+        }
+
+            .lds-roller div:nth-child(8):after {
+                top: 56px;
+                left: 12px;
+            }
+
+@keyframes lds-roller {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}*/
+/*windows load end*/

@@ -1,0 +1,297 @@
+D:\Azad\Projects\Videos C#\SimitMVC\Simit Saray\bin\Simit Saray.dll.config
+D:\Azad\Projects\Videos C#\SimitMVC\Simit Saray\bin\Simit Saray.dll
+D:\Azad\Projects\Videos C#\SimitMVC\Simit Saray\bin\Simit Saray.pdb
+D:\Azad\Projects\Videos C#\SimitMVC\Simit Saray\bin\roslyn\csc.exe
+D:\Azad\Projects\Videos C#\SimitMVC\Simit Saray\bin\roslyn\csc.exe.config
+D:\Azad\Projects\Videos C#\SimitMVC\Simit Saray\bin\roslyn\csc.rsp
+D:\Azad\Projects\Videos C#\SimitMVC\Simit Saray\bin\roslyn\csi.exe
+D:\Azad\Projects\Videos C#\SimitMVC\Simit Saray\bin\roslyn\csi.exe.config
+D:\Azad\Projects\Videos C#\SimitMVC\Simit Saray\bin\roslyn\csi.rsp
+D:\Azad\Projects\Videos C#\SimitMVC\Simit Saray\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+D:\Azad\Projects\Videos C#\SimitMVC\Simit Saray\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+D:\Azad\Projects\Videos C#\SimitMVC\Simit Saray\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+D:\Azad\Projects\Videos C#\SimitMVC\Simit Saray\bin\roslyn\Microsoft.CodeAnalysis.dll
+D:\Azad\Projects\Videos C#\SimitMVC\Simit Saray\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+D:\Azad\Projects\Videos C#\SimitMVC\Simit Saray\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+D:\Azad\Projects\Videos C#\SimitMVC\Simit Saray\bin\roslyn\Microsoft.CSharp.Core.targets
+D:\Azad\Projects\Videos C#\SimitMVC\Simit Saray\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+D:\Azad\Projects\Videos C#\SimitMVC\Simit Saray\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+D:\Azad\Projects\Videos C#\SimitMVC\Simit Saray\bin\roslyn\Microsoft.Managed.Core.targets
+D:\Azad\Projects\Videos C#\SimitMVC\Simit Saray\bin\roslyn\Microsoft.VisualBasic.Core.targets
+D:\Azad\Projects\Videos C#\SimitMVC\Simit Saray\bin\roslyn\System.AppContext.dll
+D:\Azad\Projects\Videos C#\SimitMVC\Simit Saray\bin\roslyn\System.Collections.Immutable.dll
+D:\Azad\Projects\Videos C#\SimitMVC\Simit Saray\bin\roslyn\System.Console.dll
+D:\Azad\Projects\Videos C#\SimitMVC\Simit Saray\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+D:\Azad\Projects\Videos C#\SimitMVC\Simit Saray\bin\roslyn\System.Diagnostics.StackTrace.dll
+D:\Azad\Projects\Videos C#\SimitMVC\Simit Saray\bin\roslyn\System.IO.Compression.dll
+D:\Azad\Projects\Videos C#\SimitMVC\Simit Saray\bin\roslyn\System.IO.FileSystem.dll
+D:\Azad\Projects\Videos C#\SimitMVC\Simit Saray\bin\roslyn\System.IO.FileSystem.Primitives.dll
+D:\Azad\Projects\Videos C#\SimitMVC\Simit Saray\bin\roslyn\System.IO.Pipes.AccessControl.dll
+D:\Azad\Projects\Videos C#\SimitMVC\Simit Saray\bin\roslyn\System.IO.Pipes.dll
+D:\Azad\Projects\Videos C#\SimitMVC\Simit Saray\bin\roslyn\System.Reflection.Metadata.dll
+D:\Azad\Projects\Videos C#\SimitMVC\Simit Saray\bin\roslyn\System.Security.AccessControl.dll
+D:\Azad\Projects\Videos C#\SimitMVC\Simit Saray\bin\roslyn\System.Security.Claims.dll
+D:\Azad\Projects\Videos C#\SimitMVC\Simit Saray\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+D:\Azad\Projects\Videos C#\SimitMVC\Simit Saray\bin\roslyn\System.Security.Cryptography.Encoding.dll
+D:\Azad\Projects\Videos C#\SimitMVC\Simit Saray\bin\roslyn\System.Security.Cryptography.Primitives.dll
+D:\Azad\Projects\Videos C#\SimitMVC\Simit Saray\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+D:\Azad\Projects\Videos C#\SimitMVC\Simit Saray\bin\roslyn\System.Security.Principal.Windows.dll
+D:\Azad\Projects\Videos C#\SimitMVC\Simit Saray\bin\roslyn\System.Text.Encoding.CodePages.dll
+D:\Azad\Projects\Videos C#\SimitMVC\Simit Saray\bin\roslyn\System.ValueTuple.dll
+D:\Azad\Projects\Videos C#\SimitMVC\Simit Saray\bin\roslyn\System.Xml.ReaderWriter.dll
+D:\Azad\Projects\Videos C#\SimitMVC\Simit Saray\bin\roslyn\System.Xml.XmlDocument.dll
+D:\Azad\Projects\Videos C#\SimitMVC\Simit Saray\bin\roslyn\System.Xml.XPath.dll
+D:\Azad\Projects\Videos C#\SimitMVC\Simit Saray\bin\roslyn\System.Xml.XPath.XDocument.dll
+D:\Azad\Projects\Videos C#\SimitMVC\Simit Saray\bin\roslyn\vbc.exe
+D:\Azad\Projects\Videos C#\SimitMVC\Simit Saray\bin\roslyn\vbc.exe.config
+D:\Azad\Projects\Videos C#\SimitMVC\Simit Saray\bin\roslyn\vbc.rsp
+D:\Azad\Projects\Videos C#\SimitMVC\Simit Saray\bin\roslyn\VBCSCompiler.exe
+D:\Azad\Projects\Videos C#\SimitMVC\Simit Saray\bin\roslyn\VBCSCompiler.exe.config
+D:\Azad\Projects\Videos C#\SimitMVC\Simit Saray\bin\Antlr3.Runtime.dll
+D:\Azad\Projects\Videos C#\SimitMVC\Simit Saray\bin\EntityFramework.dll
+D:\Azad\Projects\Videos C#\SimitMVC\Simit Saray\bin\EntityFramework.SqlServer.dll
+D:\Azad\Projects\Videos C#\SimitMVC\Simit Saray\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\Azad\Projects\Videos C#\SimitMVC\Simit Saray\bin\Microsoft.Web.Infrastructure.dll
+D:\Azad\Projects\Videos C#\SimitMVC\Simit Saray\bin\Newtonsoft.Json.dll
+D:\Azad\Projects\Videos C#\SimitMVC\Simit Saray\bin\System.Net.Http.Formatting.dll
+D:\Azad\Projects\Videos C#\SimitMVC\Simit Saray\bin\System.Web.Helpers.dll
+D:\Azad\Projects\Videos C#\SimitMVC\Simit Saray\bin\System.Web.Http.dll
+D:\Azad\Projects\Videos C#\SimitMVC\Simit Saray\bin\System.Web.Http.WebHost.dll
+D:\Azad\Projects\Videos C#\SimitMVC\Simit Saray\bin\System.Web.Mvc.dll
+D:\Azad\Projects\Videos C#\SimitMVC\Simit Saray\bin\System.Web.Optimization.dll
+D:\Azad\Projects\Videos C#\SimitMVC\Simit Saray\bin\System.Web.Razor.dll
+D:\Azad\Projects\Videos C#\SimitMVC\Simit Saray\bin\System.Web.WebPages.Deployment.dll
+D:\Azad\Projects\Videos C#\SimitMVC\Simit Saray\bin\System.Web.WebPages.dll
+D:\Azad\Projects\Videos C#\SimitMVC\Simit Saray\bin\System.Web.WebPages.Razor.dll
+D:\Azad\Projects\Videos C#\SimitMVC\Simit Saray\bin\WebGrease.dll
+D:\Azad\Projects\Videos C#\SimitMVC\Simit Saray\bin\EntityFramework.xml
+D:\Azad\Projects\Videos C#\SimitMVC\Simit Saray\bin\EntityFramework.SqlServer.xml
+D:\Azad\Projects\Videos C#\SimitMVC\Simit Saray\bin\System.Net.Http.Formatting.xml
+D:\Azad\Projects\Videos C#\SimitMVC\Simit Saray\bin\System.Web.Http.xml
+D:\Azad\Projects\Videos C#\SimitMVC\Simit Saray\bin\System.Web.Http.WebHost.xml
+D:\Azad\Projects\Videos C#\SimitMVC\Simit Saray\bin\System.Web.Helpers.xml
+D:\Azad\Projects\Videos C#\SimitMVC\Simit Saray\bin\System.Web.Mvc.xml
+D:\Azad\Projects\Videos C#\SimitMVC\Simit Saray\bin\System.Web.Optimization.xml
+D:\Azad\Projects\Videos C#\SimitMVC\Simit Saray\bin\System.Web.Razor.xml
+D:\Azad\Projects\Videos C#\SimitMVC\Simit Saray\bin\System.Web.WebPages.xml
+D:\Azad\Projects\Videos C#\SimitMVC\Simit Saray\bin\System.Web.WebPages.Deployment.xml
+D:\Azad\Projects\Videos C#\SimitMVC\Simit Saray\bin\System.Web.WebPages.Razor.xml
+D:\Azad\Projects\Videos C#\SimitMVC\Simit Saray\bin\Newtonsoft.Json.xml
+D:\Azad\Projects\Videos C#\SimitMVC\Simit Saray\bin\Antlr3.Runtime.pdb
+D:\Azad\Projects\Videos C#\SimitMVC\Simit Saray\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\Azad\Projects\Videos C#\SimitMVC\Simit Saray\obj\Release\Simit Saray.csprojAssemblyReference.cache
+D:\Azad\Projects\Videos C#\SimitMVC\Simit Saray\obj\Release\Simit Saray.csproj.CopyComplete
+D:\Azad\Projects\Videos C#\SimitMVC\Simit Saray\obj\Release\Simit Saray.dll
+D:\Azad\Projects\Videos C#\SimitMVC\Simit Saray\obj\Release\Simit Saray.pdb
+D:\Azad\Projects\Videos C#\SimitMVC\Simit Saray\bin\Microsoft.IdentityModel.Logging.dll
+D:\Azad\Projects\Videos C#\SimitMVC\Simit Saray\bin\Microsoft.IdentityModel.Tokens.dll
+D:\Azad\Projects\Videos C#\SimitMVC\Simit Saray\bin\PhoneNumbers.dll
+D:\Azad\Projects\Videos C#\SimitMVC\Simit Saray\bin\System.IdentityModel.Tokens.Jwt.dll
+D:\Azad\Projects\Videos C#\SimitMVC\Simit Saray\bin\Twilio.AspNet.Common.dll
+D:\Azad\Projects\Videos C#\SimitMVC\Simit Saray\bin\Twilio.AspNet.Mvc.dll
+D:\Azad\Projects\Videos C#\SimitMVC\Simit Saray\bin\Twilio.dll
+D:\Azad\Projects\Videos C#\SimitMVC\Simit Saray\bin\TwilioFluent.Mvc3.dll
+D:\Azad\Projects\Videos C#\SimitMVC\Simit Saray\bin\TwilioFluent.TwiML.dll
+D:\Azad\Projects\Videos C#\SimitMVC\Simit Saray\bin\Microsoft.IdentityModel.Tokens.xml
+D:\Azad\Projects\Videos C#\SimitMVC\Simit Saray\bin\System.IdentityModel.Tokens.Jwt.xml
+D:\Azad\Projects\Videos C#\SimitMVC\Simit Saray\bin\Twilio.xml
+D:\Azad\Projects\Videos C#\SimitMVC\Simit Saray\bin\TwilioFluent.Mvc3.xml
+D:\Azad\Projects\Videos C#\SimitMVC\Simit Saray\bin\TwilioFluent.TwiML.xml
+D:\SimitMVC\Simit Saray\bin\Simit Saray.dll.config
+D:\SimitMVC\Simit Saray\bin\Simit Saray.dll
+D:\SimitMVC\Simit Saray\bin\Simit Saray.pdb
+D:\SimitMVC\Simit Saray\bin\roslyn\csc.exe
+D:\SimitMVC\Simit Saray\bin\roslyn\csc.exe.config
+D:\SimitMVC\Simit Saray\bin\roslyn\csc.rsp
+D:\SimitMVC\Simit Saray\bin\roslyn\csi.exe
+D:\SimitMVC\Simit Saray\bin\roslyn\csi.exe.config
+D:\SimitMVC\Simit Saray\bin\roslyn\csi.rsp
+D:\SimitMVC\Simit Saray\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+D:\SimitMVC\Simit Saray\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+D:\SimitMVC\Simit Saray\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+D:\SimitMVC\Simit Saray\bin\roslyn\Microsoft.CodeAnalysis.dll
+D:\SimitMVC\Simit Saray\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+D:\SimitMVC\Simit Saray\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+D:\SimitMVC\Simit Saray\bin\roslyn\Microsoft.CSharp.Core.targets
+D:\SimitMVC\Simit Saray\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+D:\SimitMVC\Simit Saray\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+D:\SimitMVC\Simit Saray\bin\roslyn\Microsoft.Managed.Core.targets
+D:\SimitMVC\Simit Saray\bin\roslyn\Microsoft.VisualBasic.Core.targets
+D:\SimitMVC\Simit Saray\bin\roslyn\System.AppContext.dll
+D:\SimitMVC\Simit Saray\bin\roslyn\System.Collections.Immutable.dll
+D:\SimitMVC\Simit Saray\bin\roslyn\System.Console.dll
+D:\SimitMVC\Simit Saray\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+D:\SimitMVC\Simit Saray\bin\roslyn\System.Diagnostics.StackTrace.dll
+D:\SimitMVC\Simit Saray\bin\roslyn\System.IO.Compression.dll
+D:\SimitMVC\Simit Saray\bin\roslyn\System.IO.FileSystem.dll
+D:\SimitMVC\Simit Saray\bin\roslyn\System.IO.FileSystem.Primitives.dll
+D:\SimitMVC\Simit Saray\bin\roslyn\System.IO.Pipes.AccessControl.dll
+D:\SimitMVC\Simit Saray\bin\roslyn\System.IO.Pipes.dll
+D:\SimitMVC\Simit Saray\bin\roslyn\System.Reflection.Metadata.dll
+D:\SimitMVC\Simit Saray\bin\roslyn\System.Security.AccessControl.dll
+D:\SimitMVC\Simit Saray\bin\roslyn\System.Security.Claims.dll
+D:\SimitMVC\Simit Saray\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+D:\SimitMVC\Simit Saray\bin\roslyn\System.Security.Cryptography.Encoding.dll
+D:\SimitMVC\Simit Saray\bin\roslyn\System.Security.Cryptography.Primitives.dll
+D:\SimitMVC\Simit Saray\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+D:\SimitMVC\Simit Saray\bin\roslyn\System.Security.Principal.Windows.dll
+D:\SimitMVC\Simit Saray\bin\roslyn\System.Text.Encoding.CodePages.dll
+D:\SimitMVC\Simit Saray\bin\roslyn\System.ValueTuple.dll
+D:\SimitMVC\Simit Saray\bin\roslyn\System.Xml.ReaderWriter.dll
+D:\SimitMVC\Simit Saray\bin\roslyn\System.Xml.XmlDocument.dll
+D:\SimitMVC\Simit Saray\bin\roslyn\System.Xml.XPath.dll
+D:\SimitMVC\Simit Saray\bin\roslyn\System.Xml.XPath.XDocument.dll
+D:\SimitMVC\Simit Saray\bin\roslyn\vbc.exe
+D:\SimitMVC\Simit Saray\bin\roslyn\vbc.exe.config
+D:\SimitMVC\Simit Saray\bin\roslyn\vbc.rsp
+D:\SimitMVC\Simit Saray\bin\roslyn\VBCSCompiler.exe
+D:\SimitMVC\Simit Saray\bin\roslyn\VBCSCompiler.exe.config
+D:\SimitMVC\Simit Saray\bin\Antlr3.Runtime.dll
+D:\SimitMVC\Simit Saray\bin\EntityFramework.dll
+D:\SimitMVC\Simit Saray\bin\EntityFramework.SqlServer.dll
+D:\SimitMVC\Simit Saray\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\SimitMVC\Simit Saray\bin\Microsoft.IdentityModel.Logging.dll
+D:\SimitMVC\Simit Saray\bin\Microsoft.IdentityModel.Tokens.dll
+D:\SimitMVC\Simit Saray\bin\Microsoft.Web.Infrastructure.dll
+D:\SimitMVC\Simit Saray\bin\Newtonsoft.Json.dll
+D:\SimitMVC\Simit Saray\bin\PhoneNumbers.dll
+D:\SimitMVC\Simit Saray\bin\System.IdentityModel.Tokens.Jwt.dll
+D:\SimitMVC\Simit Saray\bin\System.Net.Http.Formatting.dll
+D:\SimitMVC\Simit Saray\bin\System.Web.Helpers.dll
+D:\SimitMVC\Simit Saray\bin\System.Web.Http.dll
+D:\SimitMVC\Simit Saray\bin\System.Web.Http.WebHost.dll
+D:\SimitMVC\Simit Saray\bin\System.Web.Mvc.dll
+D:\SimitMVC\Simit Saray\bin\System.Web.Optimization.dll
+D:\SimitMVC\Simit Saray\bin\System.Web.Razor.dll
+D:\SimitMVC\Simit Saray\bin\System.Web.WebPages.Deployment.dll
+D:\SimitMVC\Simit Saray\bin\System.Web.WebPages.dll
+D:\SimitMVC\Simit Saray\bin\System.Web.WebPages.Razor.dll
+D:\SimitMVC\Simit Saray\bin\Twilio.AspNet.Common.dll
+D:\SimitMVC\Simit Saray\bin\Twilio.AspNet.Mvc.dll
+D:\SimitMVC\Simit Saray\bin\Twilio.dll
+D:\SimitMVC\Simit Saray\bin\TwilioFluent.Mvc3.dll
+D:\SimitMVC\Simit Saray\bin\TwilioFluent.TwiML.dll
+D:\SimitMVC\Simit Saray\bin\WebGrease.dll
+D:\SimitMVC\Simit Saray\bin\EntityFramework.xml
+D:\SimitMVC\Simit Saray\bin\EntityFramework.SqlServer.xml
+D:\SimitMVC\Simit Saray\bin\Microsoft.IdentityModel.Tokens.xml
+D:\SimitMVC\Simit Saray\bin\System.IdentityModel.Tokens.Jwt.xml
+D:\SimitMVC\Simit Saray\bin\System.Net.Http.Formatting.xml
+D:\SimitMVC\Simit Saray\bin\System.Web.Http.xml
+D:\SimitMVC\Simit Saray\bin\System.Web.Http.WebHost.xml
+D:\SimitMVC\Simit Saray\bin\System.Web.Helpers.xml
+D:\SimitMVC\Simit Saray\bin\System.Web.Mvc.xml
+D:\SimitMVC\Simit Saray\bin\System.Web.Optimization.xml
+D:\SimitMVC\Simit Saray\bin\System.Web.Razor.xml
+D:\SimitMVC\Simit Saray\bin\System.Web.WebPages.xml
+D:\SimitMVC\Simit Saray\bin\System.Web.WebPages.Deployment.xml
+D:\SimitMVC\Simit Saray\bin\System.Web.WebPages.Razor.xml
+D:\SimitMVC\Simit Saray\bin\Newtonsoft.Json.xml
+D:\SimitMVC\Simit Saray\bin\Twilio.xml
+D:\SimitMVC\Simit Saray\bin\TwilioFluent.Mvc3.xml
+D:\SimitMVC\Simit Saray\bin\TwilioFluent.TwiML.xml
+D:\SimitMVC\Simit Saray\bin\Antlr3.Runtime.pdb
+D:\SimitMVC\Simit Saray\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\SimitMVC\Simit Saray\obj\Release\Simit Saray.csprojAssemblyReference.cache
+D:\SimitMVC\Simit Saray\obj\Release\Simit Saray.csproj.CopyComplete
+D:\SimitMVC\Simit Saray\obj\Release\Simit Saray.dll
+D:\SimitMVC\Simit Saray\obj\Release\Simit Saray.pdb
+F:\SimitMVC\Simit Saray\bin\Simit Saray.dll.config
+F:\SimitMVC\Simit Saray\bin\Simit Saray.dll
+F:\SimitMVC\Simit Saray\bin\Simit Saray.pdb
+F:\SimitMVC\Simit Saray\bin\roslyn\csc.exe
+F:\SimitMVC\Simit Saray\bin\roslyn\csc.exe.config
+F:\SimitMVC\Simit Saray\bin\roslyn\csc.rsp
+F:\SimitMVC\Simit Saray\bin\roslyn\csi.exe
+F:\SimitMVC\Simit Saray\bin\roslyn\csi.exe.config
+F:\SimitMVC\Simit Saray\bin\roslyn\csi.rsp
+F:\SimitMVC\Simit Saray\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+F:\SimitMVC\Simit Saray\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+F:\SimitMVC\Simit Saray\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+F:\SimitMVC\Simit Saray\bin\roslyn\Microsoft.CodeAnalysis.dll
+F:\SimitMVC\Simit Saray\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+F:\SimitMVC\Simit Saray\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+F:\SimitMVC\Simit Saray\bin\roslyn\Microsoft.CSharp.Core.targets
+F:\SimitMVC\Simit Saray\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+F:\SimitMVC\Simit Saray\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+F:\SimitMVC\Simit Saray\bin\roslyn\Microsoft.Managed.Core.targets
+F:\SimitMVC\Simit Saray\bin\roslyn\Microsoft.VisualBasic.Core.targets
+F:\SimitMVC\Simit Saray\bin\roslyn\System.AppContext.dll
+F:\SimitMVC\Simit Saray\bin\roslyn\System.Collections.Immutable.dll
+F:\SimitMVC\Simit Saray\bin\roslyn\System.Console.dll
+F:\SimitMVC\Simit Saray\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+F:\SimitMVC\Simit Saray\bin\roslyn\System.Diagnostics.StackTrace.dll
+F:\SimitMVC\Simit Saray\bin\roslyn\System.IO.Compression.dll
+F:\SimitMVC\Simit Saray\bin\roslyn\System.IO.FileSystem.dll
+F:\SimitMVC\Simit Saray\bin\roslyn\System.IO.FileSystem.Primitives.dll
+F:\SimitMVC\Simit Saray\bin\roslyn\System.IO.Pipes.AccessControl.dll
+F:\SimitMVC\Simit Saray\bin\roslyn\System.IO.Pipes.dll
+F:\SimitMVC\Simit Saray\bin\roslyn\System.Reflection.Metadata.dll
+F:\SimitMVC\Simit Saray\bin\roslyn\System.Security.AccessControl.dll
+F:\SimitMVC\Simit Saray\bin\roslyn\System.Security.Claims.dll
+F:\SimitMVC\Simit Saray\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+F:\SimitMVC\Simit Saray\bin\roslyn\System.Security.Cryptography.Encoding.dll
+F:\SimitMVC\Simit Saray\bin\roslyn\System.Security.Cryptography.Primitives.dll
+F:\SimitMVC\Simit Saray\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+F:\SimitMVC\Simit Saray\bin\roslyn\System.Security.Principal.Windows.dll
+F:\SimitMVC\Simit Saray\bin\roslyn\System.Text.Encoding.CodePages.dll
+F:\SimitMVC\Simit Saray\bin\roslyn\System.ValueTuple.dll
+F:\SimitMVC\Simit Saray\bin\roslyn\System.Xml.ReaderWriter.dll
+F:\SimitMVC\Simit Saray\bin\roslyn\System.Xml.XmlDocument.dll
+F:\SimitMVC\Simit Saray\bin\roslyn\System.Xml.XPath.dll
+F:\SimitMVC\Simit Saray\bin\roslyn\System.Xml.XPath.XDocument.dll
+F:\SimitMVC\Simit Saray\bin\roslyn\vbc.exe
+F:\SimitMVC\Simit Saray\bin\roslyn\vbc.exe.config
+F:\SimitMVC\Simit Saray\bin\roslyn\vbc.rsp
+F:\SimitMVC\Simit Saray\bin\roslyn\VBCSCompiler.exe
+F:\SimitMVC\Simit Saray\bin\roslyn\VBCSCompiler.exe.config
+F:\SimitMVC\Simit Saray\bin\Antlr3.Runtime.dll
+F:\SimitMVC\Simit Saray\bin\EntityFramework.dll
+F:\SimitMVC\Simit Saray\bin\EntityFramework.SqlServer.dll
+F:\SimitMVC\Simit Saray\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+F:\SimitMVC\Simit Saray\bin\Microsoft.IdentityModel.Logging.dll
+F:\SimitMVC\Simit Saray\bin\Microsoft.IdentityModel.Tokens.dll
+F:\SimitMVC\Simit Saray\bin\Microsoft.Web.Infrastructure.dll
+F:\SimitMVC\Simit Saray\bin\Newtonsoft.Json.dll
+F:\SimitMVC\Simit Saray\bin\PhoneNumbers.dll
+F:\SimitMVC\Simit Saray\bin\System.IdentityModel.Tokens.Jwt.dll
+F:\SimitMVC\Simit Saray\bin\System.Net.Http.Formatting.dll
+F:\SimitMVC\Simit Saray\bin\System.Web.Helpers.dll
+F:\SimitMVC\Simit Saray\bin\System.Web.Http.dll
+F:\SimitMVC\Simit Saray\bin\System.Web.Http.WebHost.dll
+F:\SimitMVC\Simit Saray\bin\System.Web.Mvc.dll
+F:\SimitMVC\Simit Saray\bin\System.Web.Optimization.dll
+F:\SimitMVC\Simit Saray\bin\System.Web.Razor.dll
+F:\SimitMVC\Simit Saray\bin\System.Web.WebPages.Deployment.dll
+F:\SimitMVC\Simit Saray\bin\System.Web.WebPages.dll
+F:\SimitMVC\Simit Saray\bin\System.Web.WebPages.Razor.dll
+F:\SimitMVC\Simit Saray\bin\Twilio.AspNet.Common.dll
+F:\SimitMVC\Simit Saray\bin\Twilio.AspNet.Mvc.dll
+F:\SimitMVC\Simit Saray\bin\Twilio.dll
+F:\SimitMVC\Simit Saray\bin\TwilioFluent.Mvc3.dll
+F:\SimitMVC\Simit Saray\bin\TwilioFluent.TwiML.dll
+F:\SimitMVC\Simit Saray\bin\WebGrease.dll
+F:\SimitMVC\Simit Saray\bin\EntityFramework.xml
+F:\SimitMVC\Simit Saray\bin\EntityFramework.SqlServer.xml
+F:\SimitMVC\Simit Saray\bin\Microsoft.IdentityModel.Tokens.xml
+F:\SimitMVC\Simit Saray\bin\System.IdentityModel.Tokens.Jwt.xml
+F:\SimitMVC\Simit Saray\bin\System.Net.Http.Formatting.xml
+F:\SimitMVC\Simit Saray\bin\System.Web.Http.xml
+F:\SimitMVC\Simit Saray\bin\System.Web.Http.WebHost.xml
+F:\SimitMVC\Simit Saray\bin\System.Web.Helpers.xml
+F:\SimitMVC\Simit Saray\bin\System.Web.Mvc.xml
+F:\SimitMVC\Simit Saray\bin\System.Web.Optimization.xml
+F:\SimitMVC\Simit Saray\bin\System.Web.Razor.xml
+F:\SimitMVC\Simit Saray\bin\System.Web.WebPages.xml
+F:\SimitMVC\Simit Saray\bin\System.Web.WebPages.Deployment.xml
+F:\SimitMVC\Simit Saray\bin\System.Web.WebPages.Razor.xml
+F:\SimitMVC\Simit Saray\bin\Newtonsoft.Json.xml
+F:\SimitMVC\Simit Saray\bin\Twilio.xml
+F:\SimitMVC\Simit Saray\bin\TwilioFluent.Mvc3.xml
+F:\SimitMVC\Simit Saray\bin\TwilioFluent.TwiML.xml
+F:\SimitMVC\Simit Saray\bin\Antlr3.Runtime.pdb
+F:\SimitMVC\Simit Saray\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+F:\SimitMVC\Simit Saray\obj\Release\Simit Saray.csprojAssemblyReference.cache
+F:\SimitMVC\Simit Saray\obj\Release\Simit Saray.csproj.CopyComplete
+F:\SimitMVC\Simit Saray\obj\Release\Simit Saray.dll
+F:\SimitMVC\Simit Saray\obj\Release\Simit Saray.pdb

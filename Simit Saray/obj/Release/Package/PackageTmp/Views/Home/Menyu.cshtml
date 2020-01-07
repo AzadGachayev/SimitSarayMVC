@@ -1,0 +1,216 @@
+﻿@{
+    ViewBag.Title = "Menyu";
+}
+@using Simit_Saray.ViewModels
+@model DefaultViewModel
+@section MainCss{
+    <link rel="stylesheet" href="~/Public/assets/plugins/iziModal/css/iziModal.min.css">
+    <link rel="stylesheet" href="~/Public/assets/plugins/animsition/dist/css/animsition.min.css">
+
+    <!-- CSS Global -->
+    <!-- build:css assets/css/theme.min.css -->
+    <link rel="stylesheet" href="~/Public/css/theme.css">
+}
+<!-- NAVBAR
+          ================================================== -->
+<nav class="navbar navbar-light">
+
+    <div class="container">
+
+        <span class="navbar-text order-2 order-sm-first"> </span>
+
+
+        <a class="nav-link order-12" data-izimodal-open="#modal" data-izimodal-transitionin="fadeInRight" href="#">Rezervasiya</a>
+
+    </div> <!-- / .container -->
+
+</nav>
+
+<!-- MODAL RESERVATION
+================================================== -->
+
+<div id="modal" class="iziModal mainPage">
+    <div class="container">
+
+        <div class="row text-right">
+            <div class="col">
+
+                <a class="btn mt-3" href="#" data-izimodal-close="" data-izimodal-transitionout="fadeOutRight">
+                    Bağla
+                </a>
+
+            </div>
+        </div> <!-- / .row -->
+
+        <div class="row text-center">
+            <div class="col">
+
+                <h2 class="mb-0">Rezervasiya</h2>
+
+            </div>
+        </div> <!-- / .row -->
+        <!-- Form -->
+       
+    @Html.Partial("Reservation")
+
+        <div class="row text-center">
+            <div class="col">
+
+                <div class="modal_info__item">
+                    <h4>İş Vaxtı</h4>
+                    <p>Həftənin bütün günləri</p>
+                    <p>08:00 - 01:00</p>
+                </div>
+
+                <div class="modal_info__item">
+                    <h4>Simit Saray sosialda</h4>
+
+                    <!-- Social icons -->
+                    <ul class="social__list">
+                        <li><a href="https://twitter.com/simitsarayi"><i class="fab fa-twitter"></i></a></li>
+                        <li><a href="https://www.facebook.com/Simit-Sarayı-Baku-467592887378361/"><i class="fab fa-facebook-f"></i></a></li>
+                        <li><a href="https://www.instagram.com/simitsarayibaku/"><i class="fab fa-instagram"></i></a></li>
+                        <li><a href="https://foursquare.com/v/simit-sarayi-baku/56daab7d498e2749a6934f62"><i class="fab fa-foursquare"></i></a></li>
+                    </ul> <!-- .social__list -->
+                </div>
+
+            </div>
+        </div> <!-- / .row -->
+
+    </div> <!-- / .container -->
+
+</div> <!-- #modal -->
+<!-- MENU
+================================================== -->
+<section class="section section_menu">
+    <!-- Navigation -->
+
+    <div class="container">
+        <nav class="nav nav_links d-flex justify-content-end">
+            <a class="nav-link animsition-link" href="@Url.Action("Index","Home")">Əsas səhifə</a>
+            <a class="nav-link animsition-link" href="@Url.Action("About","Home")">Haqqımızda</a>
+            <a class="nav-link animsition-link active" href="@Url.Action("Menyu","Home")">Menyu</a>
+            <a class="nav-link animsition-link" href="@Url.Action("Blog","Home")">Bloq</a>
+            <a class="nav-link animsition-link" href="@Url.Action("Gallery","Home")">Qalereya</a>
+            <a class="nav-link animsition-link" href="@Url.Action("Contact","Home")">Əlaqə</a>
+        </nav>
+        @{ var count = 0;}
+        @foreach (var item in Model.KateqoriyaMenyu)
+        {
+            count++;
+            if (count % 2 != 0)
+            {
+                <div class="row justify-content-between section_menu__body">
+
+                    <div class="col-sm-12 col-md-5 order-2 order-sm-first">
+                        <div class="section_menu__img">
+
+                            <img style="height: 100%; object-fit: cover" src="@item.CategoryPhoto" class="img-fluid" alt="...">
+
+
+
+                        </div>
+                    </div>
+
+                    <div class="col-sm-12 col-md-7 col-lg-7 col-xl-6 order-first order-sm-2">
+
+                        <!-- Heading -->
+                        <h1 class="section__heading mb-0">@item.CategoryName</h1>
+
+                        <!-- Devider Line -->
+                        <div class="divider_line"></div>
+
+                        <div class="row">
+
+                            @foreach (var menuitem in item.Menyu)
+                            {
+                            <div class="col-sm-12 col-md-6 dish_body">
+                                <div class="dish_body__name" style="display:flex;align-items:center;justify-content:space-between">
+                                    <h5 style="flex:2;margin:0 4px;">@menuitem.Name </h5><span style="flex:1;text-align:right">@menuitem.Price AZN</span>
+                                </div>
+                                <div class="dish_body__desc text-italic">
+                                    @menuitem.Ingridient
+                                </div>
+                            </div> <!-- .dish_body -->
+                            }
+
+
+                        </div> <!-- / .row -->
+                    </div>
+                </div> <!-- / .row -->
+            }
+            else
+            {
+                <div class="row justify-content-between section_menu__body">
+                    <div class="col-sm-12 col-md-7 col-lg-7 col-xl-6 order-first order-sm-2">
+
+                        <!-- Heading -->
+                        <h1 class="section__heading mb-0">@item.CategoryName</h1>
+
+                        <!-- Devider Line -->
+                        <div class="divider_line"></div>
+
+                        <div class="row">
+
+                            @foreach (var menuitem in item.Menyu)
+                            {
+                                <div class="col-sm-12 col-md-6 dish_body">
+                                    <div class="dish_body__name" style="display:flex;align-items:center;justify-content:space-between">
+                                        <h5 style="flex:2;margin:0 4px;">@menuitem.Name </h5><span style="flex:1;text-align:right">@menuitem.Price AZN</span>
+                                    </div>
+                                    <div class="dish_body__desc text-italic">
+                                        @menuitem.Ingridient
+                                    </div>
+                                </div> <!-- .dish_body -->
+                            }
+
+
+                        </div> <!-- / .row -->
+                    </div>
+                    <div class="col-sm-12 col-md-5 order-2 order-sm-first">
+                        <div class="section_menu__img">
+
+                            <img style="height: 100%; object-fit: cover" src="@item.CategoryPhoto" class="img-fluid" alt="...">
+
+
+
+                        </div>
+                    </div>
+
+
+                </div> <!-- / .row -->
+            }
+
+
+        }
+
+
+        <div class="row text-center">
+            <div class="col">
+                <a target="_blank" class="btn" href="https://docdro.id/TB9vPXk">
+
+                    @*<a target="_blank" class="btn" href="https://bit.ly/31Os9iE">*@
+                        <h4 class="mb-0">Menyunu yüklə</h4>
+                    </a>
+
+            </div>
+        </div> <!-- / .row -->
+
+    </div> <!-- .container -->
+
+</section> <!-- .section_menu -->
+@section MainJs{
+
+    <!-- JS Plugins -->
+    <script src="~/Public/assets/plugins/iziModal/js/iziModal.min.js"></script>
+    <script src="~/Public/assets/plugins/alerts/alerts.js"></script>
+    <script src="~/Public/assets/plugins/animsition/dist/js/animsition.min.js"></script>
+
+    <!-- JS Custom -->
+    <!-- build:js assets/js/theme.min.js -->
+    <script src="~/Public/assets/js/theme.js"></script>
+    <!-- endbuild -->
+    <script src="~/Public/assets/js/custom.js"></script>
+
+    <!-- Google maps -->
+}

@@ -1,0 +1,362 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+@using Simit_Saray.ViewModels
+@model DefaultViewModel
+@section navMenu{
+    <div class="nav-but-wrap" style="position:fixed;right:45px;top:0px;">
+        <div class="menu-icon hover-target">
+            <span class="menu-icon__line menu-icon__line-left"></span>
+            <span class="menu-icon__line"></span>
+            <span class="menu-icon__line menu-icon__line-right"></span>
+        </div>
+    </div>
+}
+<section id="welcome" style="
+
+    background: linear-gradient(to bottom, rgba(92, 77, 66, 0.8) 0, rgba(92, 77, 66, 0.8) 100%), url(@Model.homeHeader.BackgroundImage) no-repeat center center/ cover">
+    <div class="section full-height over-hide">
+        <div class="switch-wrap">
+            <h1>@Model.EsasSehife.Head <br> XOŞ GƏLMİSİNİZ !</h1>
+            <!-- <div id="switch" class="hover-target">
+                    <div id="circle"></div>
+
+                </div> -->
+            <div class="paragraf">
+                <p> @Model.EsasSehife.Description </p>
+            </div>
+        </div>
+    </div>
+
+
+</section>
+<!-- MENU
+           ================================================== -->
+<section id="menyu">
+    <section class="section section_menu">
+        <!-- Heading -->
+        <h1 class="section__heading text-center pt-5">Menyu</h1>
+        <div class="container">
+            <div class="owl-carousel owl-theme mt-5">
+
+                @{ var count = 0; }
+                @foreach (var item in Model.KateqoriyaMenyu)
+                {
+                    count++;
+                    if (count % 2 != 0)
+                    {
+                        <div class="row justify-content-between section_menu__body">
+
+                            <div class="col-sm-12 col-md-5 order-2 order-sm-first">
+                                <div class="section_menu__img" style="height:100%">
+                                    <img style="height: 100%; object-fit: cover" src="@item.CategoryPhoto" class="img-fluid" alt="...">
+                                </div>
+                            </div>
+
+                            <div class="col-sm-12 col-md-7 col-lg-7 col-xl-6 order-first order-sm-2">
+
+
+                                <!-- Heading -->
+                                <h1 class="section__heading mb-0">@item.CategoryName</h1>
+
+                                <!-- Devider Line -->
+                                <div class="divider_line"></div>
+
+                                <div class="row">
+
+                                    @foreach (var menuitem in item.Menyu)
+                                    {
+                                        <div class="col-sm-12 col-md-6 dish_body">
+                                            <div class="dish_body__name" style="display:flex;align-items:center;justify-content:space-between">
+                                                <h5 style="flex:2;margin:0 4px;">@menuitem.Name </h5><span style="flex:1;text-align:right">@menuitem.Price AZN</span>
+                                            </div>
+                                            <div class="dish_body__desc text-italic">
+                                                @menuitem.Ingridient
+                                            </div>
+                                        </div> <!-- .dish_body -->
+                                    }
+
+
+
+                                </div> <!-- / .row -->
+
+                            </div>
+                        </div> <!-- / .row -->
+
+
+                    }
+
+                    else
+                    {
+
+                        <div class="row justify-content-between section_menu__body">
+
+                            <div class="col-sm-12 col-md-7 col-lg-7 col-xl-6">
+
+                                <!-- Heading -->
+                                <h1 class="section__heading mb-0">@item.CategoryName</h1>
+
+                                <!-- Devider Line -->
+                                <div class="divider_line"></div>
+
+                                <div class="row">
+                                    @foreach (var menuitem in item.Menyu)
+                                    {
+                                        <div class="col-sm-12 col-md-6 dish_body">
+                                            <div class="dish_body__name" style="display:flex;align-items:center;justify-content:space-between">
+                                                <h5 style="flex:2;margin:0 4px;">@menuitem.Name </h5><span style="flex:1;text-align:right">@menuitem.Price AZN</span>
+                                            </div>
+                                            <div class="dish_body__desc text-italic">
+                                                @menuitem.Ingridient
+                                            </div>
+                                        </div> <!-- .dish_body -->
+                                    }
+
+
+                                </div> <!-- / .row -->
+
+                            </div>
+                            <div class="col-sm-12 col-md-5 order-2 order-sm-first">
+                                <div class="section_menu__img" style="height:100%">
+                                    <img style="height: 100%; object-fit: cover" src="@item.CategoryPhoto" class="img-fluid" alt="...">
+                                </div>
+                            </div>
+                        </div> <!-- / .row -->
+
+                    }
+
+
+
+
+                }
+
+
+
+
+            </div>
+
+        </div> <!-- .container -->
+
+    </section> <!-- .section_menu -->
+</section>
+
+
+
+<!-- Link to page
+       ================================================== -->
+<!-- ABOUT
+            ================================================== -->
+
+
+<section id="about" style="
+         background: linear-gradient(to bottom, rgba(92, 77, 66, 0.8) 0, rgba(92, 77, 66, 0.8) 100%), url(@Model.Haqqinda.BackgroundImage)  no-repeat center center/ cover">
+
+    <!-- Heading -->
+    <h1 class="section__heading text-center pt-5">Haqqımızda</h1>
+
+    <div class="container">
+        <div class="row justify-content-between">
+
+            <div class="col-sm-12 col-md-6 col-lg-6 col-xl-5">
+
+                <!-- Heading -->
+                <h1 class="section__heading">@Model.Haqqinda.Header</h1>
+
+                <!-- Info -->
+
+                <p class="text-italic">@Model.Haqqinda.Description</p>
+
+                <!-- Devider Line -->
+                <div class="divider_line"></div>
+
+            </div>
+
+            <div class="col-sm-12 col-md-6">
+                <div class="section_about__img">
+                    <img src="@Model.Haqqinda.Photo" class="img-fluid mb-5" alt="...">
+                </div>
+            </div>
+
+        </div> <!-- / .row -->
+    </div>
+
+</section>
+
+
+<!-- CONTACT
+================================================== -->
+<section id="contact">
+    <section class="section_contact pb-5">
+
+        <!-- Heading -->
+        <h1 class="section__heading text-center pt-5 mb-0">Əlaqə vasitələri</h1>
+
+
+        <div class="container pt-5">
+            <div class="row justify-content-between mb-5">
+
+                <div class="col-sm-12 col-md-6 col-lg-5 order-2 order-sm-first">
+                    <div data-map="@Model.Kontakt.Map" id="map"></div>
+
+                    <script>
+                        var map;
+                        var mapElement = document.getElementById("map")
+                        function initMap() {
+                            var locationMap = mapElement.getAttribute("data-map")
+                            var settingsMap = locationMap.split(",")
+                            var latMap = Number(settingsMap[0])
+                            var lngMap = Number(settingsMap[1])
+                            var academy = { lat: latMap, lng: lngMap }
+                            map = new google.maps.Map(document.getElementById('map'), {
+                                center: academy,
+                                zoom: 18,
+                                //styles: [
+                                //    { elementType: 'geometry', stylers: [{ color: '#242f3e' }] },
+                                //    { elementType: 'labels.text.stroke', stylers: [{ color: '#242f3e' }] },
+                                //    { elementType: 'labels.text.fill', stylers: [{ color: '#746855' }] },
+                                //    {
+                                //        featureType: 'administrative.locality',
+                                //        elementType: 'labels.text.fill',
+                                //        stylers: [{ color: '#d59563' }]
+                                //    },
+                                //    {
+                                //        featureType: 'poi',
+                                //        elementType: 'labels.text.fill',
+                                //        stylers: [{ color: '#d59563' }]
+                                //    },
+                                //    {
+                                //        featureType: 'poi.park',
+                                //        elementType: 'geometry',
+                                //        stylers: [{ color: '#263c3f' }]
+                                //    },
+                                //    {
+                                //        featureType: 'poi.park',
+                                //        elementType: 'labels.text.fill',
+                                //        stylers: [{ color: '#6b9a76' }]
+                                //    },
+                                //    {
+                                //        featureType: 'road',
+                                //        elementType: 'geometry',
+                                //        stylers: [{ color: '#38414e' }]
+                                //    },
+                                //    {
+                                //        featureType: 'road',
+                                //        elementType: 'geometry.stroke',
+                                //        stylers: [{ color: '#212a37' }]
+                                //    },
+                                //    {
+                                //        featureType: 'road',
+                                //        elementType: 'labels.text.fill',
+                                //        stylers: [{ color: '#9ca5b3' }]
+                                //    },
+                                //    {
+                                //        featureType: 'road.highway',
+                                //        elementType: 'geometry',
+                                //        stylers: [{ color: '#746855' }]
+                                //    },
+                                //    {
+                                //        featureType: 'road.highway',
+                                //        elementType: 'geometry.stroke',
+                                //        stylers: [{ color: '#1f2835' }]
+                                //    },
+                                //    {
+                                //        featureType: 'road.highway',
+                                //        elementType: 'labels.text.fill',
+                                //        stylers: [{ color: '#f3d19c' }]
+                                //    },
+                                //    {
+                                //        featureType: 'transit',
+                                //        elementType: 'geometry',
+                                //        stylers: [{ color: '#2f3948' }]
+                                //    },
+                                //    {
+                                //        featureType: 'transit.station',
+                                //        elementType: 'labels.text.fill',
+                                //        stylers: [{ color: '#d59563' }]
+                                //    },
+                                //    {
+                                //        featureType: 'water',
+                                //        elementType: 'geometry',
+                                //        stylers: [{ color: '#17263c' }]
+                                //    },
+                                //    {
+                                //        featureType: 'water',
+                                //        elementType: 'labels.text.fill',
+                                //        stylers: [{ color: '#515c6d' }]
+                                //    },
+                                //    {
+                                //        featureType: 'water',
+                                //        elementType: 'labels.text.stroke',
+                                //        stylers: [{ color: '#17263c' }]
+                                //    }
+                                //],
+                            });
+                            var marker = new google.maps.Marker({
+                                position: academy,
+                                map: map,
+                                draggable: true
+
+                            })
+                            var contentString = "<div id='content'><h1>Simit Sarayı</h1>" +
+                                "<p>Xoş gəlmisiniz! <a target='_blank' href='http://localhost:50236/Home/Contact'> Əlaqə: +994 55 254 29 32</a>" +
+                                "</div > "
+                            var infowindow = new google.maps.InfoWindow({
+                                content: contentString
+                            });
+                            marker.addListener('click', function () {
+                                infowindow.open(map, marker);
+                            });
+                        }
+
+
+
+                    </script>
+                    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAPm-ZQUNuMNmZ9DfSXn9fhGFVKQI1lpoQ&callback=initMap"
+                            async defer></script>
+                    @*<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d379.9515667175205!2d49.839936764481955!3d40.37311500285256!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40307db02096a42f%3A0x4f6276f326db430b!2sSimit%20Saray%C4%B1!5e0!3m2!1saz!2s!4v1570579189676!5m2!1saz!2s" width="100%" height="100%" frameborder="0" style="border:0;" allowfullscreen=""></iframe>*@
+                </div>
+
+
+                <div class="col-sm-12 col-md-6 order-first order-sm-2">
+
+
+
+
+                    <!-- Subheading -->
+                    <p>
+                        @Model.Kontakt.Contact1
+                    </p>
+
+                    <!-- Info -->
+                    <div class="section_contact__item col-md-7 p-0">
+                        <h4 class="mb-0">Ünvan</h4>
+                        <p class="mb-0">@Model.Kontakt.Adress</p>
+                    </div> <!-- .section_contact__item -->
+
+                    <div class="section_contact__item">
+                        <h4 class="mb-0">Telefon</h4>
+                        <p class="mb-0">@Model.Kontakt.Phone</p>
+                        <p class="mb-0">@Model.Kontakt.Phone2</p>
+                    </div> <!-- .section_contact__item -->
+
+                    <div class="section_contact__item">
+                        <h4 class="mb-0">Email</h4>
+                        <p class="mb-0">@Model.Kontakt.Email</p>
+                        <p class="mb-0">@Model.Kontakt.Email2</p>
+                    </div> <!-- .section_contact__item -->
+
+                    <div class="section_contact__item">
+                        <h4 class="mb-0">İş Vaxtı</h4>
+                        <p class="mb-0">Həftənin bütün günləri</p>
+                        <p class="mb-0">08:00 - 01:00</p>
+                    </div> <!-- .section_contact__item -->
+
+                </div>
+            </div> <!-- / .row -->
+
+
+
+        </div> <!-- .container -->
+    </section> <!-- .section_contact -->
+
+</section>

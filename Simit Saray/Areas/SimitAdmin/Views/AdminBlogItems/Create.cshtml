@@ -2,14 +2,14 @@
 
 @{
     ViewBag.Title = "Create";
-         Layout = "~/Areas/SimitAdmin/Views/Shared/_AdminLayout.cshtml";
+    Layout = "~/Areas/SimitAdmin/Views/Shared/_AdminLayout.cshtml";
 }
 
 <h2>Create</h2>
-@using (Html.BeginForm("Create", "AdminBlogItems", FormMethod.Post, new {enctype="multipart/form-data" })) 
+@using (Html.BeginForm("Create", "AdminBlogItems", FormMethod.Post, new { enctype = "multipart/form-data" }))
 {
     @Html.AntiForgeryToken()
-    
+
     <div class="form-horizontal">
         <h4>BlogItem</h4>
         <hr />
@@ -32,7 +32,8 @@
         <div class="form-group">
             @Html.LabelFor(model => model.Description, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                @Html.EditorFor(model => model.Description, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.TextAreaFor(model => Model.Description, htmlAttributes: new { @id = "Description", rows = "10", cols = "100" })
+
                 @Html.ValidationMessageFor(model => model.Description, "", new { @class = "text-danger" })
             </div>
         </div>
@@ -40,7 +41,7 @@
         <div class="form-group">
             @Html.LabelFor(model => model.CreateDate, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                <input type="date"  name="mainDate" />
+                <input type="date" name="mainDate" />
             </div>
         </div>
 
@@ -63,3 +64,16 @@
 <div>
     @Html.ActionLink("Back to List", "Index")
 </div>
+
+@section AdminJS{
+    <script src="~/Scripts/tinymce/jquery.tinymce.min.js"></script>
+    <script>
+        tinymce.init({
+            selector: 'textarea#Description'
+
+});
+
+    </script>
+
+}
+
