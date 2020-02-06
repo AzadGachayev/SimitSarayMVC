@@ -1,0 +1,70 @@
+﻿@model IEnumerable<Simit_Saray.Models.Contact>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Areas/SimitAdmin/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2>Index</h2>
+
+<table class="table  table-responsive">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Adress)
+        </th>
+        <th>
+            Contact
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Phone)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Phone2)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Email)
+        </th>
+        
+        <th>
+            @Html.DisplayNameFor(model => model.Email2)
+        </th>
+      
+        <th>
+            @Html.DisplayNameFor(model => model.Map)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Adress)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Contact1)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Phone)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Phone2)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Email)
+            </td>
+            
+            <td>
+                @Html.DisplayFor(modelItem => item.Email2)
+            </td>
+            
+            <td>
+                @Html.DisplayFor(modelItem => item.Map)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id = item.ID })
+            </td>
+        </tr>
+    }
+
+</table>

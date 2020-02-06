@@ -1,0 +1,198 @@
+﻿
+@{
+    ViewBag.Title = "BlogItem";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@using Simit_Saray.ViewModels
+@model DefaultViewModel
+@section MainCss{
+    <link rel="stylesheet" href="~/Public/assets/plugins/iziModal/css/iziModal.min.css">
+    <link rel="stylesheet" href="~/Public/assets/plugins/animsition/dist/css/animsition.min.css">
+
+    <!-- CSS Global -->
+    <!-- build:css assets/css/theme.min.css -->
+    <link rel="stylesheet" href="~/Public/css/theme.css">
+
+}
+<!-- NAVBAR
+    ================================================== -->
+<nav class="navbar navbar-light">
+
+    <div class="container">
+
+        <span class="navbar-text order-2 order-sm-first"> </span>
+
+
+
+        <a class="nav-link order-12" data-izimodal-open="#modal" data-izimodal-transitionin="fadeInRight" href="#">Rezervasiya</a>
+
+    </div> <!-- / .container -->
+
+</nav>
+
+<!-- MODAL RESERVATION
+================================================== -->
+
+<div id="modal" class="iziModal mainPage">
+    <div class="container">
+
+        <div class="row text-right">
+            <div class="col">
+
+                <a class="btn mt-3" href="#" data-izimodal-close="" data-izimodal-transitionout="fadeOutRight">
+                    Bağla
+                </a>
+
+            </div>
+        </div> <!-- / .row -->
+
+        <div class="row text-center">
+            <div class="col">
+
+                <h2 class="mb-0">Rezervasiya</h2>
+
+            </div>
+        </div> <!-- / .row -->
+        <!-- Form -->
+       @Html.Partial("Reservation")
+
+        <div class="row text-center">
+            <div class="col">
+
+                <div class="modal_info__item">
+                    <h4>İş Vaxtı</h4>
+                    <p>Həftənin bütün günləri</p>
+                    <p>08:00 - 01:00</p>
+                </div>
+
+                <div class="modal_info__item">
+                    <h4>Simit Saray sosialda</h4>
+
+                    <!-- Social icons -->
+                    <ul class="social__list">
+                        <li><a href="https://twitter.com/simitsarayi"><i class="fab fa-twitter"></i></a></li>
+                        <li><a href="https://www.facebook.com/Simit-Sarayı-Baku-467592887378361/"><i class="fab fa-facebook-f"></i></a></li>
+                        <li><a href="https://www.instagram.com/simitsarayibaku/"><i class="fab fa-instagram"></i></a></li>
+                        <li><a href="https://foursquare.com/v/simit-sarayi-baku/56daab7d498e2749a6934f62"><i class="fab fa-foursquare"></i></a></li>
+                    </ul> <!-- .social__list -->
+                </div>
+
+            </div>
+        </div> <!-- / .row -->
+
+    </div> <!-- / .container -->
+
+</div> <!-- #modal -->
+<!-- BLOG ITEM
+================================================== -->
+<section class="section section_blog-item">
+
+    <div class="container">
+        <div class="row justify-content-center">
+
+            <div class="col-sm-12 col-md-10 col-lg-7">
+
+                <div class="section_blog-item_body">
+
+                    <!-- Image -->
+                    <div class="section_blog-item_body__img">
+                        <img src="@Model.blogDetail.Photo" class="img-fluid" alt="...">
+                    </div>
+
+                    <!-- Heading -->
+                    <h2 class="section_blog-item_body__title text-center mb-0">@Model.blogDetail.Header</h2>
+
+                    <!-- Info data -->
+                    <ul class="section_blog-item_body__info">
+                        <li><a href="#">@Model.blogDetail.CreateDate.ToString("dd MMMM yyyy")</a></li>
+                        <li>/</li>
+                        @*<li><a href="#">Food</a></li>
+                        <li>/</li>*@
+                        <li><a href="#">@Model.blogDetail.AuthorName</a></li>
+                    </ul>
+
+                    <!-- Description -->
+                    <p class="section_blog-item_body__desc">@Model.blogDetail.Description</p>
+
+                </div> <!-- .section_blog-item_body -->
+
+            </div>
+
+        </div> <!-- / .row -->
+
+        <div class="row justify-content-center">
+
+            <div class="col-sm-12 col-md-10 col-lg-7">
+
+
+                <!-- Social icons -->
+                <ul class="social__list">
+                    <li><a href="https://twitter.com/simitsarayi"><i class="fab fa-twitter"></i></a></li>
+                    <li><a href="https://www.facebook.com/Simit-Sarayı-Baku-467592887378361/"><i class="fab fa-facebook-f"></i></a></li>
+                    <li><a href="https://www.instagram.com/simitsarayibaku/"><i class="fab fa-instagram"></i></a></li>
+                    <li><a href="https://foursquare.com/v/simit-sarayi-baku/56daab7d498e2749a6934f62"><i class="fab fa-foursquare"></i></a></li>
+                </ul> <!-- .social__list -->
+
+            </div>
+        </div> <!-- / .row -->
+
+        <div class="row justify-content-center">
+            <div class="col-sm-12 col-md-10 col-lg-7">
+
+                <div class="section_blog-item__comments">
+                    <div id="disqus_thread"></div>
+                    <script>
+
+                        /**
+                        *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+                        *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+                        /*
+                        var disqus_config = function () {
+                        this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+                        this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+                        };
+                        */
+                        (function () { // DON'T EDIT BELOW THIS LINE
+                            var d = document, s = d.createElement('script');
+                            s.src = 'https://simitsarayi.disqus.com/embed.js';
+                            s.setAttribute('data-timestamp', +new Date());
+                            (d.head || d.body).appendChild(s);
+                        })();
+                    </script>
+                    <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+                </div> <!-- .comments -->
+            </div>
+        </div> <!-- / .row -->
+
+  
+
+        <div class="row text-center">
+            <div class="col">
+
+                <a href="@Url.Action("Blog","Home")" class="btn animsition-link">
+                    <h4 class="mb-0 mt-5">Xəbər listinə geri dön</h4>
+                </a>
+
+            </div>
+        </div> <!-- / .row -->
+
+    </div> <!-- .container -->
+
+</section> <!-- .section_blog-item -->
+@section MainJs{
+
+    <!-- JS Plugins -->
+    <script src="~/Public/assets/plugins/iziModal/js/iziModal.min.js"></script>
+    <script src="~/Public/assets/plugins/reservation/reservation.js"></script>
+    <script src="~/Public/assets/plugins/alerts/alerts.js"></script>
+    <script src="~/Public/assets/plugins/animsition/dist/js/animsition.min.js"></script>
+
+    <!-- JS Custom -->
+    <!-- build:js assets/js/theme.min.js -->
+    <script src="~/Public/assets/js/theme.js"></script>
+    <!-- endbuild -->
+    <script src="~/Public/assets/js/custom.js"></script>
+
+    <!-- Google maps -->
+}

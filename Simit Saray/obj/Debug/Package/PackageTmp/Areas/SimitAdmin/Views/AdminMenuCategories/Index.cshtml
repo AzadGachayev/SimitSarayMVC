@@ -1,0 +1,42 @@
+﻿@model IEnumerable<Simit_Saray.Models.MenuCategory>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Areas/SimitAdmin/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            <label class="control-label">Kateqoriya adı</label>
+
+        </th>
+        <th>
+            <label class="control-label">Photo</label>
+
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.CategoryName)
+        </td>
+        <td style="width:25%">
+            <img src="@item.CategoryPhoto" class="img-thumbnail" alt="Alternate Text" />
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.ID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.ID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.ID })
+        </td>
+    </tr>
+}
+
+</table>

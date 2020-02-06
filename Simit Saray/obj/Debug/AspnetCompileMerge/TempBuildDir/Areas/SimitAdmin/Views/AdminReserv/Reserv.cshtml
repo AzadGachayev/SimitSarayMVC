@@ -1,0 +1,35 @@
+﻿@model IEnumerable<Simit_Saray.Models.Reservation>
+@{
+    ViewBag.Title = "Reserv";
+    Layout = "~/Areas/SimitAdmin/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2>Reserv</h2>
+<table class="table table-border-horizontal">
+    <tr>
+        <td>Client Name</td>
+        <td>Phone</td>
+
+        <td>Person Count</td>
+        <td>Reserv Date</td>
+
+    </tr>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            if (item.ComeDate != null && item.UserID != null)
+            {
+                <tr>
+
+                    <td>@item.Profil.FullName</td>
+                     <td>@item.Profil.Phone</td>
+                    <td>@item.Amount</td>
+                    <td>@item.ComeDate (@item.ComingHours)</td>
+                </tr>
+            }
+
+        }
+
+    </tbody>
+</table>
+

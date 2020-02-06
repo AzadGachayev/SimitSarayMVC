@@ -1,0 +1,227 @@
+﻿
+@{
+    ViewBag.Title = "About";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+    @using Simit_Saray.ViewModels
+    @model DefaultViewModel
+@section MainCss{
+    <link rel="stylesheet" href="~/Public/assets/plugins/iziModal/css/iziModal.min.css">
+    <link rel="stylesheet" href="~/Public/assets/plugins/animsition/dist/css/animsition.min.css">
+    <link href="~/public/assets/plugins/flickity/flickity.min.css" rel="stylesheet">
+
+    <!-- CSS Global -->
+    <!-- build:css assets/css/theme.min.css -->
+    <link rel="stylesheet" href="~/Public/css/theme.css">
+
+}
+
+<!-- NAVBAR
+       ================================================== -->
+<nav class="navbar navbar-light">
+
+    <div class="container">
+
+        <span class="navbar-text order-2 order-sm-first"></span>
+
+        <a class="nav-link order-12" data-izimodal-open="#modal" data-izimodal-transitionin="fadeInRight" href="#">Rezervasiya</a>
+
+    </div> <!-- / .container -->
+
+</nav>
+
+<!-- MODAL RESERVATION
+================================================== -->
+
+<div id="modal" class="iziModal mainPage">
+    <div class="container">
+
+        <div class="row text-right">
+            <div class="col">
+
+                <a class="btn mt-3" href="#" data-izimodal-close="" data-izimodal-transitionout="fadeOutRight">
+                    Bağla
+                </a>
+
+            </div>
+        </div> <!-- / .row -->
+
+        <div class="row text-center">
+            <div class="col">
+
+                <h2 class="mb-0">Rezervasiya</h2>
+
+            </div>
+        </div> <!-- / .row -->
+        <!-- Form -->
+       @Html.Partial("Reservation")
+
+        <div class="row text-center">
+            <div class="col">
+
+                <div class="modal_info__item">
+                    <h4>İş Vaxtı</h4>
+                    <p>Həftənin bütün günləri</p>
+                    <p>08:00 - 01:00</p>
+                </div>
+
+                <div class="modal_info__item">
+                    <h4>Simit Saray sosialda</h4>
+
+                    <!-- Social icons -->
+                    <ul class="social__list">
+                        <li><a href="https://twitter.com/simitsarayi"><i class="fab fa-twitter"></i></a></li>
+                        <li><a href="https://www.facebook.com/Simit-Sarayı-Baku-467592887378361/"><i class="fab fa-facebook-f"></i></a></li>
+                        <li><a href="https://www.instagram.com/simitsarayibaku/"><i class="fab fa-instagram"></i></a></li>
+                        <li><a href="https://foursquare.com/v/simit-sarayi-baku/56daab7d498e2749a6934f62"><i class="fab fa-foursquare"></i></a></li>
+                    </ul> <!-- .social__list -->
+                </div>
+
+            </div>
+        </div> <!-- / .row -->
+
+    </div> <!-- / .container -->
+
+</div> <!-- #modal -->
+<!-- ABOUT
+================================================== -->
+<section class="section section_about">
+
+    <div class="container">
+
+        <div class="row justify-content-between">
+
+            <div class="col-sm-12 col-md-5 order-2 order-sm-first">
+                <div class="section_about__img">
+                    <img style="height: 100%; object-fit: cover" src="@Model.Haqqinda.Photo" class="img-fluid" alt="...">
+                </div>
+            </div>
+
+            <div class="col-sm-12 col-md-7 col-lg-7 col-xl-6 order-first order-sm-2">
+
+                <!-- Navigation -->
+                <nav class="nav nav_links d-flex">
+                    <a class="nav-link animsition-link" href="@Url.Action("Index","Home")">Əsas səhifə</a>
+                    <a class="nav-link animsition-link active" href="@Url.Action("About","Home")">Haqqımızda</a>
+                    <a class="nav-link animsition-link" href="@Url.Action("Menyu","Home")">Menyu</a>
+                    <a class="nav-link animsition-link" href="@Url.Action("Blog","Home")">Bloq</a>
+                    <a class="nav-link animsition-link" href="@Url.Action("Gallery","Home")">Qalereya</a>
+                    <a class="nav-link animsition-link" href="@Url.Action("Contact","Home")">Əlaqə</a>
+                </nav>
+
+                <!-- Heading -->
+                <h1 class="section__heading"> @Model.Haqqinda.Header</h1>
+
+
+                <!-- Info -->
+                <p class="text-italic">@Model.Haqqinda.Description</p>
+
+                <!-- Devider Line -->
+                <div class="divider_line"></div>
+
+                <h4 class="mb-1">İş Vaxtı</h4>
+                <p class="mb-0">Həftənin bütün günləri</p>
+                <p class="mb-0">08:00 - 01:00</p>
+            </div>
+        </div> <!-- / .row -->
+
+    
+
+    </div> <!-- .container -->
+
+</section> <!-- .section_about -->
+<!-- TESTIMONIALS
+================================================== -->
+<section class="section section_testimonials">
+
+    <div class="container">
+
+        <div class="row justify-content-center text-center pb-5">
+
+            <div class="col-xs-12 col-sm-12 col-md-8">
+
+                <!-- Title -->
+                <h2 class="section_testimonials_title">Testimonials</h2>
+
+                <div class="section_testimonials_carousel">
+
+                    <div class="section_testimonials_carousel_item">
+
+                        <!-- Text -->
+                        <p class="section_testimonials_text">Everything was amazing ❤️ highly recommended for breakfast. You can enjoy the fresh simit and coffee there.</p>
+
+                        <!-- Author -->
+                        <p class="section_testimonials_author text-italic">
+                            Zainab Y.
+                        </p>
+
+                    </div> <!-- .section_testimonials_item -->
+
+                    <div class="section_testimonials_carousel_item">
+
+                        <!-- Text -->
+                        <p class="section_testimonials_text">Simit ve cay cok iyi, bakude oldugum sure icerisinde nerdeyse her sabah burdayim. Personel guleryuzlu, ortam sakin.</p>
+
+                        <!-- Author -->
+                        <p class="section_testimonials_author text-italic">
+                            Ismaıl Sayın
+                        </p>
+
+                    </div> <!-- .section_testimonials_item -->
+
+                    <div class="section_testimonials_carousel_item">
+
+                        <!-- Text -->
+                        <p class="section_testimonials_text">Genel olarak tat konusunda malzemeler ve içerik konusunda harikalar yaratıyorlar gerçekten hep zevk alarak yediğim menüye sahipler.</p>
+
+                        <!-- Author -->
+                        <p class="section_testimonials_author text-italic">
+                            Ersin Akden
+                        </p>
+
+                    </div> <!-- .section_testimonials_item -->
+
+                        <div class="section_testimonials_carousel_item">
+
+                        <!-- Text -->
+                        <p class="section_testimonials_text">Taste of Istanbul in Baku, Azerbaijan. Lovely
+                            Turkish coffee and red tea with traditional savory and sweet munchies. Just around the corner from 
+                            famous walkink street. Best part is thekinf and generous staff.</p>
+
+                        <!-- Author -->
+                        <p class="section_testimonials_author text-italic">
+                            Shahzad jafri
+                        </p>
+
+                    </div> <!-- .section_testimonials_item -->
+                </div>
+
+            </div>
+
+        </div> <!-- / .row -->
+
+    </div> <!-- .container -->
+
+</section> <!-- .section_testimonials -->
+@section MainJs{
+
+    <!-- JS Plugins -->
+    <script src="~/Public/assets/plugins/iziModal/js/iziModal.min.js"></script>
+    <script src="~/Public/assets/plugins/reservation/reservation.js"></script>
+    <script src="~/Public/assets/plugins/alerts/alerts.js"></script>
+    <script src="~/Public/assets/plugins/animsition/dist/js/animsition.min.js"></script>
+    <script src="~/public/assets/plugins/contact/contact.js"></script>
+    <script src="~/public/assets/plugins/flickity/flickity.pkgd.min.js"></script>
+
+
+
+    <!-- JS Custom -->
+    <!-- build:js assets/js/theme.min.js -->
+    <script src="~/Public/assets/js/theme.js"></script>
+    <script src="~/public/assets/js/google_maps.js"></script>
+
+    <!-- endbuild -->
+    <script src="~/Public/assets/js/custom.js"></script>
+
+    <!-- Google maps -->
+}

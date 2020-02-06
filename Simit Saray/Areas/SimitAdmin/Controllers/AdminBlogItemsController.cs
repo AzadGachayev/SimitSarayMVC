@@ -124,8 +124,8 @@ namespace Simit_Saray.Areas.SimitAdmin.Controllers
                     WebImage img = new WebImage(Image.InputStream);
                     FileInfo imgInfo = new FileInfo(Image.FileName);
                     string FileName = Guid.NewGuid().ToString() + imgInfo.Extension;
-                    img.Save("~/Public/uploads/BlogPhoto/" + FileName);
-                    selectedBlog.Photo= "/Public/uploads/BlogPhoto/" + FileName;
+                    img.Save("~/Public/uploads/" + FileName);
+                    selectedBlog.Photo= "/Public/uploads/" + FileName;
 
                 }
                 selectedBlog.Description = blogItem.Description;

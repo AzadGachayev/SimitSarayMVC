@@ -472,3 +472,17 @@ D:\Azad\Projects\Videos C#\SimitMVC\Simit Saray\bin\System.Web.Http.WebHost.dll
 D:\Azad\Projects\Videos C#\SimitMVC\Simit Saray\bin\System.Net.Http.Formatting.xml
 D:\Azad\Projects\Videos C#\SimitMVC\Simit Saray\bin\System.Web.Http.xml
 D:\Azad\Projects\Videos C#\SimitMVC\Simit Saray\bin\System.Web.Http.WebHost.xml
+D:\Azad\Projects\Videos C#\SimitMVC\Simit Saray\bin\Microsoft.IdentityModel.Logging.dll
+D:\Azad\Projects\Videos C#\SimitMVC\Simit Saray\bin\Microsoft.IdentityModel.Tokens.dll
+D:\Azad\Projects\Videos C#\SimitMVC\Simit Saray\bin\PhoneNumbers.dll
+D:\Azad\Projects\Videos C#\SimitMVC\Simit Saray\bin\System.IdentityModel.Tokens.Jwt.dll
+D:\Azad\Projects\Videos C#\SimitMVC\Simit Saray\bin\Twilio.AspNet.Common.dll
+D:\Azad\Projects\Videos C#\SimitMVC\Simit Saray\bin\Twilio.AspNet.Mvc.dll
+D:\Azad\Projects\Videos C#\SimitMVC\Simit Saray\bin\Twilio.dll
+D:\Azad\Projects\Videos C#\SimitMVC\Simit Saray\bin\TwilioFluent.Mvc3.dll
+D:\Azad\Projects\Videos C#\SimitMVC\Simit Saray\bin\TwilioFluent.TwiML.dll
+D:\Azad\Projects\Videos C#\SimitMVC\Simit Saray\bin\Microsoft.IdentityModel.Tokens.xml
+D:\Azad\Projects\Videos C#\SimitMVC\Simit Saray\bin\System.IdentityModel.Tokens.Jwt.xml
+D:\Azad\Projects\Videos C#\SimitMVC\Simit Saray\bin\Twilio.xml
+D:\Azad\Projects\Videos C#\SimitMVC\Simit Saray\bin\TwilioFluent.Mvc3.xml
+D:\Azad\Projects\Videos C#\SimitMVC\Simit Saray\bin\TwilioFluent.TwiML.xml

@@ -69,8 +69,8 @@ namespace Simit_Saray.Areas.SimitAdmin.Controllers
                         WebImage img = new WebImage(Photo.InputStream);
                         FileInfo imgInfo = new FileInfo(Photo.FileName);
                         string FileName = Guid.NewGuid().ToString() + imgInfo.Extension;
-                        img.Save("~/Public/uploads/CategoryPhoto/" + FileName);
-                        menuCategory.CategoryPhoto = "/Public/uploads/CategoryPhoto/" + FileName;
+                        img.Save("~/Public/uploads/Menu/" + FileName);
+                        menuCategory.CategoryPhoto = "/Public/uploads/Menu/" + FileName;
                     }
 
                 }
@@ -125,8 +125,8 @@ namespace Simit_Saray.Areas.SimitAdmin.Controllers
                     WebImage img = new WebImage(Photo.InputStream);
                     FileInfo imgInfo = new FileInfo(Photo.FileName);
                     string FileName = Guid.NewGuid().ToString() + imgInfo.Extension;
-                    img.Save("~/Public/uploads/CategoryPhoto/" + FileName);
-                    selectedCategory.CategoryPhoto = "/Public/uploads/CategoryPhoto/" + FileName;
+                    img.Save("~/Public/uploads/Menu/" + FileName);
+                    selectedCategory.CategoryPhoto = "/Public/uploads/Menu/" + FileName;
                 }
 
                 }

@@ -1,0 +1,338 @@
+﻿
+@{
+    ViewBag.Title = "Contact";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@using Simit_Saray.ViewModels
+@model DefaultViewModel
+@section MainCss{
+    <link rel="stylesheet" href="~/Public/assets/plugins/iziModal/css/iziModal.min.css">
+    <link rel="stylesheet" href="~/Public/assets/plugins/animsition/dist/css/animsition.min.css">
+
+    <!-- CSS Global -->
+    <!-- build:css assets/css/theme.min.css -->
+    <link rel="stylesheet" href="~/Public/css/theme.css">
+
+}
+
+
+<!-- NAVBAR
+================================================== -->
+<nav class="navbar navbar-light">
+
+    <div class="container">
+
+        <span class="navbar-text order-2 order-sm-first"></span>
+
+      
+        <a class="nav-link order-12" data-izimodal-open="#modal" data-izimodal-transitionin="fadeInRight" href="#">Rezervasiya</a>
+
+    </div> <!-- / .container -->
+
+</nav>
+
+<!-- MODAL RESERVATION
+================================================== -->
+
+<div id="modal" class="iziModal mainPage">
+    <div class="container">
+
+        <div class="row text-right">
+            <div class="col">
+
+                <a class="btn mt-3" href="#" data-izimodal-close="" data-izimodal-transitionout="fadeOutRight">
+                    Bağla
+                </a>
+
+            </div>
+        </div> <!-- / .row -->
+
+        <div class="row text-center">
+            <div class="col">
+
+                <h2 class="mb-0">Rezervasiya</h2>
+
+            </div>
+        </div> <!-- / .row -->
+
+    @Html.Partial("Reservation")
+        <!-- Form -->
+        @*<form class="reservation__form" id="reservation__form">
+            <div class="row align-items-center justify-content-center">
+                <div class="col-md-5">
+
+                    <div class="form-groug">
+                        <label class="sr-only" for="reservation__name">Full name</label>
+                        <input type="text" class="form-control" id="reservation__name" name="reservation__name" placeholder="Ad Soyad">
+                        <div class="invalid-feedback"></div>
+                    </div>
+                    <div class="form-group">
+                        <label class="sr-only" for="reservation__phone">Phone number</label>
+                        <input type="tel" class="form-control" id="reservation__phone" name="reservation__phone" placeholder="Telefon nömrəsi">
+                        <div class="invalid-feedback"></div>
+                    </div>
+                    <div class="form-group">
+                        <label class="sr-only" for="reservation__email">E-mail address</label>
+                        <input type="email" class="form-control" id="reservation__email" name="reservation__email" placeholder="Elektron poçt ünvanı">
+                        <div class="invalid-feedback"></div>
+                    </div>
+                </div>
+                <div class="col-md-5">
+
+                    <div class="form-group">
+                        <label class="sr-only" for="reservation__people">People</label>
+                        <select class="form-control" id="reservation__people" name="reservation__people">
+                            <option value="1">1 nəfər</option>
+                            <option value="2" selected="">2 nəfər</option>
+                            <option value="3">3 nəfər</option>
+                            <option value="4">4 nəfər</option>
+                            <option value="5">5 nəfər</option>
+                        </select>
+                        <div class="invalid-feedback"></div>
+                    </div>
+                    <div class="form-group">
+                        <label class="sr-only" for="reservation__date">Date</label>
+                        <input type="date" class="form-control" id="reservation__date" name="reservation__date" value="2017-12-31">
+                        <div class="invalid-feedback"></div>
+                    </div>
+                    <div class="form-group">
+                        <label class="sr-only" for="reservation__time">Time</label>
+                        <input type="time" class="form-control" id="reservation__time" name="reservation__time" value="18:00">
+                        <div class="invalid-feedback"></div>
+                    </div>
+
+                </div>
+
+                <div class="w-100"></div>
+
+                <div class="col">
+
+                    <div class="text-center">
+                        <button type="submit" class="btn">
+                            Masa sifariş et
+                        </button>
+                    </div>
+
+                </div>
+            </div>*@ <!-- / .row -->
+        @*</form>*@
+
+        <div class="row text-center">
+            <div class="col">
+
+                <div class="modal_info__item">
+                    <h4>İş Vaxtı</h4>
+                    <p>Həftənin bütün günləri</p>
+                    <p>08:00 - 01:00</p>
+                </div>
+
+                <div class="modal_info__item">
+                    <h4>Simit Saray sosialda</h4>
+
+                    <!-- Social icons -->
+                    <ul class="social__list">
+                        <li><a href="https://twitter.com/simitsarayi"><i class="fab fa-twitter"></i></a></li>
+                        <li><a href="https://www.facebook.com/Simit-Sarayı-Baku-467592887378361/"><i class="fab fa-facebook-f"></i></a></li>
+                        <li><a href="https://www.instagram.com/simitsarayibaku/"><i class="fab fa-instagram"></i></a></li>
+                        <li><a href="https://foursquare.com/v/simit-sarayi-baku/56daab7d498e2749a6934f62"><i class="fab fa-foursquare"></i></a></li>
+                    </ul> <!-- .social__list -->
+                </div>
+
+            </div>
+        </div> <!-- / .row -->
+
+    </div> <!-- / .container -->
+
+</div> <!-- #modal -->
+<!-- CONTACT
+================================================== -->
+<section class="section section_contact">
+
+    <div class="container">
+        <div class="row justify-content-between mb-5">
+
+            <div class="col-sm-12 col-md-6 col-lg-5 order-2 order-sm-first">
+
+                <div data-map="@Model.Kontakt.Map" id="map"></div>
+                <script>
+                    var map;
+                    var mapElement = document.getElementById("map")
+                    function initMap() {
+                        var locationMap = mapElement.getAttribute("data-map")
+                        var settingsMap = locationMap.split(",")
+                        var latMap = Number(settingsMap[0])
+                        var lngMap = Number(settingsMap[1])
+                        var academy = { lat: latMap, lng: lngMap }
+                        map = new google.maps.Map(document.getElementById('map'), {
+                            center: academy,
+                            zoom: 18,
+                            styles: [
+            {elementType: 'geometry', stylers: [{color: '#242f3e'}]},
+            {elementType: 'labels.text.stroke', stylers: [{color: '#242f3e'}]},
+            {elementType: 'labels.text.fill', stylers: [{color: '#746855'}]},
+            {
+              featureType: 'administrative.locality',
+              elementType: 'labels.text.fill',
+              stylers: [{color: '#d59563'}]
+            },
+            {
+              featureType: 'poi',
+              elementType: 'labels.text.fill',
+              stylers: [{color: '#d59563'}]
+            },
+            {
+              featureType: 'poi.park',
+              elementType: 'geometry',
+              stylers: [{color: '#263c3f'}]
+            },
+            {
+              featureType: 'poi.park',
+              elementType: 'labels.text.fill',
+              stylers: [{color: '#6b9a76'}]
+            },
+            {
+              featureType: 'road',
+              elementType: 'geometry',
+              stylers: [{color: '#38414e'}]
+            },
+            {
+              featureType: 'road',
+              elementType: 'geometry.stroke',
+              stylers: [{color: '#212a37'}]
+            },
+            {
+              featureType: 'road',
+              elementType: 'labels.text.fill',
+              stylers: [{color: '#9ca5b3'}]
+            },
+            {
+              featureType: 'road.highway',
+              elementType: 'geometry',
+              stylers: [{color: '#746855'}]
+            },
+            {
+              featureType: 'road.highway',
+              elementType: 'geometry.stroke',
+              stylers: [{color: '#1f2835'}]
+            },
+            {
+              featureType: 'road.highway',
+              elementType: 'labels.text.fill',
+              stylers: [{color: '#f3d19c'}]
+            },
+            {
+              featureType: 'transit',
+              elementType: 'geometry',
+              stylers: [{color: '#2f3948'}]
+            },
+            {
+              featureType: 'transit.station',
+              elementType: 'labels.text.fill',
+              stylers: [{color: '#d59563'}]
+            },
+            {
+              featureType: 'water',
+              elementType: 'geometry',
+              stylers: [{color: '#17263c'}]
+            },
+            {
+              featureType: 'water',
+              elementType: 'labels.text.fill',
+              stylers: [{color: '#515c6d'}]
+            },
+            {
+              featureType: 'water',
+              elementType: 'labels.text.stroke',
+              stylers: [{color: '#17263c'}]
+            }
+          ],
+                        });
+                        var marker = new google.maps.Marker({
+                            position: academy,
+                            map: map,
+                                draggable:true
+
+                        })
+                        var contentString = "<div id='content'><h1>Simit Sarayı</h1>"+
+                            "<p>Xoş gəlmisiniz! <a target='_blank' href='http://localhost:50236/Home/Contact'> Əlaqə: +994 55 254 29 32</a>"+
+                            "</div > "
+                          var infowindow = new google.maps.InfoWindow({
+                         content: contentString
+                         });
+                      marker.addListener('click', function() {
+                             infowindow.open(map, marker);
+                        });
+                    }
+
+                    
+
+                </script>
+                <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAPm-ZQUNuMNmZ9DfSXn9fhGFVKQI1lpoQ&callback=initMap"
+                        async defer></script>
+            </div>
+
+            <div class="col-sm-12 col-md-6 order-first order-sm-2">
+
+                <!-- Navigation -->
+                <nav class="nav nav_links d-flex">
+                    <a class="nav-link animsition-link" href="@Url.Action("Index","Home")">Əsas səhifə</a>
+                    <a class="nav-link animsition-link" href="@Url.Action("About","Home")">Haqqımızda</a>
+                    <a class="nav-link animsition-link" href="@Url.Action("Menyu","Home")">Menyu</a>
+                    <a class="nav-link animsition-link" href="@Url.Action("Blog","Home")">Bloq</a>
+                    <a class="nav-link animsition-link" href="@Url.Action("Gallery","Home")">Qalereya</a>
+                    <a class="nav-link animsition-link active" href="@Url.Action("Contact","Home")">Əlaqə</a>
+                </nav>
+
+                <!-- Heading -->
+                <h1 class="section__heading mb-0">Əlaqə vasitələri</h1>
+
+                <!-- Subheading -->
+                <p>
+                    @Model.Kontakt.Contact1
+                </p>
+
+                <!-- Info -->
+                <div class="section_contact__item col-md-7 p-0">
+                    <h4 class="mb-0">Ünvan</h4>
+                    <p class="mb-0">@Model.Kontakt.Adress</p>
+                </div> <!-- .section_contact__item -->
+
+                <div class="section_contact__item">
+                    <h4 class="mb-0">Telefon</h4>
+                    <p class="mb-0">@Model.Kontakt.Phone</p>
+                    <p class="mb-0">@Model.Kontakt.Phone2</p>
+                </div> <!-- .section_contact__item -->
+
+                <div class="section_contact__item">
+                    <h4 class="mb-0">Email</h4>
+                    <p class="mb-0">@Model.Kontakt.Email</p>
+                    <p class="mb-0">@Model.Kontakt.Email2</p>
+                </div> <!-- .section_contact__item -->
+
+                <div class="section_contact__item">
+                    <h4 class="mb-0">İş Vaxtı</h4>
+                    <p class="mb-0">Həftənin bütün günləri</p>
+                    <p class="mb-0">08:00 - 01:00</p>
+                </div> <!-- .section_contact__item -->
+
+            </div>
+        </div> <!-- / .row -->
+       
+
+    </div> <!-- .container -->
+</section> <!-- .section_contact -->
+@section MainJs{
+<!-- JS Plugins -->
+<script src="~/public/assets/plugins/iziModal/js/iziModal.min.js"></script>
+<script src="~/public/assets/plugins/reservation/reservation.js"></script>
+<script src="~/public/assets/plugins/alerts/alerts.js"></script>
+<script src="~/public/assets/plugins/animsition/dist/js/animsition.min.js"></script>
+<script src="~/public/assets/plugins/contact/contact.js"></script>
+
+<!-- JS Custom -->
+<!-- build:js ~/public/assets/js/theme.min.js -->
+<script src="~/public/assets/js/theme.js"></script>
+<script src="~/public/assets/js/google_maps.js"></script>
+<!-- endbuild -->
+<script src="~/public/assets/js/custom.js"></script>
+}
